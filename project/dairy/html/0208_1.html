@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0208_1</title>
+	<link rel="stylesheet" type="text/css" href="font.css">
+</head>
+<body>
+	<h1>ifram</h1>
+	<p>html 안에 다른 html 문서 삽입</p>
+	<dl>
+		<dt>속성</dt>
+		<dd>- name, src, frameborder, width, height <br/>
+			- name : 하이퍼링크 삽입을 위한 iframe 이름 지정 <br/> 
+			- frameborder : 테두리 있음 (1) 테두리 없음(0) </dd>
+		<dt>특징</dt>
+		<dd>- 삽입된 문서의 코드까지 기본 html 문서에 포함되기 때문에 검색엔진 최적화(SEO)에는 좋지 않음</dd>
+		<dd>- 하이퍼링크 연결시 a태그 target="iframe의 name" 유의</dd>
+	</dl>
+	<dl>
+		<dt>하이퍼링크 연결</dt>
+		<dd>- a태그 target 속성 = "iframe's name"</dd>
+	</dl>
+	<h4 title="링크 클릭 시 ifram에 연결">예시</h4>
+	<ul>
+		<li><a href="http://dlth8888.dothome.co.kr/dairy/html/0204_2.html" target="mainframe" title="링크 클릭 시 ifram에 연결">video</a></li>
+		<li><a href="https://www.gunpo.go.kr/www/index.do" target="mainframe" title="링크 클릭 시 ifram에 연결">군포시청</a></li>
+	</ul>
+	<iframe name="mainframe" src="http://dlth8888.dothome.co.kr" frameborder="1" width="80%" height="400"></iframe>
+</body>
+</html>

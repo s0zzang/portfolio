@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0201_1</title>
+	<link rel="stylesheet" href="style.css"/>
+	<link rel="stylesheet" type="text/css" href="font.css">
+</head>
+<body>
+	<h1>시맨틱 요소를 이용한 마크업</h1>
+	<h2>목적</h2>
+	<ul>
+		<li>레이아웃(구역)의 의미를 부여함</li>
+		<li>브라우저와 개발자에게 컨텐츠의 의미를 알려줌</li>
+		<li>html5 이전 : div id라는 태그로 분류했음</li>
+		<li>※주의사항 : 익스플로어9 하위 버전은 시맨틱 태그 지원 안됨 (html5 shiiv 통한 cross browsing 필요)</li>
+	</ul>
+	<h2>종류</h2>
+	<ul>
+		<li>header : 사이트 전체의 머릿말</li>
+		<li>section : 주제별 영역 그룹화 / 사이트의 주요 컨텐츠</li>
+		<li>article : section에 포함되는 세부 영역 / 책의 1장, 2장, 3장 개념</li>
+		<li>aside : 페이지의 주요 내용을 제외한 부수적 내용</li>
+		<li>footer : 사이트의 꼬릿말 / 회사정보, 저작권 표시</li>
+		<li>id(속성) : 디자인(css)을 위해 태그에 이름을 붙임</li>
+	</ul>
+	<div id="wrap">
+		<h2 id="css">css 맛보기</h2>
+		<header>header</header>
+		<aside id="sidebar">sidebar</aside>
+		<section>section</section>
+		<aside id="sidebar_ad">sidebar_ad</aside>
+		<footer>footer</footer>
+	</div>
+	<h2>style 적용시 주의점</h2>
+	<ul>
+		<li>css 문서를 html 파일에 불러와야 스타일이 적용됨</li>
+		<li>(#)선택자{속성:속성값;}</li>
+			<ol>
+				<li>선택자 : html의 id값 입력</li>
+				<li># : html의 해당 id 불러와 명령 의미</li>
+				<li>; : 속성값 뒤에 ";"를 입력하여 값 입력이 끝났다고 컴퓨터에게 전달</li>
+			</ol>
+		<li>오타 줄이기위해 html 문서에서 복붙하기</li>
+		<li>옆으로 나란히 만들기 : float:left;</li>
+	</ul>
+</body>
+</html>

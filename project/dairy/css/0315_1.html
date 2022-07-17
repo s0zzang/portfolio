@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0315_1</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{background:#faedbe;}
+		strong{color:#15892e;}
+		p{margin-left:20px;}
+		a{text-decoration:none; color:#ccc;}
+		a:hover{color:#cee1c1;}
+	</style>
+</head>
+<body>
+	<h1>float <a href="http://dlth8888.dothome.co.kr/dairy/css/0225_2.html">position 바로가기</a></h1>
+	<div class="div">
+		<div>
+			<h3>float</h3>
+			<ul>
+				<li>배열하고 싶은 모든 요소에 float 속성 적용</li>
+				<li>사용시, 누적순서가 한 층 올라가 사용하지 않은 요소들과 겹쳐짐</li>
+				<li>float : right / left</li>
+			</ul>
+			<p><strong>★ float 해제 방법 (줄바꿈) ★</strong></p>
+			<ul>
+				<li>줄바꿈 할 요소 float:left + 부모 요소 너비 설정 </li>
+				<li>줄바꿈 할 요소 clear:left</li>
+				<li>나중에 배움</li>
+			</ul>
+			<p><strong>★ 특징 ★</strong></p>
+			<ul>
+				<li>inline 요소에 float 사용시, inline을 block 처럼 바꿔줌</li>
+			</ul>
+		</div>
+		<div>
+			<h3>clear</h3>
+			<p>float가 적용된 값을 해제하고 줄을 바꿈</p>
+			<ul>
+				<li>해제 / 줄을 바꾸고 싶은 요소에 clear 속성 적용</li>
+				<li>float : left - clear : left / both</li>
+				<li>float : right - clear : right / both</li>
+			</ul>
+		</div>
+	</div>
+	<div class="div">
+		<div>
+			<h3>float 요소 대응 방법</h3>
+			<dl>
+				<dt><strong> 1. 부모 : none</strong></dt>
+				<dd>- 단점 : 자식이 부모 box에 포함 X</dd>
+			</dl>
+			<dl>
+				<dt><strong> 2. 부모 : float</strong> <sub>float:left or right</sub></dt>
+				<dd>- 자식이 부모 box에 포함</dd>
+				<dd>- 단점 : 너비가 자동 설정되어 좁아짐</dd>
+			</dl>
+			<dl>
+				<dt><strong> 3. 부모 : ★ overflow ★ </strong> <sub>overflow:hidden</sub></dt>
+				<dd>- 자식이 부모 box에 포함</dd>
+				<dd>- 너비 100%</dd>
+				<dd>- 단점 : 컨텐츠가 많아져 박스가 더 생기면 컨텐츠가 숨겨질 수 있음</dd>
+			</dl>
+			<dl>
+				<dt><strong> 4. 부모 : none +  새로운 자식 생성</strong> <sub>div:clear:both; height:0; (overflow:hidden;)</sub></dt>
+				<dd>- 자식이 부모 box에 포함</dd>
+				<dd>- text 적힌 경우 overflow:hidden 추가해 보이지 않게 함</dd>
+				<dd>- 단점 : 번거로움</dd>
+			</dl>
+			<dl>
+				<dt><strong> 5. 부모 : ★ 가상선택자 (after) ★</strong> <sub>부모:after{content:'', display:block; clear:both;}</sub></dt>
+				<dd>- 자식이 부모 box에 포함</dd>
+				<dd>- after{content:'', display:block; clear:both;}</dd>
+			</dl>
+		</div>
+	</div>
+</body>
+</html>

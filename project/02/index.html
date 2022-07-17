@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="author" content="이소정"/>
+	<meta name="description" content="이소정의 두번째 프로젝트 '이마트' 입니다."/>
+	<meta name="keyword" content="웹표준,웹접근성,반응형,SCSS"/>
+	<meta name="generator" content="Visual Studio Code"/>
+	<meta property="og:title" content="이소정의 두번째 프로젝트 '이마트' 입니다."/>
+	<meta property="og:url" content="http://dlth8888.dothome.co.kr/portpolio/index.html"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:image" content="images/title_img.jpg"/>
+	<meta property="og:site_name" content="이소정의 프로젝트2 (이마트)"/>
+	<meta property="og:description" content="어떤 프로젝트에도 결코 쓰러지지 않는 오뚝이 이소정입니다."/>
+	<meta name="twitter:title" content="이소정의 두번째 프로젝트 '이마트' 입니다."/>
+	<meta name="twitter:url" content="http://dlth8888.dothome.co.kr/portpolio/index.html"/>
+	<meta property="og:description" content="어떤 프로젝트에도 결코 쓰러지지 않는 오뚝이 이소정입니다."/>
+	<title>대한민국 신생활, 이마트</title>
+	<link rel="shortcut icon" href="favicon.ico"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap" rel="stylesheet">
+	<!-- styles -->
+	<link rel="stylesheet" href="css/reset.css"/>
+	<link rel="stylesheet" href="css/swiper.css" />
+	<link rel="stylesheet" href="css/style.css">
+	<!-- js -->
+	<script src="js/jquery.min.js"></script>
+	<script src="https://rawgithub.com/tobia/Pause/master/jquery.pause.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+	<div class="popup">
+		<div class="top"><img src="images/dialog_20201210.jpg" alt="노브랜드 건전지 자발적 리콜 안내"/></div>
+		<div class="bottom">
+			<label><input type="radio" name="close"/><span>오늘 하루 보지 않기</span></label>
+			<label><input type="radio" name="close"/><span>일주일간 보지 않기</span></label>
+			<button class="close">닫기</button>
+		</div>
+	</div> <!-- //class="popup" -->
+	<div id="skip">
+		<a href="#gnb" rel="bookmark">메인 메뉴 바로가기</a>
+		<a href="#benefit" rel="bookmark">혜택 바로가기</a>
+		<a href="#check" rel="bookmark">체크리스트 바로가기</a>
+		<a href="#joyful" rel="bookmark">컨텐츠 바로가기</a>
+		<a href="#brand" rel="bookmark">브랜드 바로가기</a>
+	</div>
+	<div id="wrap">
+		<header id="header">
+			<div class="container">
+				<nav id="lnb">
+					<div class="lnb_wrap cf">
+						<ul class="left cf">
+							<li><a href="#">PEACOCK</a></li>
+							<li><a href="#">이마트몰</a></li>
+							<li><a href="#">신세계포인트</a></li>
+							<li><a href="#">문화센터</a></li>
+							<li><a href="#">알뜰폰</a></li>
+						</ul>
+						<ul class="right cf">
+							<li><a href="#">My이마트</a></li>
+							<li><a href="#">이마트뮤직</a></li>
+							<li><a href="#">이마트TV</a></li>
+							<li><a href="#">로그인</a></li>
+							<li><a href="#">회원가입</a></li>
+						</ul>
+					</div>
+					<div class="lnb_wrap_m">
+						<h2><a href="#"><img src="images/gnb01.png" alt="로고"/></a></h2>
+						<button class="m_btn close"></button>
+						<button class="m_btn menu"></button>
+						<button class="m_btn user"></button>
+
+					</div>
+				</nav> <!-- //id="lnb" -->
+				<div id="gnb">
+					<div class="gnb_wrap">
+						<ul id="menu" class="cf">
+							<li><a href="#">점포찾기</a></li>
+							<li><a href="#">전단광고</a></li>
+							<li><h1><a href="#"><img src="images/gnb01.png" alt="로고"/></a></h1></li>
+							<li><a href="#">이벤트</a></li>
+							<li><a href="#">고객센터</a>
+								<ul class="sub">
+									<li><a href="#">공지사항</a></li>
+									<li><a href="#">자주하는질문</a></li>
+									<li><a href="#">고객의소리</a></li>
+									<li><a href="#">고객만족제도</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="gnb_wrap_m">
+						<ul id="menu_m" class="cf">
+							<li><a href="#">점포찾기</a></li>
+							<li><a href="#">전단광고</a></li>
+							<li><a href="#">이벤트</a></li>
+							<li><a href="#">고객센터</a>
+								<ul class="sub_m">
+									<li><a href="#">공지사항</a></li>
+									<li><a href="#">자주하는질문</a></li>
+									<li><a href="#">고객의소리</a></li>
+									<li><a href="#">고객만족제도</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div> <!-- //id="gnb" -->
+			</div>
+		</header> <!-- //id="header" -->
+		<section id="section" class="cf">
+			<div class="container">
+				<div id="main_visual">
+					<div class="swiper-container main_banner">
+						<h2 class="ir_pm">메인 슬라이드 배너</h2>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><a href="#"><img src="images/banner_01.jpg" alt="와인클럽 등록 혜택"/></a></div>
+							<div class="swiper-slide"><a href="#"><img src="images/banner_02.jpg" alt="미트클럽 쿠폰안내"/></a></div>
+							<div class="swiper-slide"><a href="#"><img src="images/banner_03.jpg" alt="댕냥이클럽 릴레이 스탬프"/></a></div>
+							<div class="swiper-slide"><a href="#"><img src="images/banner_04.jpg" alt="산지에서 온 지역특산 회클럽"/></a></div>
+							<div class="swiper-slide"><a href="#"><img src="images/banner_05.jpg" alt="3월 출석체크"/></a></div>
+							<div class="swiper-slide"><a href="#"><img src="images/banner_06.jpg" alt="건강밥 클럽"/></a></div>
+							<div class="swiper-slide"><a href="#"><img src="images/banner_07.jpg" alt="LG Object 처음 만나는 공간"/></a></div>
+							<div class="swiper-slide"><a href="#"><img src="images/banner_08.jpg" alt="3월 VIP 전용 이벤트"/></a></div>
+							<div class="swiper-slide"><a href="#"><img src="images/banner_09.jpg" alt="이번주 맛남 미나리"/></a></div>
+						</div>
+						<div class="arrow cf">
+							<a href="#" class="left ir_pm">이전 슬라이드</a>
+							<a href="#" class="right ir_pm">다음 슬라이드</a>
+							<div class="click start ir_pm">시작</div>
+							<div class="click pause ir_pm">정지</div>
+						</div>
+						<div class="control swiper-pagination-clickable swiper-pagination-bullets">
+							<span class="swiper-pagination-bullet" role="button"></span>
+							<span class="swiper-pagination-bullet" role="button"></span>
+							<span class="swiper-pagination-bullet" role="button"></span>
+							<span class="swiper-pagination-bullet" role="button"></span>
+							<span class="swiper-pagination-bullet" role="button"></span>
+							<span class="swiper-pagination-bullet" role="button"></span>
+							<span class="swiper-pagination-bullet" role="button"></span>
+						</div>
+					</div> <!-- //swiper-container --></div>			
+				<div id="benefit" class="cf">
+					<h2>기분좋은 혜택</h2>
+					<div class="marquee benefit_list">
+						<div class="js-marquee"><a href="#">피코크 행사상품 20% 할인</a></div>
+						<div class="js-marquee"><a href="#">가전 행사상품 구매시 상품권 증정</a></div>
+						<div class="js-marquee"><a href="#">어반 수납트롤리 2종 50％할인</a></div>
+						<div class="js-marquee"><a href="#">다용도 접이스툴, 롱스툴 10％ 할인</a></div>
+						<div class="js-marquee"><a href="#">젤리베어 A4 복사지 4천원 할인</a></div>
+						<div class="js-marquee"><a href="#">건강용품 행사상품 최대 20만원 할인</a></div>
+						<div class="js-marquee"><a href="#">필립스 에스프레소 머신 14만원 할인</a></div>
+						<div class="js-marquee"><a href="#">아웃도어 행사상품 최대 30％ 할인</a></div>
+						<div class="js-marquee"><a href="#">햇 세척인삼 행사상품 20％ 할인</a></div>
+					</div>
+					<div class="control cf">
+						<button class="start ir_pm">시작</button>
+						<button class="pause ir_pm">정지</button>
+					</div>
+				</div>
+				<div id="check">
+					<h2>이마트 고객이라면 장보기 전 체크</h2>
+					<div class="check_list cf">
+						<div class="check_item no1">
+							<a href="#"><img src="images/check_item1.jpg" alt="금주의 전단광고 바로가기"/><span>더 좋은 가격으로 이마트에서 절약하세요!</span></a>
+						</div>
+						<div class="check_item no2">
+							<a href="#"><img src="images/check_item2.jpg" alt="이마트/트레이더스 쇼핑 할인 안내 바로가기"/><span>이마트/트레이더스에서 쇼핑하면 할부금이 0원!</span></a>
+						</div>
+						<div class="check_item no3">
+							<a href="#"><img src="images/check_item3.jpg" alt="대한민국 수산대전 신세계포인트 적립 안내 바로가기"/><span>대한민국 수산대전 <br/>신세계포인트 최대 30％할인!</span></a>
+						</div>
+						<div class="check_item no4">
+							<a href="#"><img src="images/check_item4.jpg" alt="최대 5% 신세계 포인트 적립되는 이마트 e카드 바로가기"/><span>이마트 e카드 Edition2 <br/>최대 5% 신세계포인트 적립!</span></a>
+						</div>
+						<div class="check_item no5">
+							<a href="#"><img src="images/check_item5.jpg" alt="지점별 행사와 공지사항 바로가기"/><span>지금 이마트로 달려가야해~ <br/>지점별 행사 & 공지사항</span></a>
+						</div>
+					</div>
+				</div>
+				<div id="joyful">
+					<h2>언제 어디서나 즐거운 컨텐츠</h2>
+					<div class="joyful_banner cf">
+						<div class="left">
+							<a href="#"><img src="images/joyful_app.jpg" alt="이마트앱, 기본 좋은 쇼핑"/></a>
+						</div>
+						<div class="right">
+							<div class="top">
+								<a href="#"><img src="images/joyful_tv.jpg" alt="꼭 끝까지 봐야하는 이마트 TV"/></a>
+							</div>
+							<div class="center mt12">
+								<a href="#"><img src="images/joyful_music.jpg" alt="이마트가 직접 만든 뮤직 스토리"/></a>
+							</div>
+							<div class="bottom mt12">
+								<a href="#"><img src="images/joyful_emart-basket.jpg" alt="전통시장에서 만나는 노란 국민 장바구니"/></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="brand">
+					<ul class="cf">
+						<li class="logo1"><a href="#">트레이더스</a>
+						<li class="logo2"><a href="#">몰리스 </a></li>
+						<li class="logo3"><a href="#">일렉트로마트 </a></li>
+						<li class="logo4"><a href="#">센텐스 </a></li>
+						<li class="logo5"><a href="#">PK Market </a></li>
+						<li class="logo6"><a href="#">SSG푸드마켓 </a></li>
+						<li class="logo7"><a href="#">토이킹덤 </a></li>
+						<li class="logo8"><a href="#">베이비서클 </a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<footer id="footer">
+			<div class="container">
+				<div class="footer_menu cf">
+					<div class="left">
+						<ul>
+							<li><a href="#">점포찾기</a></li>
+							<li><a href="#">전단광고</a></li>
+							<li><a href="#">이벤트</a></li>
+							<li><a href="#">고객센터</a>
+								<ul>
+									<li><a href="#">공지사항</a></li>
+									<li><a href="#">자주하는 질문</a></li>
+									<li><a href="#">고객의 소리</a></li>
+									<li><a href="#">고객만족제도</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="right">
+						<ul>
+							<li><a href="#">My이마트</a></li>
+							<li><a href="#">이마트뮤직</a></li>
+							<li><a href="#">이마트TV</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer_bottom cf">
+					<div class="left cf">
+						<ul class="footer_info cf first">
+							<li><img src="images/footer_logo_emart.png" alt="이마트로고"/></li>
+							<li><span>대표자:</span>강희석</li>
+							<li>서울특별시 성동구 뚝섬로 377(성수동2가)</li>
+						</ul>
+						<ul class="footer_info cf">
+							<li><span>사업자등록번호:</span> 206-86-50913</li>
+							<li><span>통신판매업 신고번호:</span>  제 2011-서울성동-0345</li>
+						</ul>
+						<ul class="footer_info legal cf">
+							<li><a href="#">공정거래자율준수프로그램</a></li>
+							<li><a href="#">이용약관</a></li>
+							<li class="important"><a href="#">개인정보처리방침</a></li>
+							<li class="important"><a href="#">영상정보처리기기운영, 관리방침</a></li>
+						</ul>
+						<ul class="footer_link cf">
+							<li><a href="#">회사소개</a></li>
+							<li><a href="#">CSR경영</a></li>
+							<li><a href="#">투자정보(IR)</a></li>
+							<li><a href="#">채용정보</a></li>
+							<li><a href="#">이마트 신문고</a></li>
+						</ul>
+						<ul class="partner_link cf">
+							<li><a href="#">협력회사 상담<span>(상품/임대을)</span></a></li>
+							<li><a href="#">협력회사 상담<span>(임대갑 구매총무 기타입찰 및 계약)</span></a></li>
+						</ul>
+					</div>
+					<div class="right cf">
+						<div class="family_site cf">
+							<label for="familysite"></label>
+							<form action="#">
+								<select name="familysite" id="familysite">
+									<option value="FAMILY SITE">FAMILY SITE</option>
+									<option value="이마트 회사소개">이마트 회사소개</option>
+									<option value="신세계포인트">신세계포인트</option>
+									<option value="이마트몰">이마트몰</option>
+									<option value="이마트 트레이더스">이마트 트레이더스</option>
+									<option value="이마트 에브리데이">이마트 에브리데이</option>
+									<option value="이마트24">이마트24</option>
+									<option value="신세계그룹">신세계그룹</option>
+									<option value="신세계백화점">신세계백화점</option>
+									<option value="신세계인터내셔날">신세계인터내셔날</option>
+									<option value="신세계푸드">신세계푸드</option>
+									<option value="신세계건설">신세계건설</option>
+									<option value="신세계아이앤씨">신세계아이앤씨</option>
+									<option value="스타벅스커피코리아">스타벅스커피코리아</option>
+									<option value="조선호텔앤리조트">조선호텔앤리조트</option>
+									<option value="신세계사이먼">신세계사이먼</option>
+									<option value="SSG.COM">SSG.COM</option>
+								</select>
+							</form>
+							<button>확인</button>
+						</div>
+						<ul class="cs_call">
+							<li><em>이마트대표전화:</em> 02-380-5678</li>
+							<li><em>(주)에스에스지닷컴:</em>  1577-3419</li>
+							<li><em>신세계포인트:</em>  1899-4349</li>
+							<li><em>노브랜드 가맹문의:</em> 02-380-9192</li>
+						</ul>
+						<div class="wa_mark">
+							<a href="#"><img src="images/logo_wa.png" alt="(사)한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크(WA인증마크)"/></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

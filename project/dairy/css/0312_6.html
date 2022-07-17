@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>layout2</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		*{margin:0;padding:0;background:#eee;}
+		ul{list-style:none; width:1200px; margin:70px auto;}
+		li{float:left;}
+		#menu a{text-decoration:none; color:#735699; font-size:20px; font-weight:bold; margin:40px; padding:10px; border:3px solid #735699; border-radius:10px; background:#fff;}
+		#menu a:hover,#menu a.active{background:#735699; color:#fff;}
+		
+		#wrap{width:100%; color:#fff; font-size:25px; text-align:center; text-transform:uppercase; position:relative; top:100px;}
+		#header-top{width:100%; height:70px; line-height:20px; background:#b2ebf2;}
+		#header-nav{width:100%; height:70px; line-height:70px; background:#80deea;}
+		#banner{width:100%; height:200px; line-height:200px; background:#4dd0e1;}
+		#content1{width:100%; height:100px; line-height:100px; background:#26c6da;}
+		#content2{width:100%; height:300px; line-height:300px; background:#00bcd1;}
+		#content3{width:100%; height:200px; line-height:200px; background:#00acca;}
+		#footer-nav{width:100%; height:70px; line-height:70px; background:#00a8bf;}
+		#footer-info{width:100%; height:70px; line-height:70px; background:#0099ae;}
+		.container{width:1000px; height:inherit; margin:0 auto; background:rgba(0,0,0,0.1);}
+	</style>
+</head>
+<body>
+	<div id="menu">
+		<ul>
+			<li><a href="http://dlth8888.dothome.co.kr/dairy/css/0312_1.html">layout2_1</a></li>
+			<li><a href="http://dlth8888.dothome.co.kr/dairy/css/0312_2.html">layout2_2</a></li>
+			<li><a href="http://dlth8888.dothome.co.kr/dairy/css/0312_3.html">layout2_3</a></li>
+			<li><a href="http://dlth8888.dothome.co.kr/dairy/css/0312_4.html">layout2_4</a></li>
+			<li><a href="http://dlth8888.dothome.co.kr/dairy/css/0312_5.html">layout2_5</a></li>
+			<li><a class="active" href="http://dlth8888.dothome.co.kr/dairy/css/0312_6.html">layout2_6</a></li>
+		</ul>
+	</div>
+	<div id="wrap">
+		<div id="header">
+			<div id="header-top">
+				<div class="container">header-top</div>
+			</div>
+			<div id="header-nav">
+				<div class="container">header-nav</div>
+			</div>
+		</div>
+		<div id="banner">
+			<div class="container">banner</div>
+		</div>
+		<div id="content">
+			<div id="content1">
+				<div class="container">content1</div>
+			</div>
+			<div id="content2">
+				<div class="container">content2</div>
+			</div>
+			<div id="content3">
+				<div class="container">content3</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer-nav">
+				<div class="container">footer-nav</div>
+			</div>
+			<div id="footer-info">
+				<div class="container">footer-info</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

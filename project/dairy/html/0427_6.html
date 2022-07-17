@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>0427_6</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h1{z-index: 1;}
+        .svg{position: absolute; left:0; top:0; width:100%; height:100%; background:#ddd;;}    
+	</style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>svg mask</h1>
+    <svg class="svg">
+        <defs>
+            <pattern id="pattern-bg" x="0" y="0" width='.38' height='.8'>
+                <path class="st0" d="M651,445.49c0,157.39-115.51,255.84-258,255.84s-258-98.45-258-255.84s82.23-284.98,258-284.98
+                    C576.99,160.51,651,288.1,651,445.49z"/>
+                <g>
+                    <circle class="wink" cx="289.5" cy="458.5" r="30.5"/>
+                </g>
+                <g>
+                    <circle cx="498.5" cy="458.5" r="30.5"/>
+                </g>
+                <path class="st1" d="M529,549.16c-33.28,37.19-93,53.09-136,52.84c-40.02-0.23-102.2-15.65-135.48-52.84"/>
+                <ellipse cx="275.5" cy="274.5" rx="168.5" ry="121.5"/>
+                <ellipse cx="535.5" cy="262.5" rx="142.5" ry="123.5"/>
+                <ellipse cx="352.5" cy="167" rx="151.5" ry="103"/>
+            </pattern>
+            <mask id="mask-glass">
+                <circle id="mask" cx="218.8" cy="203.9" r="114.4" fill="#fff"/>
+            </mask>
+            <style>
+                .st0{fill:none;stroke:#000000;stroke-width:40;stroke-miterlimit:10;}
+                .st1{fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:roun;stroke-miterlimit:10;}
+                .wink{animation:winks .5s infinite alternate; transform-origin:290px 460px;}
+                @keyframes winks{
+                    from{transform:scaleY(1)}
+                    to{transform:scaleY(.2)}
+                }
+                .bg{fill:url(#pattern-bg)}
+            </style>     
+            <!-- 바닐라 자바스크립트   -->
+            <!-- <script>
+                window.addEventListener('DOMContentLoaded',function(){           // $(function)과 같은 의미
+                    const magnifierEl=document.querySelector('.magnifier');      // .magnifier 를 찾아서 magnifier 변수에 담음
+                    const maskEl=document.querySelector('#mask-glass circle');
+                    window.addEventListener('mousemove',function(e){             // e : 마우스 좌표값을 얻어 전달해주는 역할
+                    magnifierEl.style.transform='translate('+ e.clientX +'px,'+ e.clientY + 'px)'  // clicentX : 마우스 좌표값 
+                    maskEl.style.transform='translate('+ e.clientX +'px,'+ e.clientY + 'px)'  // clicentX : 마우스 좌표값 
+                    })
+                })
+            </script>      -->
+
+            <!-- 제이쿼리 -->
+            <script>
+                $(function(){
+                    const magnifierEl=$('.magnifier');
+                    const maskEl=$('#mask-glass circle');
+                    $(document).mousemove(function(e){
+                        magnifierEl.css('transform','translate(' + e.pageX + 'px,' + e.pageY+'px)')     // page : 마우스 좌표값 
+                        maskEl.css('transform','translate(' + e.pageX + 'px,' + e.pageY+'px)')
+                    })
+                })
+            </script>
+        </defs>
+        <path fill="#BF7373" class="magnifier" d="M431,426.6l-88.7-108.8c0.3-0.3,0.6-0.6,0.8-0.9c3.6-3.9,7-8.1,10.2-12.3c2.4-3.2,4.7-6.5,6.9-9.9
+		c0.7-1.1,1.4-2.3,2.1-3.4c1.4-2.3,2.7-4.6,4-7c0.6-1.2,1.3-2.4,1.9-3.6c1.2-2.4,2.4-4.8,3.5-7.3c0.6-1.2,1.1-2.5,1.6-3.7
+		c2.6-6.2,4.9-12.7,6.8-19.3c1.1-4,2.1-8,2.9-12c0.8-4.1,1.5-8.2,2-12.4c0.9-7,1.3-14,1.3-21.2c0-92.1-74.7-166.7-166.7-166.7
+		S52.9,112.7,52.9,204.8c0,7.2,0.5,14.3,1.3,21.2c0.5,4.2,1.2,8.3,2,12.4c0.8,4.1,1.8,8.1,2.9,12c1.9,6.6,4.1,13,6.8,19.3
+		c0.5,1.2,1.1,2.5,1.6,3.7c1.1,2.5,2.3,4.9,3.5,7.3c0.6,1.2,1.2,2.4,1.9,3.6c1.3,2.4,2.6,4.7,4,7c0.7,1.1,1.4,2.3,2.1,3.4
+		c2.2,3.4,4.5,6.7,6.9,9.9c3.2,4.3,6.6,8.4,10.2,12.3c1.8,2,3.6,3.9,5.5,5.8c1.9,1.9,3.8,3.7,5.8,5.5c2,1.8,4,3.5,6.1,5.2
+		c1,0.8,2.1,1.7,3.1,2.5c3.1,2.5,6.4,4.8,9.7,7.1c13.3,9,28,16.1,43.6,21c2.6,0.8,5.2,1.6,7.9,2.2c13.3,3.4,27.3,5.2,41.7,5.2
+		c14.4,0,28.4-1.8,41.7-5.2c2.7-0.7,5.3-1.4,7.9-2.2c10.9-3.4,21.4-7.9,31.2-13.3l89.3,109.5c5.3,6.4,12.9,9.8,20.6,9.8
+		c5.9,0,11.9-2,16.8-6C438.6,454.7,440.3,438,431,426.6z M218.8,318.3c-63.2,0-114.4-51.2-114.4-114.4S155.6,89.5,218.8,89.5
+		s114.4,51.2,114.4,114.4S282,318.3,218.8,318.3z"/>
+        <g mask="url(#mask-glass)">
+            <rect class="bg" x="0" y="0" width="100%" height="100%"></rect>
+        </g>
+    </svg>
+</body>
+</html>

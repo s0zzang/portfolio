@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0412_2</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{background:#ffe5e5;}
+		p{margin-left:10px;}
+		a{text-decoration:none; color:#ccc;}
+		a:hover{color:#ffe5e5;}		
+	</style>
+</head>
+<body>
+	<h1>function 1 <a href="0412_3.html">function 2 바로가기</a></h1>
+	<div class="div">
+		<h3>show, hide</h3>
+		<p>요소를 보이고, 안보이게 하는 함수</p>
+		<ul>
+			<li>인자 : fast, slow, n  </li>
+			<li>보이기 : $ ( '.a' ) . show ( )</li>
+			<li>숨기기 : $ ( '.a' ) . hide ( )</li>
+			<li>hide ( 1000, function ( ) { alert('숨김완료') } )</li>
+			<li style="list-style:none"> : 1초 동안 스르륵 없어진 후, alert 창 띄우기 <sub>콜백함수</sub></li>
+		</ul>
+		<h3>width, height</h3>
+		<p>요소의 너비와 높이를 변경하는 함수</p>
+		<ul>
+			<li>너비 : $ ( '.a' ) . width ( n )</li>
+			<li>높이 : $ ( '.a' ) . height ( n )</li>
+			<li>a.height/width( ) : 높이</li>
+			<li>a.innerHeight( ) : 높이 + 패딩</li>
+			<li>a.outerHeight( ) : 높이 + 패딩 + 보더</li>
+			<li>a.outerHeight(true) : 높이 + 패딩 + 보더 + 마진</li>
+		</ul>
+		<h3>toggle</h3>
+		<p></p>
+		<ul>
+			<li>인자 : fast, slow </li>
+			<li>$ ( '.a' ) . toggle ( 'slow' )</li>
+			<li style="list-style:none">토글이 적용된 버튼을 누르면 천천히 껐다 켰다</li>
+			<li style="list-style:none">on( 'click' )과 함께 사용</li>
+		</ul>
+		<h3>fadeIn, fadeOut</h3>
+		<p>서서히 보이고, 안보이게 하는 함수</p>
+		<ul>
+			<li>인자 : fast, slow, n </li>
+			<li>$ ( '.a' ) . fadeIn ( )</li>
+			<li>$ ( '.a' ) . fadeOut ( 'fast' )</li>
+		</ul>
+		<h3>fadeTo</h3>
+		<p>보이고, 안보이고의 정도를 조절할 수 있는 함수</p>
+		<ul>
+			<li>인자 : 기간, 불투명도 </li>
+			<li>$ ( '.a' ) . fadeTo ( 3000, 0.5 )</li>
+		</ul>
+		<h3>slideUp, slideDown, slideToggle</h3>
+		<p>내려오고 올라오게 하는 함수</p>
+		<ul>
+			<li>인자 : fast, slow, n </li>
+			<li>내려가기 : $ ( '.a' ) . slideDown ( ) </li>
+			<li>올라가기 : $ ( '.a' ) . slideUp ( 'fast' ) </li>
+			<li>토글적용 : $ ( '.a' ) . slideToggle ( 1000 ) </li>
+		</ul>
+	</div>
+	<div class="div">
+		<h3>animate</h3>
+		<p>top, left, bottom, right 좌표값을 변경하는 함수 <br/>* hover와 함께 사용한 경우 :  움직인 횟수를 기억, stop( ).animate( ) 로 사용하기 </p>
+		<ul>
+			<li>인자 : { top : n, left : n } </li>
+			<li>인자 : { left : n1 }, n2 : n2 ms동안 n1만큼 이동</li>
+			<li>$ ( '.a' ) . animate ( { top:100, left:300 } ) </li>
+			<li>$ ( '.a' ) . animate ( { top:100 }, 1000 ) . animate ( { left:200 }, 2000 ) <sub>animate 중복 적용 가능</sub></li>
+			<li style="list-style:none">delay( n )과 함께 사용 가능</li>
+		</ul>
+		<h3>text</h3>
+		<p>텍스트를 변경하는 함수</p>
+		<ul>
+			<li>인자 : ' text ' </li>
+			<li>$ ( '.a' ) . text ( '짜장이 일로와' ) </li>
+			<li>$ ( '.a' ) . text ( ' ' ) : text 지우기 </li>
+			<li>$ ( '.a' ) . text ( ) : text 담기 </li>
+		</ul>
+		<h3>html</h3>
+		<p>텍스트를 변경하는 함수, 태그 사용이 가능함</p>
+		<ul>
+			<li>인자 : ' text ', ' &lt;tag&gt; text &lt;/tag&gt; ' </li>
+			<li>$ ( '.a' ) . text ( '짜장이 일로와' ) </li>
+		</ul>
+		<h3>empty</h3>
+		<p>text를 지우는 함수 <sub>보더 등의 흔적은 남음, opacity, visibility 느낌</sub></p>
+		<ul>
+			<li>$ ( '.a' ) . empty ( '짜장이 일로와' ) </li>
+		</ul>
+		<h3>remove</h3>
+		<p>text를 지우는 함수 <sub>보더 등의 흔적 모두 삭제, display:none 느낌</sub></p>
+		<ul>
+			<li>$ ( '.a' ) . remove ( '짜장이 일로와' ) </li>
+		</ul>
+		<h3>attr</h3>
+		<p>속성을 변경할 수 있는 함수</p>
+		<ul>
+			<li>인자 : ( ' 가지고 올 속성 ', ' 변경할 값 ' ) </li>
+			<li>$ ( '.a' ) . attr ( 'src', 'img2.png' ) </li>
+			<li>$ ( 'a' ) . attr ( 'target', '_blank' ) </li>
+		</ul>
+		<h3>val</h3>
+		<p>form 요소의 value 값을 변경할 수 있는 함수</p>
+		<ul>
+			<li>인자 : ' 변경할 값 ' </li>
+			<li>select 요소의 인자 : ' ex2 ' 순서 변경</li>
+			<li>select 요소의 인자 : [ ' ex2 ', ' ex3 ' ] active 상태로 출력</li>
+			<li>$ ( '.a' ) . val ( '이렇게 변경하겠습니다.' ) </li>
+		</ul>
+	</div>
+</body>
+</html>

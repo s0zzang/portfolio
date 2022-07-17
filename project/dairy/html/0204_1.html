@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0204_1</title>
+	<link rel="stylesheet" type="text/css" href="font.css">
+</head>
+<body>
+	<h1>audio</h1>
+	<h3>속성</h3>
+	<ul>
+		<li>controls : 컨트롤바 (필수)</li>
+		<li>loop : 반복재생 <br/> * loop="n" : n번만 반복</li>
+	</ul>
+	<h3>source</h3>
+	<ul>
+		<li>audio 하위에서 경로를 적기 위한 <em>단일 태그</em></li>
+		<li>src 속성 : 경로 작성</li>
+	</ul>
+	<h3>주의점</h3>
+	<p>
+		오디오 확장자에 따라 브라우저별 지원 여부를 확인하여 cross browsing 작업 필요
+	</p>
+	<h3>예시</h3>
+	<audio title="힙하다 힙해" controls loop="10">
+		<source src="media/Life After Death - DJ Freedem.mp3"/>
+	</audio>
+</body>
+</html>

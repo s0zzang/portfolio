@@ -1,0 +1,55 @@
+a{
+	text-decoration:none;
+	color:#000;
+}
+ul,li{
+	list-style:none;
+}
+h1{
+	width:400px; 
+	margin:50px auto;
+	font-style:italic;
+	font-size:250%;
+	color:#fff;
+	text-shadow:1px 5px 10px #3c34a4;
+}
+#photoBox{
+	width:250px;
+	margin:0 auto;
+}
+#tabNavi{
+	margin-left:20px;
+}
+#tabNavi li{
+	float:left;
+	margin-right:2px;
+}
+#tabNavi li a{
+	display:block;
+	background:#fff;
+	color:#8e88d9;
+	padding:1px 5px;
+	border:5px solid #8e88d9;
+	border-radius:8px 8px 0 0;
+	font-size:0.9em;
+	position:relative;
+	top:5px;
+}
+#photo{
+	border:12px solid #8e88d9;
+	border-radius:10px;
+	background:#8e88d9;
+	clear:left;
+}
+#photo img{
+	display:block;
+	margin:0 auto;
+}
+#tabNavi li.activeS a{
+	background:#8e88d9;
+	color:#fff;
+}
+#tabNavi li a:hover {
+	background:#8e88d9;
+	color:#fff;
+}

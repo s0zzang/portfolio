@@ -1,0 +1,43 @@
+*{margin:0; padding:0; border:0;}
+h1{text-align:center; font-size:5em; margin:200px;}
+.scene{position:relative; width:80vw; height:2000px; margin:auto; background:#b8ea75; overflow:hidden;}
+.scene:before{content:''; position:absolute; width:300px; height:100%; background:yellow; z-index:1; display:block; left:50%; margin-left:-150px; top:0;}
+.scene:after{content:''; position:absolute; width:10px; height:100%; background:black; z-index:2; display:block; left:50%; margin-left:-5px; top:0;}
+.ani{position:relative; width:250px; height:100%; left:50%; top:80%; margin-left:-95px; z-index:3;
+	animation-name:turtle; 
+	animation-duration:10s; 
+	animation-iteration-count:infinite; 
+	animation-delay:0s; 				/* 재생 전 지연시간 */
+	animation-direction:normal; 		
+	/* normal (정방향), alternate (0~100~0~1000), reverse (역방향)*/
+	animation-play-state:paused;		
+	/* 재생여부 : running (실행) paused (정지) */ 		
+	animation-timing-function:linear;
+	/* 가속도 : ease ,ease-in, ease-out */
+	animation-fill-mode:forwards;
+	/* 시작과 끝의 상태 
+		: forwards (애니메이션 끝날 때 마지막 키프레임 값 유지),
+		  backwards (애니메이션 끝날 때 첫번째 키프레임 값 유지),
+		  both (애니메이션 시작할 땐 첫번째 키프레임 설정값, 끝날 땐 마지막 값 유지),
+	*/
+	}
+.body{position:absolute; display:block; width:200px; z-index:3; top:0; left:0;}
+.arm1{position:absolute; display:block; width:50px; top:78px; left:5px; z-index:2; animation:arm1 infinite 2s;}
+.arm2{position:absolute; display:block; width:50px; top:78px; right:52px; z-index:2; animation:arm2 infinite 2s 1s;}
+
+@keyframes turtle{
+	0%{transform:translate(0,0)}
+	100%{transform:translate(0,-110%)}
+}
+@keyframes arm1{
+	0%{transform:rotate(0); transform-origin:100% 0%;}
+	50%{transform:rotate(45deg)}
+	100%{transform:rotate(0deg)}
+}
+@keyframes arm2{
+	0%{transform:rotate(0); transform-origin:100% 0%;}
+	50%{transform:rotate(-45deg)}
+	100%{transform:rotate(0deg)}
+}
+
+.ani.on{animation-play-state:running;}

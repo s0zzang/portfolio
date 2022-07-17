@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>order form</title>
+	<style type="text/css">
+		*,body{
+			margin:0;padding:0;
+		}
+		#wrapper{
+			width:500px;
+			border:5px solid #82b29e;
+			border-radius:10px;
+			margin:50px auto;
+			font-size:13px;
+		}
+		#orderForm{
+			display:table;
+			border-collapse:collapse;
+			margin:10px auto 20px;
+		}
+		#orderForm h1{
+			font-size:15px;
+			text-align:center;
+			display:table-caption;
+			padding:5px;
+			margin:20px auto;
+			background:#666666;
+			color:#fff;
+		}
+		#orderForm p{
+			display:table-row;
+			border-bottom:1px solid #b6b6b6;
+			padding:5px;
+		}
+		#orderForm label{
+			display:table-cell;
+			padding-left:40px;
+			padding-right:70px;
+		}
+		#orderForm .cellStyle{
+			display:table-cell;
+			padding:5px;
+		}
+		#orderForm #userId{
+			width:80px;
+		}
+		#orderForm #userEmail1,#orderForm #userEmail2{
+			width:100px;
+		}
+		#orderForm #userAdd2,#orderForm #userAdd3{
+			width:220px;
+			display:block;
+		}
+		#orderForm input[type="text"], #orderForm select{
+			margin:5px;
+			width:60px;
+			background:#efefef;
+			padding:3px;
+			border:1px solid #bababa;
+		}
+		#orderForm input[type="button"]{
+			border:2px solid #82b29e;
+			border-radius:15px;
+			background:#fff;
+			color:#333;
+			padding:2px 8px;
+		}
+		#orderForm .btnRow{
+			text-align:center;
+			border-bottom:none;
+			margin:10px auto 5px;
+			display:block;
+			width:150px;
+			position:relative;
+			left:130px;
+		}
+		#btnSubmit{
+			padding:5px 25px;
+			margin:0 auto;
+			background:#82b29e;
+			color:#fff;
+			border:none;
+			border-radius:5px;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<form id="orderForm">
+			<h1 title="h1, display : table-caption"><span>주문자 정보 입력</span></h1>
+			<p>
+				<label title="label, display : table-cell" for="userId">이름</label>
+				<input type="text" id="userId" />
+			</p>
+			<p>
+				<label>휴대폰</label>
+				<span title="display : table-cell" class="cellStyle">
+					<select id="userPhone1">
+						<option value="010">010</option>
+						<option value="010">011</option>
+						<option value="010">016</option>
+						<option value="010">017</option>
+						<option value="010">019</option>
+					</select>
+					-
+					<input type="text" id="userPhone2" />
+					-
+					<input type="text" id="userPhone3" />
+				</span>
+			</p>
+			<p>
+				<label for="userEmail1">이메일</label>
+				<span class="cellStyle">
+					<input type="text" id="userEmail1" />
+					@
+					<input type="text" id="userEmail2" />
+				</span>
+			</p>
+			<p>
+				<label>배송 주소</label>
+				<span class="cellStyle">
+					<input type="text" id="userAdd1" />
+					<input type="button" id="userAddBtn" value="우편번호 찾기" />
+					<input type="text" id="userAdd2" />
+					<input type="text" id="userAdd3" />
+				</span>
+			</p>
+			<p title="p, display:block, position:relative, left:130px" class="btnRow">
+				<input type="submit" id="btnSubmit" value="제품 주문 신청 완료 " />
+			</p>
+		</form>
+	</div>
+</body>
+</html>

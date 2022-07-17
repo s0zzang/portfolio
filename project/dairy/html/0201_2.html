@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0201_2</title>
+	<link rel="stylesheet" type="text/css" href="font.css">
+</head>
+<body>
+	<h1>링크 관련 태그</h1>
+	<h2>a</h2>
+	<ul>
+		<li>목적 : 하이퍼링크 설정</li>
+		<li>속성 : href(경로) / target(새로운 탭으로 열기, 현재 탭에서 열기 등)</li>
+		<li>href : mailto, tel, sms 함께 사용 가능</li>
+		<li>예시 : <a href="../../index.html">소짱홈</a></li>
+		<li>tabindex : 웹접근성 / tab을 통해 포커스하는 기능
+			<ul>
+				<li>tabindex="n" : 번호가 작을 수록 우선순위</li>
+				<li>tabindex="0" : tab으로 포커스 되지 않는 a 태그 외의 태그 선택 가능</li>
+				<li>tabindex="-1" : tab 포커스 해제</li>
+			</ul>
+		</li>
+	</ul>
+	<h4>name anchor</h4>
+		<ul>
+			<li>목적 : 해당 페이지 내 위치 이동</li>
+			<li>사용
+				<ul>
+					<li>이동을 희망하는 태그에 id로 이름 부여</li>
+					<li>a 태그 href="#이름" </li>
+					<li>특징 : #으로 페이지 최상위로 이동</a></li>
+					<li>예시 1 : <a href="#nav">nav로 이동하기</a></li>
+					<li>예시 2 : <a href="#">위로</a></li>
+				</ul>
+			</li>
+		</ul>
+	<h4>하이퍼링크 이미지</h4>
+		<ul>
+			<li>목적 : 이미지를 눌러 링크 이동</li>
+			<li>사용 : &lt;a &lt;img/&gt; /a&gt;</li>
+		</ul>
+	<h4>하이퍼링크 기능을 가졌거나 함께 쓰는 다른 태그</h4>
+		<ul>
+			<li><a href="0205_1.html" target="_blank">이미지맵</a></li>
+			<li><a href="0208_1.html" target="_blank">iframe</a></li>
+		</ul>
+	<hr/>
+	<h2>link</h2>
+	<ul>
+		<li>목적 : 해당 html와 다른 문서(예:style.css)를 연결</li>
+		<li>속성 : rel(관계:stylesheet) / href(경로)</li>
+	</ul>
+	<hr/>
+	<h2 id="nav">nav</h2>
+	<ul>
+		<li>목적 : 문서의 부분 중 현재페이지 내 또는 다른 페이지로의 링크</li>
+	</ul>
+</body>
+</html>

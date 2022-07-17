@@ -1,0 +1,73 @@
+*{
+	border:0px; 
+	/* 익스플로러 : 이미지에 파란색 border 방지 */
+	padding:0;
+	margin:0;
+}
+#wrap ul,li{
+	list-style:none;
+	line-height:0.5em;
+}
+a{
+	text-decoration:none;
+}
+h3,p{
+	margin:10px;
+}
+h3{
+	background:#cbbde3;
+	padding:3px 10px;
+	width:750px;
+}
+#id, #id img, #menu{
+	text-align:center;
+}
+/* 아이디 먼저 쭉, 그리고 클래스 */
+#wrap{
+	width:770px;
+	height:560px;
+	border:1px solid #ccc;
+	box-shadow:3px 3px 10px 2px #ccc;
+	margin-left:8px;
+	background:url(../image/divGrid/images2/grid_back_02.gif)
+}
+#menu{
+	height:210px;
+	width:140px;
+}
+#title{
+	height:140px;
+	width:210px;
+}
+.box3_1{
+	height:210px;
+	width:70px;
+}
+.box3_3{
+	height:210px;
+	width:210px;
+}
+.box1_3{
+	height:70px;
+	width:210px;
+}
+.box1_11{
+	height:70px;
+	width:770px;
+}
+.box1_1{
+	height:70px;
+	width:70px;
+}
+.color1{
+	background:#ffff99;
+}
+.color2{
+	background:#ffcc00;
+}
+.color3{
+	background:#ff9900;
+}
+.fl{
+	float:left;
+}

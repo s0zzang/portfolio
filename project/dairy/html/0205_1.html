@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0205_1</title>
+	<link rel="stylesheet" type="text/css" href="font.css">
+</head>
+<body>
+	<h1>이미지맵을 이용한 하이퍼링크 연결</h1>
+	<p>1개의 이미지에서 좌표를 입력해 여러 개의 하이퍼링크 연결</p>
+	<h2>img</h2>
+	<ul>
+		<li>속성 : usemap="#지도의이름"</li>
+	</ul>
+	<h2>map</h2>
+	<ul>
+		<li>목적 : 지도의 이름 명명, area의 부모태그</li>
+		<li>속성 : name="지도의이름"</li>
+		<li>특징 : img의 usemap="#지도" = map의 name="지도"</li>
+	</ul>
+	<h2>area</h2>
+	<ul>
+		<li>목적 : 지도의 상세값을 지정함</li>
+		<li>속성
+			<ul>
+				<li>coords : 좌표값 (x1,y1,x2,y2)</li>
+				<li>shape : 모양 (사각:rect,원:) </li>
+				<li>href : 이동할 경로</li>
+				<li>alt : 설명값</li>
+			</ul>
+		</li>
+		<li>좌표값
+			<ul>
+				<li>(x1,y1,x2,y2)</li>
+				<li>x1, y1 : 시작점의 x값, y값</li>
+				<li>x2, y2 : 종료점의 x값, y값</li>
+				<li>사각형 : 시작점(좌측상단 꼭짓점) 종료점(우측하단 꼭짓점)</li>
+			</ul>
+		</li>
+	</ul>
+	<h3>예시</h3>
+	<img title="마로니에 북스를 클릭하시오" src="media/banner_map.gif" width="200" height="200" alt="배너" usemap="#bannerImg"/>
+	<map name="bannerImg">
+		<area shape="rect" coords="0,0,100,100" href="http://naver.com" alt="네이버" target="_blank"/>
+		<area shape="rect" coords="100,0,200,100" href="http://instagram.com" alt="인스타그램" target="_blank"/>
+		<area shape="rect" coords="0,100,100,200" href="http://dlth8888.dothome.co.kr/" alt="소짱홈" target="_blank"/>
+		<area shape="rect" coords="100,100,200,200" href="https://www.pinterest.co.kr/" alt="핀테레스트" target="_blank"/>
+	</map>
+</body>
+</html>

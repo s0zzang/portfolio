@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0407_1</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{background:#ffbfbf;}
+		p{margin-left:10px;}
+	</style>
+</head>
+<body>
+	<h1>배열</h1>
+	<p>[요소, 요소, 요소, 요소] <br/>
+	여러개의 요소를 담기 때문에 식별자를 복수로 설정</p>
+	<div class="div if">
+		<h3>생성</h3>
+		<ol>
+			<li>선언과 동시에 값 할당</li>
+			<li>선언 후 값 할당</li>
+			<li>New Array 사용</li>
+		</ol>
+		<p><strong>1. 선언과 동시에 값 할당</strong></p>
+		<ul>
+			<li>const array = [1, 'a', true, function ( ) { }, { }, [1,5] ]</li>
+			<li>자료형과 관계없이 하나의 그릇에 담을 수 있음</li>
+		</ul>
+		<p><strong>2. 선언 후 값 할당</strong></p>
+		<ul>
+			<li>let fruits = [ ]</li>
+			<li>fruits [ 0 ] = ' 사과 '</li>
+			<li>fruits [ 1 ] = ' 복숭아 '</li>
+			<li>fruits [ 2 ] = ' 참외 '</li>
+			<li>fruits [ 3 ] = ' 수박 '</li>
+			<li>결과 : array (4) / 사과, 복숭아, 참외, 수박</li>
+		</ul>
+		<p><strong>3. New Array 사용</strong></p>
+		<ul>
+			<li>let animals=new Array()</li>
+			<li>animals [ 0 ] = ' 2 '</li>
+			<li>animals [ 1 ] = ' 3 '</li>
+			<li>결과 : array (2) / 2, 3</li>
+		</ul>
+	</div>
+	<div class="div">
+		<h3>배열 뒤에 요소 추가</h3>
+		<p><strong>push로 추가</strong></p>
+		<ul>
+			<li>const todos = [ '아침먹기','점심먹기' ]</li>
+			<li>todos.push( '저녁먹기' ) <sub>추가</sub></li>
+			<li>결과 : array (3) / 아침먹기, 점심먹기, 저녁먹기</li>
+		</ul>
+		<p><strong>인덱스로 추가</strong></p>
+		<ul>
+			<li>const foods = [ '삼겹살','쫄순이' ]</li>
+			<li>foods[ 5 ] = ' 배떡 ' <sub>인덱스 5에 추가</sub></li>
+			<li>결과 : array (6) / 삼겹살, 쫄순이, (2), (3), (4), 배떡</li>
+		</ul>
+		<p><strong>length로 추가</strong></p>
+		<ul>
+			<li>const foods = [ '삼겹살','쫄순이' ]</li>
+			<li>foods[ foods.length ] <sub>=2</sub> = ' 배떡 ' <sub>인덱스 2에 추가</sub></li>
+			<li>결과 : array (3) / 삼겹살, 쫄순이, 배떡</li>
+		</ul>
+		<h3>splice : 배열 요소 제거, 수정, 추가</h3>
+		<p><strong>제거</strong></p>
+		<ul>
+			<li>const items = [ '텀블러','아이패드','노트북' ]</li>
+			<li>items.splice(1,2) <sub>인덱스 1부터 2개 삭제</sub></li>
+			<li>결과 : array (1) / 텀블러</li>
+		</ul>
+		<p><strong>수정</strong></p>
+		<ul>
+			<li>splice(수정할 index 번호, 1, '수정 text')</li>
+			<li>const items = [ '텀블러','아이패드','노트북' ]</li>
+			<li>items.splice(2,1,'갤럭시탭') <sub>인덱스 2번째의 첫번째(노트북)를 '갤럭시탭'으로 수정</sub></li>
+			<li>결과 : array (3) / 텀블러, 아이패드, 갤럭시탭</li>
+		</ul>
+		<p><strong>추가</strong></p>
+		<ul>
+			<li>splice(추가할 index 번호, 0, '추가 text')</li>
+			<li>const items = [ '텀블러','아이패드','노트북' ]</li>
+			<li>items.splice(2,0,'갤럭시탭') <sub>인덱스 2번째에 '갤럭시탭'을 추가</sub></li>
+			<li>결과 : array (4) / 텀블러, 아이패드, 갤럭시탭, 노트북</li>
+		</ul>
+	</div>
+</body>
+</html>

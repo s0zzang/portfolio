@@ -1,0 +1,31 @@
+#wrap{
+	width:700px;
+	background:#ffffff;
+}
+#css{
+	width:700px;
+	background:#ffff73;
+}
+header{
+	width:700px;
+	background:#ff99b3;
+}
+#sidebar{
+	width:150px;
+	background:#cc99ff;
+	float:left;
+}
+section{
+	width:400px;
+	background:#ffcc99;
+	float:left;
+}
+#sidebar_ad{
+	width:150px;
+	background:#99b3ff;
+	float:left;
+}
+footer{
+	width:700px;
+	background:#99e6ff;
+}

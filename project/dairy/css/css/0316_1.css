@@ -1,0 +1,53 @@
+*{margin:0;padding:0;}
+img{border:0;}
+html{overflow-y:scroll;}
+body{font:14px '맑은 고딕', sans-serif;}
+.cf:after{content:''; display:block; clear:both;}
+.fl{float:left;}
+
+#title{width:26%; margin:0 auto 20px;}
+#title h1{text-align:center; margin:30px;}
+#title label{padding-left:195px;}
+#title p{background:#ffefbf; margin-top:20px; padding:10px; border-radius:20px;}
+#title .checkbox{display:none; font-size:16px; line-height:1.5;}
+#title input.checkbox1:checked ~ .checkbox{display:block;}
+
+#wrap{width:800px; margin:0 auto;}
+#wrap h1{background:url(../images/table_bg.png) no-repeat left center; height:50px; line-height:50px; padding-left:60px; margin-top:50px;}
+/* 게시판 검색창 */
+#search_wrap fieldset{float:right; margin-bottom:10px; border:0;}
+#search_wrap select,#search_wrap input{vertical-align:middle; font-size:14px; display:block; float:left; margin-right:2px; border:1px solid #aaa;}
+#search_wrap select{height:24px;}
+#search_wrap input{height:22px; line-height:22px; width:150px;}
+#search_wrap button{height:24px; width:60px; border:0; background:#a89dc5; color:#fff; border-radius:5px;}
+#search_wrap button:hover{cursor:pointer; color:#333;}
+
+/* 게시판 목록 */
+#board>div{border-bottom:1px dotted #a89dc5;}
+#board>div:hover{background:#ffffee;}
+#board>div.first{background:#a89dc5; border-radius:10px 10px 0 0; color:#fff;}
+#board>div.first>div{width:100px; line-height:50px; height:50px; text-align:center; float:left;}
+#board>div>div.left{text-align:left;}
+#board>div.first:hover{background:#a89dc5;}
+#board>div input{display:none;}
+#board>div>div{width:100px; line-height:50px; height:50px; text-align:center; float:left;}
+
+/* 게시판 세부목록 */
+.title{width:490px !important; text-align:justify; margin-right:10px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:pointer;}
+.content_wrap{display:none; height:auto !important; width:96% !important; text-align:left !important; padding:2%;}
+.subject{text-align:justify; font-weight:bold; font-size:16px; background:#ffefbf; padding:10px 20px; line-height:26px;}
+.content{text-align:center; padding:10px 20px; background:#fff; line-height:24px; border-bottom:1px solid #ddd;}
+
+/* 페이지네이션, 페이징 */
+#page{position:relative; float:left; left:50%; top:50px;}
+#page>div{position:relative; float:left; left:-180px; padding:2px 10px; margin:0 10px; cursor:pointer;}
+.prev,.next{text-indent:-9999999px;}
+.prev{background:url(../images/left.png) no-repeat center center;}
+.next{background:url(../images/right.png) no-repeat center center;}
+
+/* 라디오 체크 버튼 */
+#board input:checked ~ div.content_wrap{display:block;}
+label{cursor:pointer;}
+#board input:checked ~ div.title>label{cursor:default;}
+/* input 체크된 상태가 되면 형제관계 .content_wrap이 보여라! */
+/* 라디오버튼 뿐만 아니라 id와 for값이 일치하는 label(제목)을 클릭해도 펼쳐짐 */

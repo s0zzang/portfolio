@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0209_2</title>
+	<link rel="stylesheet" type="text/css" href="font.css">
+</head>
+<body>
+	<h2>fieldset</h2>
+	<p>form 태그의 자식 태그들을 한 그룹으로 묶는 태그</p>
+	<ul>
+		<li>사용 : input 아래에서 사용</li>
+		<li>특징 : 포함된 태그들을 box로 묶음</li>
+	</ul>
+	<h2>legend</h2>
+	<p>fieldset box의 title</p>
+	<ul>
+		<li>사용 : fieldset 아래에서 사용</li>
+		<li>특징 : fieldset box 가운데에 text가 위치하도록 함</li>
+	</ul>
+	<h2>label</h2>
+	<p>input의 이름을 붙여주는 태그</p>
+	<ul>
+		<li>사용 : 필요에 의해 input 위에서 사용</li>
+		<li>특징 : radio, checkbox의 경우 label + input = text를 눌러도 선택 가능</li>
+	</ul>
+	<h2>select</h2>
+	<p>option 태그와 함께 사용하여 select box를 삽입</p>
+	<h4>option</h4>
+	<ul>
+		<li>목적 : 보기 콘텐츠 입력</li>
+		<li>사용 : &lt;option value="콘텐츠"&gt; 콘텐츠 &lt;/option&gt;</li>
+	</ul>
+	<h4>예시</h4>
+	<form>
+		<select name="useOption">
+			<option>내가 마실 음료는?</option>
+			<option value="아이스아메리카노">아이스아메리카노</option>
+			<option value="자몽허니블랙티">자몽허니블랙티</option>
+			<option value="토피넛라떼">토피넛라떼</option>
+			<option value="치즈폼딥초코밀크티">치즈폼딥초코밀크티</option>
+		</select>
+	</form>
+	<h2>textarea</h2>
+	<p>사용자가 입력할 수 있는 메시지 상자 </p>
+	<h4>예시</h4>
+	<form>
+		<label for="userMessage">입력하시오.</label>
+		<textarea name="userMessage" cols="30" rows="3"></textarea>
+	</form>
+</body>
+</html>

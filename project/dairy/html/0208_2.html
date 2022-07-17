@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0208_2</title>
+	<link rel="stylesheet" type="text/css" href="font.css">
+	<style type="text/css">
+		table, th, td{
+			border:solid 1px #535362;
+			border-collapse:collapse;
+			padding:3px;
+			text-align:center;
+		}
+	</style>
+	</style>
+</head>
+<body>
+	<h1>table</h1>
+	<ul>
+		<li>구조 : thead, tbody, tfoot</li>
+		<li>장점 : 데이터를 화면에 표시하기 효율적이고 직관적임</li>
+		<li>단점 : 검색엔진(SEO)에 반영되지 않음</li>
+		<li>tr : table row (가로줄)</li>
+		<li>td : table data (한 칸의 데이터)</li>
+		<li>th : table headin (두꺼운 글씨, 가운데 정렬)</li>
+		<li>caption : table의 제목</li>
+	</ul>
+	<h3>table style</h3>
+	<ol>
+		<li>head 태그에 style 태그 삽입</li>
+		<li>head 태그에 link 태그로 css 문서 연결</li>
+		<li>table 태그에 style, border 속성 삽입</li>
+		<li>colgroup : 열 단위 스타일 지정을 위한 태그
+		<table style="background:#cacad9;" border="1">
+			<tr>
+				<td>col style=""</td>
+				<td>스타일 변경</td>
+			</tr>
+			<tr>
+				<td>col span="n"</td>
+				<td>선택할 열의 갯수</td>
+			</tr>
+		</table>
+	</ol>
+	<h3>셀 병합</h3>
+	<ul>
+		<li>행 병합 : rowspan="3" - 나를 포함한 행 3줄을 합칠게</li>
+		<li>열 병합 : colspan="5" - 나를 포함한 데이터 5칸을 합칠게</li>
+	</ul>
+	<h3>웹접근성 : scope</h3>
+	<ul>
+		<li>목적 : 시각장애인용 스크린 리더기에서 데이터를 읽어주는 방향 제시</li>
+		<li>특징 : th 태그에만 사용 가능</li>
+		<li>사용 : th scope="col" : 세로 방향으로 읽기</li>
+	</ul>
+	<h3>예시</h3>
+	<table>
+		<caption>2021-1 중간고사 결과</caption>
+		<colgroup>
+			<col style="background:#ffbfcf; width:40px;"/>
+			<col style="background:#cfffbf; width:70px;"/>
+			<col style="background:#ffefbf; width:70px;"/>
+			<col span="2" style="background:#bfdfff; width:70px;"/>
+		</colgroup>
+		<thead>
+			<tr>
+				<th>no</th>
+				<th>이름</th>
+				<th>국어</th>
+				<th>수학</th>
+				<th>영어</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>1</th>
+				<td>이소정</td>
+				<td rowspan="2">90점</td>
+				<td>100점</td>
+				<td>95점</td>
+			</tr>
+			<tr>
+				<th>2</th>
+				<td>이승하</td>
+				<td colspan="2">95점</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

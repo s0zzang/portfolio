@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0331_2</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{
+			background:#f0dedf;
+			padding:1px 7px;
+		}
+	</style>
+</head>
+<body>
+	<h1>svg</h1>
+	<p>웹용 벡터 이미지</p>
+	<div class="div">
+		<h3>svg 파일 불러오기</h3>
+		<ul>
+			<li><strong>svg 파일 통채로 복붙</strong></li>
+			<li>svg 파일이 길 경우 문제가 됨</li>
+			<li style="list-style:none;"> : rect width="100%" height="100%" fill="#색상"</li>
+			<li style="list-style:none;"> : circle cx="150" cy="100" r="80" fill="#색상"</li>
+			<li style="list-style:none;"> : text x="150" y="125" font-size="60" text-anchor="middle" fill="#색상</li>
+		</ul>
+		<ul>
+			<li><strong>img로 불러오기</strong></li>
+			<li style="list-style:none;"> : img src="images/face2.svg"</li>
+		</ul>
+		<ul>
+			<li><strong>inline로 불러오기</strong></li>
+			<li style="list-style:none;"> svg 파일의 &lt; svg &gt; 태그 전체 복사 붙여넣기</li>
+		</ul>
+		<ul>
+			<li><strong>object embed</strong></li>
+			<li style="list-style:none;"> : object - embed src="loader.svg	- /object</li>
+			<li>data : 경로 / type : image/svg+xml</li>		
+			<li>&lt; object &gt; data="images/face2.svg" type="image/svg+xml"> &lt; /object &gt; </li>
+			<li>object size : viewBox="0 0 500 500" </li>
+
+		</ul>
+		<ul>
+			<li><strong>object data (svg) & img (png)</strong></li>
+			<li>svg 지원 안되는 브라우저를 위한 크로스 브라우징</li>
+			<li style="list-style:none;"> 1) object -  data="loader.svg" type="image/svg+xml</li>
+			<li style="list-style:none;"> 2) img - src="loader.png"</li>
+			<li style="list-style:none;"> 3) p - svg 이미지가 지원되지 않는 브라우저입니다.</li>
+		</ul>
+	</div>
+	<div class="div">
+		<h3>주의점</h3>
+		<ul>
+			<li>미디어쿼리 및 호버 등의 동작은 svg 파일에서 적용해야 함</li>
+			<li>일러스트에서 변경한 이름대로 svg 파일로 불러와짐</li>
+		</ul>
+	</div>
+</body>
+</html>

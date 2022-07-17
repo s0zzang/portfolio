@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0223_3</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{
+			background:#d3ebf5;
+			width:600px;
+			padding:1px 7px;
+		}
+		.div{
+			float:left;
+			width:850px;
+		}
+		sub{
+			color:#999999;
+		}
+	</style>
+</head>
+<body>
+	<h1>list-style</h1>
+	<div class="div">
+		<div>
+			<h3>list</h3>
+			<ul>
+				<li style="list-style-type:circle">list style의 여러 속성을 한 번에 쓸 수 있는 축약속성</li>
+				<li style="list-style-type:circle">선언순서 없음</li>
+				<li style="list-style-type:circle">띄어쓰기 구분</li>
+			</ul>
+		</div>
+		<div>
+			<h3>list-style-type</h3>
+			<ul>
+				<div class="div">
+					<li style="list-style-type:none">none</li>
+					<li style="list-style-type:circle">circle</li>
+					<li style="list-style-type:square">square</li>
+					<li style="list-style-type:lower-alpha">lower-alpha</li>
+					<li style="list-style-type:lower-greek">lower-greek</li>
+				</div>
+				<div class="div">
+					<li style="list-style-type:lower-latin">lower-latin</li>
+					<li style="list-style-type:lower-roman">lower-roman</li>
+					<li style="list-style-type:upper-alpha">upper-alpha</li>
+					<li style="list-style-type:upper-latin">upper-latin</li>
+					<li style="list-style-type:upper-roman">upper-roman</li>
+				</div>
+			</ul>
+		</div>
+	</div>
+	<div class="div">
+		<div>
+			<h3>list-style-image</h3>
+			<p>list-style-image : url (이미지 경로)</p>
+			<ul style="list-style-image:url(image/arrow.gif)">
+				<li>자몽허니블랙티</li>
+				<li>치즈폼초코버블티</li>
+				<li>아이스아메리카노</li>
+			</ul>
+		</div>
+		<div>
+			<h3>list-style-position</h3>
+			<p>list-style-position : inside <sub> 들여쓰기 </sub> outside <sub> 내어쓰기 </sub></p>
+			<ul>
+				<li style="list-style-position:inside">내어쓰기 : 자몽허니블랙티</li>
+				<li style="list-style-position:outside">들여쓰기 : 치즈폼초코버블티</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

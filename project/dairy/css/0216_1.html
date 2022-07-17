@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0216_1</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<link rel="stylesheet" href="css/0216_1.css"/>
+	<link rel="stylesheet" href="css/0216_2.css"/>
+	<style type="text/css">
+		.div1, .div2{
+			float:left;
+			width:850px;
+		}
+		h1{
+			width:600px;
+			background:#cce2b6;
+			padding-left:10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="div1">
+		<h1>css layout</h1>
+		<h3>선택자 종류</h3>
+		<ul>
+			<li>tag</li>
+			<li>class (.)</li>
+			<li>id (#)</li>
+		</ul>
+		<h3>css tip</h3>
+		<ul>
+			<li><strong>wrap</strong>으로 모든 태그를 감싸기</li>
+			<li><strong>크기</strong>로 이름 지정하기 ex) box1_1 : 100 width 100 height</li>
+			<li>#wrap &gt; #header + ( #section &gt; #left .float &gt; .box1_1 ) + #footer  </li>
+		</ul>
+		<h3>예시</h3>
+		<div id="wrap1">
+			<div id="header">header</div>
+			<div id="section">
+				<div id="left" class="fl">
+					<div class="box1_2 color1">left <br/>box1_2 color1</div>
+				</div>
+				<div id="center" class="fl">
+					<div class="box3_1 color2">box3_1 color2</div>
+					<div class="box3_1 color3">box3_1 color3</div>
+				</div>
+				<div id="right" class="fl">
+					<div class="box1_1 color1">box1_1 color1</div>
+					<div class="box1_1 color4">box1_1 color1</div>
+				</div>
+			</div>
+			<div id="footer">footer</div>
+		</div>
+	</div>
+	<div class="div2">
+		<h1>레이아웃에 테두리 적용하기</h1>
+		<h3>유의점 : 테두리 두께만큼 레이아웃의 크기가 늘어남</h3>
+		<div id="wrap">
+			<div id="header"></div>
+			<div id="section">
+				<div id="left" class="fl">
+					<div class="box1_1 color1"></div>
+					<div class="box1_1 color2"></div>
+					<div class="box1_1 color1"></div>
+					<div class="box1_1 color2"></div>
+				</div>
+				<div id="center" class="fl">
+					<div class="box5_2 color3"></div>
+					<div class="box5_2 color4"></div>
+				</div>
+				<div id="right" class="fl">
+					<div class="box1_1 color2"></div>
+					<div class="box1_1 color5"></div>
+					<div class="box1_2 color6"></div>
+				</div>
+			</div>
+			<div id="footer"></div>
+		</div>
+		<br/>
+		<table>
+			<tr>
+				<th colspan="2" id="w200">영역</th>
+				<th id="w500">위치(변화값)</th>
+			</tr>
+			<tr>
+				<td colspan="2">header</td>
+				<td>TOP(-10) LEFT(-10) RIGHT(-10) BOTTOM(-10)</td>
+			</tr>
+			<tr>
+				<td rowspan="3">section</td>
+				<td>box1_1</td>
+				<td>LEFT(-10) RIGHT(-10) BOTTOM(-10)</td>
+			</tr>
+			<tr>
+				<td>box1_2</td>
+				<td>LEFT(-10) RIGHT(-10) BOTTOM(-10)</td>
+			</tr>
+			<tr>
+				<td>box5_2</td>
+				<td>BOTTOM(-10)</td>
+			</tr>
+			<tr>
+				<td colspan="2">footer</td>
+				<td>LEFT(-10) RIGHT(-10) BOTTOM(-10)</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

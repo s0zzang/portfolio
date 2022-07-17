@@ -1,0 +1,9 @@
+*{margin:0; padding:0; list-style:none;}
+body{font-size:16px; line-height:1.5;}
+.tit{margin:100px 0 80px; font-size:70px; text-align:center;}
+.gallery{width:90vw; margin:0 auto;}
+.gallery .list:after{clear:both; content:''; display:block;}
+.gallery .list li{float:left; width:24%; padding:6px;}
+.gallery .list li img{width:100%; border:1px solid #dbdbdb;}
+.footer{height:200px; background:#ddd;}
+.footer p{padding:50px 20px;}

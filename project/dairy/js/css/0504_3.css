@@ -1,0 +1,27 @@
+*{margin:0; padding:0;}
+html{width:100%; height:100%; overflow-y:scroll;}
+body{font-size:12px; font-family:Dotum,Arial; color:#74767a; line-height:120%;}
+a{text-decoration:none; color:#74767a;}
+ul,ol,li{list-style:none;}
+img,input,select{vertical-align:middle;}
+
+#brandVisual{position:relative; width:100%; overflow:hidden; height:500px; background:#8c908c;}
+#brandVisual ul{position:relative; width:100%; height:500px;}
+#brandVisual ul li{position:absolute; width:100%; height:500px;}
+#brandVisual ul li a{display:block; text-indent:-9999px;}
+
+/* li 위치 정렬 */
+#brandVisual .visual_0{left:0; background:#39b8e0 url(../images/0.png) 50% 0 no-repeat;}
+#brandVisual .visual_1{left:100%; background:#9e2ce0 url(../images/1.png) 50% 0 no-repeat;}
+#brandVisual .visual_2{left:100%; background:#44e0c4 url(../images/2.png) 50% 0 no-repeat;}
+
+/* 화살표 */
+.btnImg{position:relative; top:-275px; width:100%;}
+.btnImg .prev{position:absolute; left:100px;}
+.btnImg .next{position:absolute; right:100px;}
+
+/* 버튼 */
+#buttonList:after{content:''; display:block; clear:both;}
+#buttonList li{float:left; background:url(../img/btnVisual.png) no-repeat 0 -16px; width:14px; height:15px; position:relative; left:50%; top:-135px; overflow:hidden; margin:0 5px; cursor:pointer;}
+#buttonList li a{display:block; text-indent:-9999px;}
+#buttonList li.on{background-position:0 0;}

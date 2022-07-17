@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0204_2</title>
+	<link rel="stylesheet" type="text/css" href="font.css">
+</head>
+<body>
+	<h1>video</h1>
+	<h3>속성</h3>
+	<ul>
+		<li>controls : 컨트롤바 (필수)</li>
+		<li>muted : 음소거
+		<li>autoplay : 자동재생 (음소거 상태에서만 가능)
+		<li>poster (="이미지 경로") : 썸네일 이미지
+		<li>width, height : 너비, 높이
+	</ul>
+	<h3>source</h3>
+	<ul>
+		<li>video 하위에서 경로를 적기 위한 <em>단일 태그</em></li>
+		<li>src 속성 : 경로 작성</li>
+	</ul>
+	<h3>track</h3>
+	<ul>
+		<li>video 자막을 넣기 위한 <em>단일 태그</em></li>
+		<li>src 속성 : 자막 파일(vtt) 경로 작성</li>
+		<li>kind 속성 : track의 종류</li>
+		<li>srclang 속성 : 언어 코드</li>
+		<li>labal 속성 : 자막 파일의 제목</li>
+	</ul>
+	<h3>주의점</h3>
+	<ul>
+		<li>익스플로러8 이하 버전은 동영상 재생을 지원하지 않아서 추가 멘트 입력 필요</li>
+		<li>서버에 올려야만 자막 확인 가능</li>
+		<li>자동재생 시 썸네일 이미지 확인 어려움</li>
+	</ul>
+	<h3>IE 8 이하버전인 경우</h3>
+	<p> 주석달기로 아래 내용 입력하기 <p/>
+	<p>	[if lte IE 8]&gt; <br/>
+			&nbsp;1) p태그 : 이 브라우저는 동영상 재생을 지원하지 않습니다. <br/>
+			&nbsp;2) a태그 : href="대체링크" / 페이지이름 <br/>
+			&nbsp;3) img태그 : src="대체 이미지" <br/>
+		&lt;![endif]
+	</p>
+	<h3>예시</h3>
+	<video controls muted poster="../../basic/href/photo/young/images/img4.jpg" width="500" title="자막을 켜주세요.">
+		<source src="media/2.mp4" />
+		<track src="media/subtitle_ko.vtt" kind="subtitles" srclang="ko" label="한국어"/>
+	</video>
+</body>
+</html>

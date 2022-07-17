@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0412_1</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{background:#cae9ff;}
+		p{margin-left:10px;}
+		a{text-decoration:none; color:#ccc;}
+		a:hover{color:#cae9ff;}		
+	</style>
+</head>
+<body>
+	<h1>method 2 <a href="0409_2.html">method 1 바로가기</a></h1>
+	<div class="div">
+		<h3>children ( )</h3>
+		<p>자식을 선택하는 함수</p>
+		<ul>
+			<li>$ ( '.a' ) . children ( ) . css ( 'color','red' )</li>
+		</ul>
+		<h3>next ( )</h3>
+		<p>바로 다음 형제 요소 하나를 선택하는 함수</p>
+		<ul>
+			<li>$ ( '.a' ) . next ( ) . css ( 'color','red' )</li>
+		</ul>
+		<h3>nextAll ( )</h3>
+		<p>바로 다음 형제 요소 모두를 선택하는 함수</p>
+		<ul>
+			<li>$ ( '.a' ) . nextAll ( ) . css ( 'color','red' )</li>
+		</ul>
+		<h3>nextUntill ( '.end' )</h3>
+		<p>바로 다음 형제 요소부터 특정 요소 (n) 전까지 선택하는 함수</p>
+		<ul>
+			<li>$ ( '.a' ) . nextUntil ( '.end' ) . css ( 'color','red' )</li>
+		</ul>
+	</div>
+	<div class="div">
+		<h3>parent ( ' ul ' )</h3>
+		<p>요소의 부모를 선택하는 함수</p>
+		<ul>
+			<li>$ ( '.a' ) . parent ( 'ul' ) . css ( 'color','red' )</li>
+		</ul>
+		<h3>parents ( ' ul ' )</h3>
+		<p>요소의 조상을 선택하는 함수</p>
+		<ul>
+			<li>$ ( '.a' ) . parents ( 'ul' ) . css ( 'color','red' )</li>
+		</ul>
+		<h3>parentsUntil ( ' ul ' )</h3>
+		<p>요소의 조상의 모든 하위 요소를 선택하는 함수 <sub>조상은 포함되지 않음</sub></p>
+		<ul>
+			<li>$ ( '.a' ) . parentsUntil ( 'ul' ) . css ( 'color','red' )</li>
+		</ul>
+		<h3>find ( ' #this ' )</h3>
+		<p>특정 요소를 선택하는 함수</p>
+		<ul>
+			<li>$ ( '.a' ) . find ( '#this' ) . css ( 'color','red' )</li>
+		</ul>
+		<h3>is ( ' #this ' )</h3>
+		<p>특정 요소가 있는지 없는지 확인하는 함수 <sub>true, false 값으로 반환</sub></p>
+		<ul>
+			<li>var el = $ ( '.a' ) . is ( '#this' )</li>
+			<li>if ( el ) { alert ( '있다' ) }</li>
+			<li>else { alert ( '없다' ) }</li>
+		</ul>
+	</div>
+</body>
+</html>

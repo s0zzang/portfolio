@@ -1,0 +1,58 @@
+.div1 #wrap1{
+	width:500px;
+	height:350px;
+	color:#595959;
+}
+.div1 #header{
+	width:500px;
+	height:100px;
+	background:#bbbbbb;
+}
+.div1 #section{
+	width:500px;
+	height:200px;
+}
+.div1 #footer{
+	width:500px;
+	height:50px;
+	background:#bbbbbb;
+}
+.div1 #left{
+	width:100px;
+	height:200px;
+}
+.div1 #center{
+	width:300px;
+	height:200px;
+}
+.div1 #right{
+	width:100px;
+	height:200px;
+}
+.div1 .fl{
+	float:left;
+}
+.div1 .box1_2{
+	width:100px;
+	height:200px;
+}
+.div1 .box3_1{
+	width:300px;
+	height:100px;
+}
+.div1 .box1_1{
+	width:100px;
+	height:100px;
+}
+.div1 .color1{
+	background:#9ccfeb;
+}
+.div1 .color2{
+	background:#c2e184;
+}
+.div1 .color3{
+	background:#fca0a3;
+}
+.div1 .color4{
+	background:#fae7ab;
+}

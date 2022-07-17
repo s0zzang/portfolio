@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0405_3</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{background:#bed5e8;}
+		p{margin-left:10px;}
+	</style>
+</head>
+<body>
+	<h1>자료형 변환</h1>
+	<p>typeof() : 어떤 자료형인지 확인시켜주는 함수</p>
+	<div class="div">
+		<h3> confirm</h3>
+		<p>*자료 - > <strong>불 자료</strong></p>
+		<ul>
+			<li>true or false 로 자료형을 전환함</li>
+			<li>예시 : input=confirm('수락하시겠습니까?') = 확인 <sub>true</sub> 취소 <sub>false</sub></li>
+		</ul>
+		<h3>prompt</h3>
+		<p><strong>문자열 자료</strong> 입력</p>
+		<ul>
+			<li>사용자로부터 입력 받은 문자를 사용</li>
+			<li>prompt(' 사용자에게 보여질 문구 ',' 사용자가 입력할 문구 <sub>공백</sub> ')</li>
+		</ul>
+		<h3>Number</h3>
+		<p>*자료 - > <strong>숫자 자료</strong></p>
+		<ul>
+			<li>Number(변수명) : 사용자가 입력한 변수명 문자/불 자료를 숫자 자료형으로 변환</li>
+			<li>NaN : Not a Number 숫자 + 문자인 경우 </li>
+		</ul>
+	</div>
+	<div class="div">
+		<h3>숫자연산자로 자료 변환</h3>
+		<p>" number " <strong>- 0</strong></p>
+		<ul>
+			<li>typeof( "숫자" ) : string</li>
+			<li>typeof( "숫자" - 0 ) : Number</li>
+		</ul>
+		<p> true <strong>* 1</strong></p>
+		<ul>
+			<li>typeof( true ) : boolean</li>
+			<li>typeof( true * 1 ) : Number <sub> = 1</sub></li>
+		</ul>
+		<p> true <strong>+ 1</strong></p>
+		<ul>
+			<li>typeof( true ) : boolean</li>
+			<li>typeof( true + 1 ) : Number <sub> = 2</sub></li>
+			<li>불과 숫자를 + 연산자로 연결하면 숫자로 변환 + 합산됨</li>
+		</ul>
+	</div>
+</body>
+</html>

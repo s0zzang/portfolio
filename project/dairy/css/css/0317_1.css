@@ -1,0 +1,36 @@
+body{font-family:'맑은 고딕','고딕','굴림'; background:#c1daff;}
+#wrap{width:800px; margin:0 auto; border:10px solid #90afdd; border-radius:30px; padding: 20px 20px 10px 20px; background:#fff;}
+#title{width:35%; margin:0 auto 30px;}
+#title h1{text-align:center;}
+#title label{padding-left:250px;}
+#title p{background:#fff; padding:10px; border-radius:20px;}
+#title .checkbox{display:none; font-size:18px; line-height:1.5;}
+#title input.checkbox1:checked ~ .checkbox{display:block;}
+
+header{width:100%; height:150px; background:#f46075 url(../image/nav2.png) no-repeat right top;}
+header nav{float:left; width:70%; margin-top:50px;}
+nav ul{list-style:none;}
+nav ul li{display:inline-block; font-weight:bold; margin-right:45px;}
+nav ul li a{color:#fff; text-decoration:none;}
+
+section{width:580px; float:left;}
+h2{font-size:1.5em;}
+h3{font-size:1em; display:inline;}
+section article{float:left;width:250px;height:180px; margin:5px;padding:10px;border:1px solid #ccc;overflow-y:scroll;}
+p{line-height:20px; font-size:12px;}
+
+aside{width:200px; float:right; background:#ffefbf; margin-top:80px; text-align:center; border:1px solid darkgreen;}
+aside img{display:block; margin:0 auto;}
+
+footer{width:100%; clear:both; background:#ccc; text-align:center;}
+footer p{padding:20px; font-size:13px;}
+
+.at1:hover{background:#ffbfbf; border:1px solid #ff4c4d;}
+.at2:hover{background:#c8e3b5; border:1px solid #85c058;}
+.at3:hover{background:#ccbbdd; border:1px solid #8e69b4;}
+.at4:hover{background:#a5d6eb; border:1px solid #68badd;}
+.at1,.at2,.at3,.at4{transition-property:background,border;transition-duration:2s;}
+input[type="checkbox"]:checked ~ div.check{height:0;}
+section .check{width:230px; height:220px; overflow:hidden; transition:height 1s;}
+/*  .check height를 0으로 해도 p태그에 텍스트가 있기 때문에 반영되지 않음.
+	.check 박스에 크기를 정하고 overflow:hidden을 주면 체크시 사라짐! */

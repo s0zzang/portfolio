@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0129_1</title>
+	<link rel="stylesheet" type="text/css" href="font.css">
+	<style>
+		div{
+			width:600px;
+			float:float;
+		}
+	</style>
+</head>
+<body>
+	<h1>텍스트 관련 요소</h1>
+	<!-- (노트패드) 키워드 블록설정 & ctrl+shift+a 단축키 -> 입력한 태그로 감싸기-->	
+	<h2>abbr</h2>
+	<p>abbreviation : 약어</p>
+	<ul>
+		<li>목적 : 단어(축약어)에 마우스 오버시 해당 단어 설명</li>
+		<li>예시 : EBS에 놀러갔더니 펭수를 만나 <abbr title="펭수 하이!">펭하</abbr>라고 했다.</li>
+		<li>사용법 : abbr title= "(펭수 하이!)" > (펭하) /abbr</li>
+	</ul>
+	<h2>address</h2>
+	<ul>
+		<li>목적 : 주소, 연락처가 기울여진 글씨로 표시</li>
+		<li>예시 : <address>Address : Dong Soong Dong, Jong Ro Gu, Seoul<br />
+		Phone: 02-3673-0113</address></li>
+	</ul>
+	<h2>em</h2>
+	<ul>
+		<li>목적 : 기울여진 글씨</li>
+		<li>예시 : <em>Address : Dong Soong Dong, Jong Ro Gu, Seoul<br />
+		Phone: 02-3673-0113</em></li>
+	</ul>
+	<p title="유의점">&nbsp;&nbsp;&nbsp;&nbsp; * address와 em을 목적에 따라 적절히 사용해야 함</p>
+	<h2>strong</h2>
+	<ul>
+		<li>목적 : 강조</li>
+		<li>예시 : 센스있는 웹디자이너 <strong>이소정</strong>입니다.</li>
+	</ul>
+		<h2>b</h2>
+	<ul>
+		<li>목적 : 글씨를 굵게</li>
+		<li>예시 : 센스있는 웹디자이너 <b>이소정</b>입니다.</li>
+	</ul>
+	<p title="차이점">&nbsp;&nbsp;&nbsp;&nbsp; * 화면에는 똑같이 표시되지만 시각장애인을 위한 스크린 리더기에서 strong 태그는 크게 읽어주고 <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b태그는 다른 텍스트와 동일하게 읽어줌</p>
+	<h2>sub</h2>
+	<ul>
+		<li>목적 : 첨자(작은 하단 글씨) 표시</li>
+		<li>예시 : 배스킨 라빈스<sub>baskin robbins</sub>에서 내가 제일 좋아하는 맛은 아몬드 봉봉<sub>almond bongbong</sub>이다.</li>
+	</ul>
+	<h2>blockquote</h2>
+	<ul>
+		<li>목적 : 인용구 표시 </li>
+		<li>특징 : 들여쓰기 + 줄바꿈 / 인용구 출처 밝히기 (화면에 표시되지 않음) </li>
+		<li>예시 : 이소정은 <blockquote cite="http://naver.com">오늘 날씨 왕 춥다!</blockquote> 라고 말했다.</li> <br/>
+		<li>사용 : blockquote cite="(http://..)"> 오늘 날씨 왕 춥다!</blockquote> 라고 말했다.</li>
+	</ul>
+	<h2>ins / del</h2>
+	<ul>
+		<li>목적 : 삭제글 및 추가글</li>
+		<li>예시 : <p><del>과제 29일까지 제출</del> <br/><ins>변경 : 과제 31일까지 제출!</ins></p></li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0303_1</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{
+			background:#d5ddec;
+		}
+		p,q{
+			padding-left:20px;
+		}
+		#ex{
+			float:left;
+			clear:left;
+		}
+		#ex div[class^="my"]{
+			float:left;
+			margin-right:10px;
+			background:#ccc;
+			width:50px;
+			height:50px;
+			text-align:center;
+			line-height:3em;
+		}
+		.box1{
+			background:#dddddd;
+			transition:transform 1s ease;
+		}
+		.myClass1:hover .box1{
+			transform:translateX(30px);
+		}
+		.myClass2:hover .box1{
+			transform:translateY(30px);
+		}
+		.myClass3:hover .box1{
+			transform:perspective(50px) translateZ(30px);
+		}
+		.myClass4:hover .box1{
+			transform:rotateX(60deg);
+		}
+		.myClass5:hover .box1{
+			transform:rotateY(60deg);
+		}
+		.myClass6:hover .box1{
+			transform:rotateZ(45deg) perspective(150px);
+		}
+		.myClass7:hover .box1{
+			transform:scaleX(2);
+		}
+		.myClass8:hover .box1{
+			transform:scaleY(2);
+		}
+		.myClass9:hover .box1{
+			transform:scaleZ(2) perspective(150px) translateZ(30px);
+		}
+		ol{
+			margin-top:85px;
+		}
+		dl{
+			margin-left:20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>transform, transition</h1>
+	<div class="div">
+		<div>
+			<h3>transform : 변형</h3>
+			<p>- 축약 가능) transform : scale(2) perspective(100px) rotateX(30deg)</p>
+			<ul>
+				<li><strong>rotate</strong> : 회전각 <sub>50deg</sub></li>
+				<li><strong>origin</strong> : 회전축 <sub>x축 y축</sub> </li>
+				<li style="list-style:none; color:#999;">- 0%, 0% : 좌측상단</li>
+				<li style="list-style:none; color:#999;">- 50%, 50% : 중앙</li>
+				<li style="list-style:none; color:#999;">- 100%, 100% : 우측하단</li>
+				<li><strong>scale</strong> : 크기 <sub>2 / 0.5 등등</sub></li>
+				<li><strong>perspective</strong> : 원근감 <sub>100px</sub></li>
+				<li><strong>translate</strong> : 이동 <sub>100px</sub></li>
+				<li style="list-style:none; color:#999;">- Z : 깊이</li>
+			</ul>
+		</div>
+		<div id="ex">
+			<h3>transform + transition</h3>
+			<div class="myClass1">
+				<div class="box1">1</div>
+			</div>
+			<div class="myClass2">
+				<div class="box1">2</div>
+			</div>
+			<div class="myClass3">
+				<div class="box1">3</div>
+			</div>
+			<div class="myClass4">
+				<div class="box1">4</div>
+			</div>
+			<div class="myClass5">
+				<div class="box1">5</div>
+			</div>
+			<div class="myClass6">
+				<div class="box1">6</div>
+			</div>
+			<div class="myClass7">
+				<div class="box1">7</div>
+			</div>
+			<div class="myClass8">
+				<div class="box1">8</div>
+			</div>
+			<div class="myClass9">
+				<div class="box1">9</div>
+			</div>
+			<ol>
+				<li> translateX(30px)</li>
+				<li> translateY(30px)</li>
+				<li> perspective(50px) translateZ(30px)</li>
+				<li style="list-style:none; color:#ff7373; font-weight:bold;"> * 선언순서 유의하기 : 1) perspective 2) translateZ</li>
+				<li> rotateX(60deg)</li>
+				<li> rotateY(60deg)</li>
+				<li> rotateZ(45deg) perspective(150px)</li>
+				<li> scaleX(2)</li>
+				<li> scaleY(2)</li>
+				<li> scaleZ(2) perspective(150px) translateZ(30px)</li>
+			</ol>
+		</div>
+	</div>
+	<div class="div">
+		<div>
+			<h3>transition : 변화 </h3>
+			<p>- 변화 전후의 <strong>중간단계 생성</strong>하여 <strong>애니메이션처럼</strong> 보이게 함
+			<br/>- transition은 가상선택자가 아닌 변화가 일어나기 전의 태그에 설정함!
+			<br/>-> 가상선택자에 transition 설정 : 마우스 내리면 스르륵 X 뚝딱 O
+			</p>
+			<ul>
+				<li><strong>property</strong> : 변화될 속성 <sub>width, transform</sub></li>
+				<li><strong>duration</strong> : 변화가 지속될 시간 <sub>2s</sub></li>
+				<li><strong>timing-function:</strong> : 변화의 속도 <sub>ease, ease-in, ease-out, linear 등</sub></li>
+			</ul>
+			<h3>transition 적용 범위</h3>
+			<ul>
+				<li><strong>Box model</strong> : width height max-width max-height min-width min-height </li>
+				<li style="list-style:none; white-space:pre" >                       padding margin border-color border-width border-spacing</li>
+				<li><strong>Background</strong> : background-color background-position</li>
+				<li><strong>텍스트</strong> : color font-size font-weight letter-spacing line-height text-indent </li>
+				<li style="list-style:none; white-space:pre" >                       text-shadow vertical-align word-spacing</li>
+				<li><strong>좌표</strong> : top left right bottom</li>
+				<li><strong>기타</strong> : opacity outline-color outline-offset outline-width visibility z-index</li>
+			</ul>
+		</div>
+		<div>
+			<h3>요소를 보였다, 안보였다 하는 3총사</h3>
+			<dl>
+				<dt><strong>1. display</strong></dt>
+				<dd>- block <sub>보이기</sub> none <sub>안보이기</sub></dd>
+				<dd>- none : 처음부터 없던 것처럼 흔적(자리)조차 남지 않고 사라짐</dd>
+				<dt><strong>2. visibility</strong></dt>
+				<dd>- visible <sub>보이기</sub> hidden <sub>안보이기</sub></dd>
+				<dd>- hidden : 자리가 흔적으로 남고, 박스 크기에 영향을 미침</dd>
+				<dt><strong>3. opacity</strong></dt>
+				<dd>- 1 <sub>보이기</sub> 0 <sub>안보이기</sub></dd>
+				<dd>- 0 : 자리가 흔적으로 남고, 박스 크기에 영향을 미침</dd>
+			</dl>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>3D_rotate</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		*{margin:0; padding:0; list-style:none; text-align:center;}
+		body{background:#f6f3eb;}
+		.scene{width:200px; height:260px; perspective:600px;  color:#fff; font-size:2em; margin-left:60px;}
+		.card{width:200px; height:200px; left:50%; top:50%; position:relative; transition:transform 1s; transform-style:preserve-3d;}
+		.card_face{position:absolute; height:100%; width:100%; border-radius:50%; <!-- backface-visibility:hidden; -->}
+		.card_face_front{background:#4359db; font-size:calc(100% * 0.8); line-height:200px; transform:rotateY(0deg);}
+		.card_face_back{background:#ffe25b; font-size:calc(100% * 0.8); line-height:200px; transform:rotateY(180deg);}
+		.card.is-flipped{transform:rotateY(180deg);}
+		.memo{text-align:left; padding:20px; background:#ddd; width:1000px; border-radius:30px; position: absolute; top: 180px; left: 550px; font-size: 1.2em; line-height: 1.5;}
+		.title{position: absolute; top: 80px; background:#ffed93;}
+		.n2{position: absolute; top: 440px;}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script>
+    jQuery(document).ready(function(){
+        $('.card').hover(
+		function(){
+			$(this).addClass('is-flipped')
+		},function(){
+			$(this).removeClass('is-flipped')
+		})
+    });
+    </script>
+</head>
+<body>
+	<div class="scene">
+		<div class="card">
+			<div class="card_face card_face_front"> front</div>
+			<div class="card_face card_face_back"> back</div>
+		</div>
+	</div>
+	<div class="title memo">
+		<h4>구조 : .scene > .card > (.card_face_front + .card_face_back)</h4>
+	</div>
+	<div class="memo">
+		<h4>css</h4>
+		1) scene : perspective:600px <br/>
+		2) card : <strong>transform-style:preserve-3d</strong> transition:transform 1s <br/>
+		3) card_face_front : transform:rotateY(0deg) <br/>
+		4) card_face_back : transform:rotateY(180deg) <br/>
+		5) card.is-flipped <sub>js</sub> : transform:rotateY(180deg) <br/>
+	</div>
+	<div class="memo n2">
+		<h4>js</h4>
+		1) $('.card').hover  <br/>
+		2) $(this).addClass('is-flipped') <br/>
+		3) $(this).removeClass('is-flipped') <br/>
+	</div>
+</body>
+</html>

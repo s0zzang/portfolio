@@ -1,0 +1,6 @@
+html{font-size:16px; line-height:1.5;}
+body{background#fff; color:#000; min-width:960px;}
+.dummy{max-width:32em; padding:6em 0; margin:auto;}
+.go-top{width:48px; height:48px; display:none; position:fixed; bottom:48px; right:48px; text-align:center; color:#666; font-size:2.5em;}
+.go-top svg{transform:rotate(-45deg);}
+.go-top .fas{width:48px; height:48px; background:#666; display:inline-block; line-height:48px;}

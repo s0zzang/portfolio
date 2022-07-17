@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0217_2</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<link rel="stylesheet" href="css/0217_2.css"/>
+	<style type="text/css">
+		h3{
+			width:600px;
+			background:#ff9999;
+			padding-left:10px;
+			color:#fff;
+		}	
+		h1{
+			width:600px;
+			background:#9ebcd8;
+			padding:5px;
+			padding-left:10px;
+			color:#fff;
+		}	
+		.border{
+			border-radius:0 30px;
+			border:4px solid #9ebcd8; 
+			width:300px; 
+			text-align:center; 
+			margin-left:40px; 
+			margin-top:-10px;
+			color:#666666;
+		}
+		.div{
+			float:left;
+			width:850px; position:relative;
+		}
+		.tip{position:absolute; border-top:20px solid #9ebcd8; border-right:13px solid transparent; border-left:13px solid transparent; top:522px; left:520px;}
+	</style>
+</head>
+<body>
+	<div class="div">
+		<div>
+			<h1>border</h1>
+			<ul>
+				<li>thin : 얇게</li>
+				<li>medium : 중간</li>
+				<li>thick : 두껍게</li>
+				<li>npx</li>
+			</ul>
+		</div>
+		<div>
+			<h1>border style</h1>
+			<p>1) border 적용 순서 : top - right - bottom - left <br/>
+			2) 선의 모양을 지정해야만 테두리 표시됨</p>
+			<table>
+				<tr>
+					<td><div id="tbox01">none</div></td>
+					<td><div id="tbox02">solid</div></td>
+					<td><div id="tbox03">dotted</div></td>
+				</tr>
+				<tr>
+					<td><div id="tbox04">dashed</div></td>
+					<td><div id="tbox05">double</div></td>
+					<td><div id="tbox06">groove</div></td>
+				</tr>
+				<tr>
+					<td><div id="tbox07">ridge</div></td>
+					<td><div id="tbox08">inset</div></td>
+					<td><div id="tbox09">outset</div></td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<h1>outline</h1>
+			<dl>
+				<dt>속성</dt>
+				<dd>- width, color </dd>
+				<dd>- style : border와 동일</dd>
+				<dd>- offset : border와 얼만큼 떨어질지 수치 입력</dd>
+			</dl>
+			<p id="outline">outline offset = 10px</p>
+		</div>
+	</div>
+	<div class="div">
+		<h1>border 효과</h1>
+		<h3>radius : 둥근 모서리</h3>
+		<dl>
+			<dt>사용방법</dt>
+			<dd>border - radius : 수치 px </dd>
+		</dl>
+		<dl>
+			<dt>적용순서</dt>
+			<dd>- 4개 : top left - top right - bottom right - bottom left</dd>
+			<dd>- 3개 : top left - top right, bottom left - bottom right</dd>
+			<dd>- 2개 : top left, bottom right - top right, bottom left <sub>대각선 적용</sub></dd>
+		</dl>
+		<p class="border">border-radius:0 30px</p>
+		<h3>collapse : 단일 테두리 설정 (table)</h3>
+		<dl>
+			<dt>사용방법</dt>
+			<dd>border - collapse : collapse </dd>
+		</dl>
+		<h1>border tip</h1>
+		<dl>
+			<dt>사용방법</dt>
+			<dd>top 방향 tip : bottom <sub>color</sub> right, left <sub>transparent</sub></dd>
+			<dd>bottom 방향 tip : top <sub>color</sub> right, left <sub>transparent</sub></dd>
+			<dd>right 방향 tip : left <sub>color</sub> top, bottom <sub>transparent</sub></dd>
+			<dd>left 방향 tip : right <sub>color</sub> top, bottom <sub>transparent</sub></dd>
+			<dd>요소에 설정하는 경우, position:absolute 설정</dd>
+		</dl>
+		<p class="tip"></p>
+	</div>
+</body>
+</html>

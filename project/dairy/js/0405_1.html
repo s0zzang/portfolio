@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0405_1</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{background:#bed5e8;}
+		p{margin-left:10px; font-weight:bold;}
+	</style>
+</head>
+<body>
+	<div class="div">
+		<h1>키워드</h1>
+		<h3>es5</h3>
+		<p>var</p>
+		<ul>
+			<li>과거(es5) 자바스크립트 시절 사용하던 키워드</li>
+			<li>애매한 범위, 중복 선언 가능 <sub>{ }<sub>블록</sub> 안에서 블록 밖의 변수에 영향을 받음</sub></li>
+			<li>es6 : const, let 키워드 등장</li>
+		</ul>
+		<h3>es6</h3>
+		<p>상수 키워드 : const</p>
+		<ul>
+			<li>상수명은 한 문서에 한 번만 사용 <sub>= css ID, 중복선언 불가</sub></li>
+			<li>상수명 선언시, 값 할당 필수 <sub>한 문서에 한 번만 선언할 수 있기 때문에</sub></li>
+			<li>할당된 값 수정 불가능 <sub>상수이기 때문에</sub></li>
+		</ul>
+		<p>변수 키워드 : let</p>
+		<ul>
+			<li>변수명은 한 문서에 한 번만 사용</li>
+			<li>할당된 값 수정 가능 <sub>방법 : (let 없이) 변수명 : 값</sub></li>
+			<li>변수명 지정시, 값 할당 필수 <sub>한 문서에 한 번만 선언할 수 있기 때문에</sub></li>
+		</ul>
+	</div>
+	<div class="div">
+		<h1>변수에 적용이 가능한 연산자</h1>
+		<h3>복합대입연산자</h3>
+		<ul>
+			<li>+= : 기존 변수값에 값 더하기 </li>
+			<li style="list-style:none;">a += 1 => a = a+1 </li>
+			<li>-= : 기존 변수값에 값 빼기 </li>
+			<li style="list-style:none;">a -= 1 => a = a-1 </li>
+			<li>*= : 기존 변수값에 값 곱하기 </li>
+			<li style="list-style:none;">a *= 1 => a = a*1 </li>
+			<li>/= : 기존 변수값에 값 나누기 </li>
+			<li style="list-style:none;">a /= 1 => a = a/1 </li>
+			<li>%= : 기존 변수값의 나머지 구하기 </li>
+			<li style="list-style:none;">a %= 1 => a = a%1 </li>
+		</ul>
+		<h3>증감연산자</h3>
+		<ul>
+			<li>변수 ++ <sub>후위</sub> : 기본 변수 값 + 1 <sub>기존 변수값 리턴, 다음 턴에 + 1</sub></li>
+			<li>변수 -- <sub>후위</sub> : 기본 변수 값 - 1 <sub>기존 변수값 리턴, 다음 턴에 - 1</sub></li>
+			<li>변수 ++ <sub>전위</sub> : 1 + 기본 변수 값 <sub>+ 1된 변수값 리턴</sub></li>
+			<li>변수 -- <sub>전위</sub> : 1 - 기본 변수 값 <sub>- 1된 변수값 리턴</sub></li>
+		</ul>
+	</div>
+</body>
+</html>

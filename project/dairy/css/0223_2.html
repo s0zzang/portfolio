@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0223_2</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{
+			background:#ecccce;
+			width:600px;
+			padding:1px 7px;
+		}
+		.div{
+			float:left;
+			width:850px;
+		}
+		sub, a{
+			color:#999999;
+			font-size:0.9em;
+		}
+		p{
+			padding-left:20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>text / 문단과 관련된 속성</h1>
+	<div class="div">
+		<div>
+			<h3>text-align</h3>
+				<p>- left <sub>좌측 정렬</sub> right <sub>우측 정렬</sub> center <sub>중앙 정렬</sub> justify <sub>좌우 정렬</sub><br/>
+				- <strong>블럭요소</strong>만 적용됨 </p>
+				<ul>
+					<li>img 요소에 적용하기 : 1) 부모<sub>블럭</sub>에게 text-align 적용</li>
+					<li style="list-style:none;"><span style="color:#fff;">img 요소에 적용하기 :</span> 2) img에게 + display:block + margin:auto</li>
+					<li>인라인 요소에 적용하기 : + display:block + margin:auto + text-align:center</li>
+				</ul>
+		</div>
+		<div>
+			<h3>line-height : 행간</h3>
+			<p style="line-height:1.5em;">
+				- line-height 1.5em 적용 : 유산균 먹기
+			</p>
+		</div>
+		<div>
+			<h3>letter-spacing : 자간</h3>
+			<p>
+				- letter-spacing 1.2em 적용 : 
+				<span style="letter-spacing:1.2em;">유산균먹기</span>
+			</p>
+			<p>
+				- letter-spacing -2px 적용 : 
+				<span style="letter-spacing:-2px;">유산균먹기</span>
+			</p>
+		</div>
+		<div>
+			<h3>word-spacing : 단어간</h3>
+			<p>
+				- word-spacing 1.5em 적용 : 
+				<span style="word-spacing:1.5em;">유산균 먹기</span>
+			</p>
+		</div>
+		<div>
+			<h3>direction : 글의 방향</h3>
+			<ul>	
+				<li>rtl : 오른쪽 정렬 right to left</li>
+				<li>ltr : 왼쪽 정렬 left to right</li>
+			</ul>	
+		</div>
+		<div>
+			<h3>white-space</h3>
+			<p>화면 크기/box 크기에 따라 자동으로 줄바꿈되는 속성을 제어함</p>
+			<ul>	
+				<li>wrap : 줄바꿈 O</li>
+				<li>nowrap : 줄바꿈 X</li>
+				<li>pre : 노트패드에 입력한 enter, tab, 띄어쓰기 반영</li>
+			</ul>
+			<p>text가 box보다 클 때 말줄임표 나오게 하기</p>
+			<ul>
+				<li>white-space:nowrap : 자동 줄바꿈 안되게하기</li>
+				<li>overflow:hidden : 박스를 넘은 컨텐츠 안보이게 하기</li>
+				<li>text-overflow:ellipsis : 말줄임표 생성하기</li>
+			</ul>
+		</div>
+	</div>
+	<div class="div">	
+		<div>	
+			<h3>text-transform : 소문자 or 대문자로</h3>	
+			<p>text-transform : uppercase <sub> 대문자로 </sub> lowercase <sub> 소문자로 </sub></p>	
+			<ul>	
+				<li>uppercase : strength &gt; <span style="text-transform:uppercase;"> strength</span> </li>	
+				<li>lowercase : STRENGTH &gt; <span style="text-transform:lowercase;"> strength</span> </li>	
+			</ul>	
+		</div>
+		<div>	
+			<h3>text-decoration : line 관련</h3>	
+			<p>none <sub> 줄없음 </sub> line-through <sub> 취소선 </sub> overline <sub> 밑줄을 글 위로 </sub> color <sub> 밑줄 색상 지정 </sub></p>	
+			<ul>	
+				<li>none : <a href="#">배떡로제떡볶이</a> &gt; <a href="#" style="text-decoration:none;">배떡로제떡볶이</a></li>	
+				<li>line-through : 배떡로제떡볶이 &gt; <span style="text-decoration:line-through;">배떡로제떡볶이</span></li>	
+				<li>line-overline : 배떡로제떡볶이 &gt; <span style="text-decoration:overline;">배떡로제떡볶이</span></li>	
+				<li>text-decoration-color : 배떡로제떡볶이 &gt; <a href="#" style="text-decoration-color:#ffb299;">배떡로제떡볶이</a></li>	
+			</ul>	
+		</div>
+		<div>	
+			<h3>text-indent : 들여쓰기</h3>	
+			<ul>
+				<li>검색엔진 최적화 위해 사용 <sub>text-indent:-9999999px;</sub></li>
+				<li>text-indent 10% 적용</li>
+			</ul>
+			<p style="text-indent:10%; width:17%; background:#e8e8e8;">배떡로제떡볶이</p>
+		</div>
+
+	</div>	
+</body>
+</html>

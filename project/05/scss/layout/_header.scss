@@ -1,0 +1,83 @@
+header{
+    width:100%;
+    height:94vh;
+    background-image:url(../images/header-image.png);
+    background-size: cover;
+    background-position: left bottom;
+    position:relative;
+    border-radius: 20px;
+    @include transition;
+        #logo-text{
+        position:absolute;
+        left:7rem;
+        top:4rem;
+        font-size:5.6rem;
+        color:$color-white;
+        letter-spacing:-.1rem;
+        font-family: 'Lato', sans-serif;
+        animation:moveInLeft 1s 2s 5 backwards;
+        @include transition;
+        @include mq('small-screen-2'){
+            img{width:80%;}
+        }
+        @include mq('small-screen-3'){
+            img{width:60%;}
+        }
+        @include mq('small-screen-4'){
+            left:4rem;
+            top:3rem;
+        }
+    }
+    #header-text{
+        position:absolute;
+        left:7rem;
+        bottom:10%;
+        color:$color-white;
+        letter-spacing: 0rem;
+        font-weight: 700;
+        @include transition;
+        @include mq('small-screen-2'){
+            img{width:80%;}
+        }
+        @include mq('small-screen-3'){
+            img{width:70%;}
+        }
+        @include mq('small-screen-4'){
+            left:4rem;
+        }
+        &-main{
+            font-size:7.2rem;
+            line-height:7.2rem;
+            animation:moveInRight 1s 1s backwards;
+            &:after{
+                content:''; 
+                display:inline-block;
+                background:url(../images/header_01.gif) no-repeat;
+                background-size: 50%;
+                width:200px;
+                height:200px;
+                position:absolute;
+                top:39%; 
+                left:73%;
+                @include transition;
+                @include mq ('small-screen-2'){
+                    top: 0%;
+                    left: 78%;
+                }
+                @include mq ('small-screen-3'){
+                    background-size: 45%;
+                    top: 15%;
+                    left: 67%;
+                }
+                @include mq ('small-screen-4'){
+                    top: -5%;
+                }
+            }
+        }
+        &-sub{
+            margin-top:1rem;
+            font-size:2.4rem;
+            animation:moveInLeft 1s 1.5s backwards;
+        }
+    }
+}

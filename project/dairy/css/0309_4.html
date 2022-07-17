@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0309_4</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{
+			background:#f0dedf;
+			padding:1px 7px;
+		}
+	</style>
+</head>
+<body>
+	<h1>상대 단위</h1>
+	<p>절대 단위 : px</p>
+	<div class="div">
+		<h3>em</h3>
+		<ul>
+			<li>대문자 'M' 너비 기준으로 한 단위</li>
+			<li>기준 : 부모요소 </li>
+			<li>1em : 약 16px </li>
+		</ul>
+		<h3>rem</h3>
+		<ul>
+			<li>대문자 'M' 너비 기준으로 한 단위</li>
+			<li>기준 : 최상위(루트) 요소 </li>
+		</ul>
+		<h3>%</h3>
+		<ul>
+			<li>기준 : 자신을 감싼 부모 </li>
+		</ul>
+		<h3>vh</h3>
+		<ul>
+			<li>viewport height</li>
+			<li>기준 : 브라우저 높이</li>
+			<li>100vh : 브라우저 높이 100%</li>
+			<li>50vh : 브라우저 높이 50%</li>
+		</ul>
+		<h3>vw</h3>
+		<ul>
+			<li>viewport width</li>
+			<li>기준 : 브라우저 너비</li>
+			<li>100vw : 브라우저 너비 100%</li>
+			<li>50vw : 브라우저 너비 50%</li>
+		</ul>
+	</div>
+	<div class="div">
+		<h3>vmin</h3>
+		<ul>
+			<li>viewport minimum</li>
+			<li>기준 : 웹브라우저 너비와 높이 중 <strong>더 작은</strong> 값</li>
+			<li>예시 : 768x900 5vmin = 768x5/100 = 38.4px</li>
+		</ul>
+		<h3>vmax</h3>
+		<ul>
+			<li>viewport maximum</li>
+			<li>기준 : 웹브라우저 너비와 높이 중 <strong>더 큰</strong> 값</li>
+			<li>예시 : 768x900 5vmin = 900x5/100 = 45px</li>
+		</ul>
+	</div>
+</body>
+</html>

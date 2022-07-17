@@ -1,0 +1,43 @@
+h2{
+    font-family: 'S-CoreDream-5Medium', sans-serif;
+    width:35%;
+    padding:1rem 0;
+    font-size:4rem;
+    text-transform: uppercase;
+    background:linear-gradient(to left, $color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include transition;
+    &:hover{
+        padding-left:1.5rem;
+    }
+    @include mq('small-screen-1'){
+        width:100%;
+    }
+    @include mq('small-screen-2'){
+        width:100%;
+    }
+    @include mq('small-screen-3'){
+        width:100%;
+    }
+    @include mq('small-screen-4'){
+        display:none;
+    }
+}
+h2.xs{
+    display:none;
+    @include transition;
+    @include mq('small-screen-4'){
+        display:block;
+    } 
+}
+h3{
+    padding:2rem 0 1rem;
+    color:$color-gray-dark;
+    font-size:2rem;
+    font-weight:700;
+    text-transform: uppercase;
+}
+p{
+    font-weight:300;
+}

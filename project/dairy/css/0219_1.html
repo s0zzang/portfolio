@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0219_1</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{
+			width:600px;
+			background:#c7dcc9;
+			padding-left:18px;
+			padding-top:5px;
+			padding-bottom:3px;
+			margin-left:5px;
+			text-weight:bold;
+		}
+		.exception{
+			background:#fbe9d9;
+		}
+		body{
+			line-height:150%;
+		}
+		sub{
+			color:#999999;
+		}
+		p{
+			margin-left:23px;
+		}
+		.wrap{
+			width:850px;
+			float:left;
+		}
+		a{
+			text-decoration:none;
+			color:#ccc;
+		}
+		a:hover{
+			color:#c7dcc9;
+		}
+	</style>
+</head>
+<body>
+	<h1>선택자 2 <a href="0218_1.html">선택자 1 바로가기</a></h1>
+	<div class="wrap">
+		<div>
+			<h3>가상 클래스 선택자</h3>
+			<p>: 앞으로 벌어질 상황을 선택하여 스타일 지정</p>
+			<ul>
+				<li>방법 : a : 종류 {style}</li>
+				<li>종류 : link <sub>(방문 안했던 링크)</sub> visited <sub>(방문했던 링크)</sub> <br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;hover <sub>(마우스 오버했을 때)</sub> active <sub>(마우스 클릭했을 때)</sub> </li>
+			</ul>
+		</div>
+		<div>
+			<h3>가상 클래스 선택자 : 동적</h3>
+			<p>: 양식의 입력칸 등에 클릭이나 탭을 했을 때</p>
+			<ul>
+				<li>방법 : input : focus {style}</li>
+				<li>종류 : 로그인 ID 클릭(tab) 했을 때 테두리, 배경 지정 </li>
+			</ul>
+		</div>
+		<div>
+			<h3>가상 클래스 선택자 : 내용 추가</h3>
+			<p>- 추가된 내용은 화면 드래그 시 선택되지 않음 <br/>
+			- 기본 input 요소 아이콘이 아닌 내가 원하는 아이콘 넣을 때, <br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;line 등에 사용 (이미지 넣는 방법 : 3월에 배움)</p>
+			<ul>
+				<li>앞 : tag:before { content : '내용' }</li>
+				<li>뒤 : tag:after { content : '내용' }</li>
+			</ul>
+		</div>
+	</div>	
+	<div class="wrap">
+		<div>
+			<h3>전체 선택자 : *</h3>
+			<p>- 브라우저별 기본값이 다르기 때문에 0으로 세팅 (초기화) 하고 시작할 때 주로 사용 <br/>
+			- 선택자 우선순위에 따라 body(2점)보다 점수가 낮음</p>
+		</div>
+		<div>
+			<h3>그룹 선택자</h3>
+			<p>: 같은 스타일을 적용할 선택자들을 동시에 선택</p>
+			<ul>
+				<li>방법 : tag1, tag2, tag3 { style }</li>
+			</ul>
+		</div>
+		<div>
+			<h3>n번째 요소 선택</h3>
+			<p>: 여러번 쓰인 태그의 n번째 요소만 선택하기 </p>
+			<ul>
+				<li>방법 1 : tag : first-child</li>
+				<li>방법 2 : tag : nth-child (n)</li>
+				<li>종류 : (even) <sub>짝수</sub> (2n) <sub>2번째 요소마다 - 짝수</sub> (3n) <sub>3번째 요소마다 - 홀수</sub></li>
+			</ul>
+		</div>
+		<div>
+			<h3>첫번째 글자/줄 선택</h3>
+			<ul>
+				<li>글자 : tag:first-letter</li>
+				<li> 줄 : tag:first-line</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

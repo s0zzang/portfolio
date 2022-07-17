@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0202_1</title>
+	<link rel="stylesheet" type="text/css" href="font.css">
+</head>
+<body>
+	<h1>img</h1>
+	<ul>
+		<li>목적 : html 파일에 이미지 넣기</li>
+		<li>속성 : src(경로), alt(부연설명), title </li>
+		<li>특징 : 단일태그 </li>
+	</ul>
+	<h3>img에서만 쓰이는 alt의 3가지 용법</h3>
+	<ol>
+		<li>웹접근성 : 시각장애인용 스크린리더기에서 읽음</li>
+		<li>SEO (검색엔진최적화) : 이미지 검색상위 노출</li>
+		<li>대체텍스트 : 이미지가 엑박 뜰 때 대신 출력</li>
+	</ol>
+	<h3>유의점</h3>
+	<ul>
+		<li>주의 : 이미지 삽입시 html은 자동적으로 확장자를 px로 인식하기 때문에 단위 쓰지 말 것!</li>
+		<li>* css : 확장자를 인식할 수 없는 경우를 대비해 px를 꼭 써야함</li>	
+	</ul> <br/><hr/><br/>
+	<h1>figure, figcaption</h1>
+	<ul>
+		<li>figure : 본문 내용 안에 포함된 첨부자료를 삽입하기 위한 태그</li>
+		<li>figcaption : figure 요소의 제목</li>
+	</ul>
+	<h3>목적 : 웹접근성</h3>
+		<ol>
+			<li>첨부자료에 대한 설명을 컴퓨터에게 알려줘 검색 일치도(정확성)을 높임</li>
+			<li>삽화이미지 임을 컴퓨터에게 알려주기 위해</li>
+		</ol>
+	<h3>특징</h3>
+		<ul>
+			<li>img 태그 상위에만 사용됨</li>
+			<li>사용시 자동 줄바꿈</li>
+			<li>figcaption : 1개의 figure 안에 1개의 캡션만 가능</li>
+			<li>figcaption : 이미지 위아래 상관업이 사용 가능</li>
+		</ul>
+	<h3>예시</h3>
+	<figure>
+		<img src="../../basic/href/photo/young/images/img4.jpg" width="300" title="짜장쓰" alt="짜장이가 누워서 쳐다보는 사진"/>
+		<figcaption>누워서 카메라를 응시하는 짜장이</figcaption>
+	</figure>
+</body>
+</html>

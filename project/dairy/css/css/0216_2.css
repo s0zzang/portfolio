@@ -1,0 +1,92 @@
+.div2 #wrap{
+	width:700px;
+	height:550px;
+}
+.div2 #header{
+	width:680px;
+	height:80px;
+	background:#999999;
+	border:10px solid #000;
+}
+.div2 #section{
+	width:700px;
+	height:400px;
+}
+.div2 #footer{
+	width:680px;
+	height:40px;
+	background:#999999;
+	border-left:10px solid #000;
+	border-right:10px solid #000;
+	border-bottom:10px solid #000;
+}
+.div2 #left{
+	width:100px;
+	height:400px;
+}
+.div2 #center{
+	width:500px;
+	height:400px;
+}
+.div2 #right{
+	width:100px;
+	height:400px;
+}
+.div2 .fl{
+	float:left;
+}
+.div2 .box1_1{
+	width:80px;
+	height:90px;
+	border-left:10px solid #000;
+	border-right:10px solid #000;
+	border-bottom:10px solid #000;
+}
+.div2 .box5_2{
+	width:500px;
+	height:190px;
+	border-bottom:10px solid #000;
+}
+.div2 .box1_2{
+	width:80px;
+	height:190px;
+	border-left:10px solid #000;
+	border-right:10px solid #000;
+	border-bottom:10px solid #000;
+}
+.div2 .color1{
+	background:#ff99b3;
+}
+.div2 .color2{
+	background:#ffe599;
+}
+.div2 .color3{
+	background:#7373ff;
+}
+.div2 .color4{
+	background:#ffffff;
+}
+.div2 .color5{
+	background:#bfe074;
+}
+.div2 .color6{
+	background:#f7bd8a;
+}
+.div2 table, td, th{
+	border:1px solid #000;
+	border-collapse:collapse;
+	font-size:17px;
+}
+.div2 th, td{
+	padding:10px;
+}
+.div2 th{
+	background:#bedcf8;
+	font-size:20px;
+}
+.div2 #w200{
+	width:150px;
+}
+.div2 #w500{
+	width:400px;
+}

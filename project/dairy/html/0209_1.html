@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0209_1</title>
+	<link rel="stylesheet" type="text/css" href="font.css">
+	<style type="text/css">
+		#fieldset1{
+			width:850px;
+			background:#fff0e1;
+			float:left;
+			margin:20px;
+			margin-top:10px;
+		}
+		#fieldset2{
+			width:850px;
+			background:#e8f3ff;
+			float:left;
+			margin:20px;
+			margin-top:10px;
+			line-height:30px;
+		}
+		input:focus{
+			background:#eeeeee;
+			border:1px solid #eeeeee; 
+		}
+	</style>
+</head>
+<body>
+	<h1>form</h1>
+	<p>데이터를 입력하는 input의 부모태그</p>
+	<ul>
+		<li>action 속성 : 서버 프로그램 URL</li>
+		<li>method 속성 : 입력된 데이터의 노출 방식
+			<ul>
+				<li>get : 노출 - 쇼핑, 공유해야되는 항목들</li>
+				<li>psot : 비공개 - 로그인 정보</li>
+			</ul>
+		</li>
+	</ul>
+	<h1>input</h1>
+	<p>type에 따라 특정 데이터를 입력/선택 할 수 있는 태그</p>
+	
+	<fieldset id="fieldset1">
+		<legend><strong>type의 속성값</strong></legend>
+		<form action="#">
+			<p><strong>text : </strong> 문자 <input type="text" /></p>
+			<p><strong>password : </strong> 비밀번호 <input type="password" required="required"/> - 입력시 *로 표시됨</p>
+			<p><strong>email : </strong> 이메일 <input type="email"/> - @ 미입력시 제출 불가능</p>
+			<p><strong>tel : </strong> 전화번호 <input type="tel"/> - 아이폰 : 클릭시 숫자 키패드</p>
+			<p><strong>date : </strong> 날짜 <input type="date"/></p>
+			<p><strong>datetime-local : </strong> 일시 <input type="datetime-local"/></p>
+			<p><strong>month : </strong> 연, 월 <input type="month"/></p>
+			<p><strong>week : </strong> 주간 <input type="week"/></p>
+			<p><strong>time : </strong> 시, 분 <input type="time"/></p>
+			<p><strong>color : </strong> 색상선택 <input type="color"/></p>
+			<p><strong>number : </strong> 숫자선택 <input type="number" value="5"/> - value를 통해 시작값 지정 </p>
+			<p><strong>search : </strong> 검색 <input type="search"/> - text와 차이점 : 지우기(X) 버튼 유무 </p>
+			<p><strong>url : </strong> url 입력 <input type="url"/> - '.com' 형식으로 필수 입력 </p>
+			<p><strong>range : </strong> 범위 <input type="range" min="10" max="50" step="10" value="30"/> - value(시작값) min(최소값) max(최대값) step(단위)</p>
+			<p><strong>file : </strong> 파일 업로드 <input type="file" /></p>
+			<p>
+			<strong>submit : </strong> 제출 <input type="submit" /> &nbsp;
+			<strong>reset : </strong> 초기화 <input type="reset" />
+			</p>
+			<p>
+			<strong>radio : </strong> 단일선택
+			<label><input type="radio" name="option1"/>로제떡볶이</label>
+			<label><input type="radio" name="option1"/>감바스</label> - label : text 눌러서 선택 가능
+			</p>
+			<p>
+			<strong>checkbox : </strong> 복수선택
+			<label><input type="checkbox" name="option1"/>로제떡볶이랑</label>
+			<label><input type="checkbox" name="option2"/>감바스랑</label> - label : text 눌러서 선택 가능
+			</p>
+		</form>
+	</fieldset>
+	<fieldset id="fieldset2">
+		<legend><strong>추가 속성</strong></legend>
+		<ul>
+			<li><strong>name : </strong>서버 참조값</li>
+			<li><strong>value : </strong>서버 전송값</li>
+			<li><strong>autofocus : </strong>웹접속시 자동으로 입력할 수 있는 상태</li>
+			<li><strong>autocomplete : </strong>자동완성 = "on / off"</li>
+			<li><strong>checked  : </strong>웹접속시 선택된 상태 *radio, checkbox 속성에서 사용</li>
+			<li><strong>disabled : </strong>비활성화</li>
+			<li><strong>readonly : </strong>쓰기금지 *text 속성에서만 사용</li>
+			<li><strong>required  : </strong>필수입력</li>
+			<li><strong>title  : </strong>text가 없는 경우 스크린 리더기를 위해 입력</li>
+			<li><strong>placeholder : </strong>클릭하면 없어지는 text 삽입</li>
+			<li><strong>pattern  : </strong>특정 패턴(ex:전화번호, 주민번호)를 벗어나지 않도록 하는 속성
+				<ul>
+					<li>방법 : pattern = " \d {자릿수} "</li>
+					<li>예시 : pattern = " \d {6} - \d{7} "</li>
+				</ul>
+			</li>
+		</ul>
+	</fieldset>
+</body>
+</html>

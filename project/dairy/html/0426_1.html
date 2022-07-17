@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>0426_1</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{background:#cde9f9;}
+		p{margin-left:10px;}
+	</style>
+</head>
+<body>
+	<h1>path</h1>
+	<div class="div">
+		<h3>path</h3>
+		<ul>
+			<li><strong>rect</strong></li>
+			<li>x="10" y="20" width="200" height="100" fill="red"</li>
+			<li>x="50" y="170" rx="10" ry="10" width="100" height="100" fill="red" <sub>모서리 둥근 사각형</sub></li>
+		</ul>
+		<ul>
+			<li><strong>circle</strong></li>
+			<li>r : 반지름</li>
+			<li>cx="350" cy="250" r="30"</li>
+		</ul>
+		<ul>
+			<li><strong>ellipse</strong></li>
+			<li>rx : x축 반지름 / ry : y축 반지름</li>
+			<li>cx="200" cy="200" rx="100" ry="50" fill="yellow" stroke="green" stroke-width="20"</li>
+		</ul>
+		<ul>
+			<li><strong>line</strong></li>
+			<li>x1, y1 : 시작되는 꼭짓점 좌표 / x2,y2 : 끝나는 꼭짓점 좌표</li>
+			<li>x1="10" x2="400" y1="30" y2="300" stroke="blue"</li>
+		</ul>
+		<ul>
+			<li><strong>polygon</strong></li>
+			<li>열린 path : points="0 0 , 200 100"</li>
+			<li>닫힌 path : points="0 0 , 200 100 , 150 300"</li>
+		</ul>
+	</div>
+	<div class="div">
+		<h3>path로 line 그리기</h3>
+		<ul>
+			<li>d = " M 시작x 시작 y L(line) 종료x 종료y "</li>
+			<li>M : 시작 / L : 직선 / H : 수평 / V : 수직 / Z : path 닫기</li>
+			<li>path d="M 300 200 L 500 100 H 50 V 300 z"</li>
+		</ul>
+		<h3>path로 곡선 그리기</h3>
+		<ul>
+			<li>d = " M 시작x 시작 y C x y(시작 고정점), x y(종료 고정점), x y(핸들) "</li>
+			<li>M : 시작 / L : 직선 / H : 수평 / V : 수직 / Z : path 닫기</li>
+			<li> path d="M 100 150 C 100 150, 300 50, 500 250"</li>
+		</ul>
+		<h3>선의 모양</h3>
+		<ul>
+			<li>stroke-linecap : 선이 끝나는 모양 ( butt 안쪽 사각 / round 둥근 / square 바깥쪽 사각 )</li>
+			<li>stroke-linejoin : 모서리 모양 ( bevel 각진 / round 둥근 )</li>
+		</ul>
+		<h3>그룹</h3>
+		<ul>
+			<li>&lt; g &gt; rect circle ellipse &lt; / g &gt;</li>
+		</ul>
+        <h3>text</h3>
+        <ul>
+            <li>text x="20" y="50">소정아 잘하자! /text</li>
+            <li>주의 : svg 이기 때문에 color가 아닌 fill</li>
+        </ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>scrollMenu</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<!-- 애니메이션에 가속도를 설정할 수 있는 제이쿼리 ui -->
+	<style type="text/css">
+		/* default */
+		*{margin:0; padding:0;}
+		body{background:#545454;}
+		
+		/* css start */
+		/* menu */
+		#top_menu{position:fixed; height:114px; left:0; top:0; background:#545454; right:0;}
+		.container{width:1170px; margin:auto;}
+		#logo a{text-decoration:none; color:#fff;}
+		#top_menu ul{float:right; margin-right:33px;}
+		#top_menu ul li{padding:59px 0 0 63px; float:left; list-style:none;}
+		#top_menu ul li a{color:#ccc; text-decoration:none;}
+		#top_menu ul li.on a{color:#000; font-weight:bold;}
+		#logo{float:left; width:125px; padding-top:40px; color:#fff;}
+		
+		/* nav */
+		#nav>ul{position:fixed; top:50%; right:15px; list-style:none;}
+		#nav>ul>li{width:10px; height:10px; background:#fff; margin-top:10px; transition:height 0.5s; text-indent:-99999px; border-radius:20px;}
+		#nav>ul>li.on{height:30px;}
+		
+		/* section */
+		#contents>section{padding:104px 0; height:100vh;}
+		#contents>section h2{margin-top:50px; font-size:3em; color:#fff;}
+		#section1{background:#00a5f4;}
+		#section2{background:#f4b100;}
+		#section3{background:#855fb4;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<header id="top_menu">
+			<div class="container">
+				<h1 id="logo">
+					<a href="#">ScrollMenu</a>
+				</h1>
+				<ul>
+					<li class="on"><a href="#section1">section1</a></li>
+					<li><a href="#section2">section2</a></li>
+					<li><a href="#section3">section3</a></li>
+				</ul>
+			</div>
+		</header>
+		<nav id="nav">
+			<ul>
+				<li class="on"><a href="#"></a>section1</li>
+				<li><a href="#"></a>section2</li>
+				<li><a href="#"></a>section3</li>
+			</ul>
+		</nav>
+		<main id="contents">
+			<section id="section1">
+				<div class="container">
+					<h2>section1</h2>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore assumenda quos ut alias qui. Ad laudantium fuga quasi consectetur nihil voluptates quidem amet. Maiores, obcaecati porro expedita asperiores earum corporis!</p>
+				</div>
+			</section>
+			<section id="section2">
+				<div class="container">
+					<h2>section2</h2>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore assumenda quos ut alias qui. Ad laudantium fuga quasi consectetur nihil voluptates quidem amet. Maiores, obcaecati porro expedita asperiores earum corporis!</p>
+				</div>
+			</section>
+			<section id="section3">
+				<div class="container">
+					<h2>section3</h2>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore assumenda quos ut alias qui. Ad laudantium fuga quasi consectetur nihil voluptates quidem amet. Maiores, obcaecati porro expedita asperiores earum corporis!</p>
+				</div>
+			</section>
+		</main>
+	</div>
+	<script>
+		$(function(){
+			var menu=$('#top_menu ul li');
+			var nav=$('#nav ul li');
+			var contents=$('#contents section');
+			
+			/* click menu */
+			menu.click(function(e){
+				e.preventDefault();
+				var tg=$(this);
+				var i=tg.index();
+				var section=contents.eq(i);
+				var tt=section.offset().top;	// offset : 화면으로부터의 요소의 위치값 취득
+				nav.removeClass('on').eq(i).addClass('on');
+				menu.removeClass('on').eq(i).addClass('on');
+				$('html, body').stop().animate({scrollTop:tt},1000,'easeInCubic')
+			});
+			
+			/* click nav */
+			nav.click(function(e){
+				e.preventDefault();
+				var tg=$(this);
+				var i=tg.index();
+				var section=contents.eq(i);
+				var tt=section.offset().top;		
+				nav.removeClass('on').eq(i).addClass('on');
+				menu.removeClass('on').eq(i).addClass('on');
+				$('html, body').stop().animate({scrollTop:tt},1000,'easeInCubic')
+			})
+			
+			/* after scroll */
+			$(window).scroll(function(){
+				var sct=$(window).scrollTop();
+				contents.each(function(){
+					var tg=$(this);
+					var i=tg.index();
+					if(tg.offset().top<=sct){
+						menu.removeClass('on');
+						nav.removeClass('on');
+						menu.eq(i).addClass('on');
+						nav.eq(i).addClass('on');
+					}
+				})
+			})
+		})
+	</script>
+</body>
+</html>

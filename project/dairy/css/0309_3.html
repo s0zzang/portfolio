@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0309_3</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{
+			background:#d6e3ca;
+			padding:1px 7px;
+		}
+		a{text-decoration:none; color:#000fc7; font-weight:bold;}
+	</style>
+</head>
+<body>
+		<h1>media query</h1>
+	<div class="div">
+		<h3>정의</h3>
+		<p>화면 <strong>크기에 따른 각각의 속성 값을 지정</strong>하여, 여러 가지 화면을 구현하는 기술</p>
+		<h3>사용방법</h3>
+		<p> @media 범위 <sub>only, all, 생략</sub> 대상 <sub>screen, print, 생략</sub> and (조건문) {실행문}</p>
+		<ul>
+			<li>범위 = only, all, 생략</li>
+			<li>대상 = screen, print, 생략</li>
+				<ul>
+					<li>screen : 컴퓨터 스크린, 휴대폰 액정</li>
+					<li>print : 인쇄 장치</li>
+				</ul>
+			<li>(조건문) : 해당 크기 설정 가능 </li>
+			<li>{실행문} : 조건에 따른 실행을 설정 </li>
+		</ul>
+		<h3>예시</h3>
+		<ul>
+			<li><a href="https://material.io/design/layout/responsive-layout-grid.html#breakpoints" target="_blank">breakpoint range 더보기</a></li>
+			<li>너비 0 - 1440px pc </li>
+			<li style="list-style:none;">@media screen and (max-width:1440px) {body{background:red;}</li>
+			<li>너비 0 - 1280px pc </li>
+			<li style="list-style:none;">@media screen and (max-width:1280px) {body{background:red;}</li>
+			<li>너비 0 - 1024px pc </li>
+			<li style="list-style:none;">@media screen and (max-width:1024px) {body{background:blue;}</li>
+			<li>너비 0 - 720px 태블릿 </li>
+			<li style="list-style:none;">@media screen and (max-width:720px) {body{background:green;}</li>
+			<li>너비 0 - 360px 모바일 </li>
+			<li style="list-style:none;">@media screen and (max-width:360px) {body{background:pink;}</li>
+		</ul>
+	</div>
+	<div class="div">
+		<h3>너비별 디자인 별도 설정</h3>
+		<ol>
+			<li> link rel="stylesheet" href="<strong>layout1</strong>.css" <sub>800px 이상 = layout1.css 적용</sub><br/>
+			<strong>media="only screen and (min-width:800px)"</strong></li>
+			<li> link rel="stylesheet" href="<strong>layout2</strong>.css" <sub>321px 이상 799px 이하 = layout2.css 적용</sub><br/>
+			<strong>media="only screen and (min-width:321px) and (max-width:799px)"</strong></li>
+			<li> link rel="stylesheet" href="<strong>layout3</strong>.css" <sub>320px 이하 = layout3.css 적용</sub><br/>
+			<strong>media="only screen and (max-width:320px)"</strong></li>
+		</ol>
+		<h3>인쇄용 디자인 별도 설정</h3>
+		<ul>
+			<li>본문 css 와 인쇄용 css 2개 link 걸기
+			<br/>1) link rel="stylesheet" href="<strong>layout.css</strong>" media="screen"/
+			<br/>2) link rel="stylesheet" href="<strong>print.css</strong>" media="print"/</li>
+		</ul>
+		<h3>주의사항</h3>
+		<ul>
+			<li>띄어쓰기 유의</li>
+			<li>숫자 겹치지 않게 쓰기</li>
+			<li>{실행문} 중괄호 2번 반복 유의</li>
+			<li>순서(오름차순, 내림차순) 지키기</li>
+			<li>크롬 미반영시, 더보기 - 설정 - 인터넷 사용기록 삭제 (비밀번호, 사이트 설정 제외)</li>
+		</ul>
+		<h3>관련 태그</h3>
+		<ul>
+			<li>meta name="viewport" content="width=device-width, initial-scale=1.0"</li>
+			<li style="list-style:none;">- width = device-width : 너비는 장치의 너비와 동일하게 </li>
+			<li style="list-style:none;">- initial-scale = 1.0 : 접속 초기화면 배율을 1로 </li>
+			<li>min-width / height : 최소 너비 / 높이</li>
+			<li>max-width / height : 최대 너비 / 높이</li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0223_1</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{background:#888cbc;color:#fff;width:600px;padding:1px 7px;}
+		.div{float:left;width:850px;}
+		sub{color:#999999;}
+		a{color:#7b52cb; text-decoration:none;}
+	</style>
+</head>
+<body>
+	<h1>font와 관련된 속성</h1>
+	<div class="div">
+		<div>
+			<h3>font</h3>
+			<p>font : style - variant - weight - size - line-height - family</p>
+			<ul>
+				<li>여러 속성을 한 번에 쓸 수 있는 축약속성</li>
+				<li>띄어쓰기로 구분</li>
+				<li>선언순서를 지키지 않으면 NO 실행 - 필요없다면 생략</li>
+			</ul>
+		</div>
+		<div>
+			<h3>font-family</h3>
+			<p>font-family : 폰트1, 폰트2, 폰트3</p>
+			<ul>
+				<li>폰트1 불가한 경우 폰트2, 폰트2도 불가하면 폰트3 적용</li>
+				<li>띄어쓰기, '-' 등 특수문자가 사용되면 "(예:맑은 고딕)" 안에 입력</li>
+			</ul>
+		</div>
+		<div>
+			<h3>font-size</h3>
+			<p>font-size : 10px / 1.5em</p>
+			<ul>
+				<li>px : <span style="font-size:13px;">13px 싸이즈</span></li>
+				<li>em : <span style="font-size:1.3em;">1.3em 싸이즈</span></li>
+			</ul>
+		</div>
+		<div>	
+			<h3>font-weight</h3>	
+			<p>font-weight : normal / bold</p>	
+			<ul>	
+				<li>normal : <span style="font-weight:normal;">무겁다 무거워</span></li>	
+				<li>bold : <span style="font-weight:bold;">무겁다 무거워</span></li>	
+				<li>단위 : 200 300 500 700 등 <sub>서체가 굵기를 가지고 있는 경우만 적용됨</sub> </li>	
+			</ul>	
+		</div>	
+	</div>
+	<div class="div">	
+		<div>	
+			<h3>font-style</h3>	
+			<p>font-style : 종류</p>	
+			<ul>	
+				<li>normal : <span style="font-style:normal;">friday</span></li>	
+				<li>italic : <span style="font-style:italic;">friday</span></li>	
+			</ul>	
+		</div>	
+		<div>	
+			<h3>font-variant</h3>
+			<p>소문자 크기의 대문자로 변환</p>
+			<ul>	
+				<li>normal : <span style="font-variant:normal;">The party is on Friday evening</span></li>	
+				<li>small-caps : <span style="font-variant:small-caps;">The party is on Friday evening</span></li>	
+			</ul>	
+		</div>	
+		<div>	
+			<h3 style="background:#ffd78f; color:#3f3f3f;">webfont</h3>
+			<p>link 방식 (CDN)</p>
+			<ol>	
+				<li><a href="https://fonts.google.com/?preview.text_type=custom" target="_blank">구글폰트</a>, <a href="https://noonnu.cc/" target="_blank">눈누</a>에서 <strong>link</strong> 복사</li>
+				<li>[html] head > link로 붙여넣기</li>
+				<li>[css] font-family 입력하기</li>
+			</ol>	
+			<p>@import 방식</p>
+			<ul>	
+				<li><a href="https://fonts.google.com/?preview.text_type=custom" target="_blank">구글폰트</a>, <a href="https://noonnu.cc/" target="_blank">눈누</a>에서 <strong>@import</strong> 복사</li>
+				<li>[css] @import, font-family 붙여넣기</li>
+				<li>[html] link로 css 연결하기</li>
+			</ul>	
+		</div>	
+	</div>	
+</body>
+</html>

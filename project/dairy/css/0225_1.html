@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0225_1</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{
+			background:#f5f0b1;
+		}
+		#bdSpace{
+			border-spacing:10px;
+			margin-top:-25px;
+			margin-bottom:-15px;
+		}
+		#bdSpace tr, #bdSpace td,#empty tr,#empty td{
+			border:1px solid #ccc;			
+			padding:3px;	
+			border-radius:10px;
+			font-size:1.1em;
+			background:#bca6d3;
+			color:#fff;
+		}
+		#bdSpace td,#empty td
+		{
+			padding:5px;
+		}
+		#empty td,#empty tr{
+			border:1px solid #ccc;
+			empty-cells:hide;
+		}
+		#empty{
+			margin-left:5px;
+			margin-top:-10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>table 관련 속성</h1>
+	<p>※ table은 <strong>자동으로 너비를 인식</strong>하여, 'margin : auto' 만으로도 중앙정렬이 가능함 <br/>
+	※ 부모가 table, 자식이 inline 태그인 경우, 자식에 display:block시 <strong>부모에 적용된 너비만큼만 늘어남</strong><br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 부모가 table 외의 태그 (예:div) 라면, 화면 너비만큼 늘어남</p>
+	<div>
+		<h3>border-spacing</h3>
+		<p>: 셀 간 여백</p>
+		<table id="bdSpace">
+			<tr></tr>
+				<td>셀</td>
+				<td>간</td>
+			<tr></tr>
+				<td>여</td>
+				<td>백</td>
+		</table>
+	</div><br/>
+	<div>
+		<h3>empty-cells</h3>
+		<p>: 콘텐츠가 없는 빈 셀 숨기기</p>
+		<table id="empty">
+			<tr></tr>
+				<td>셀</td>
+				<td>없</td>
+			<tr></tr>
+				<td>다</td>
+				<td></td>
+		</table>
+	</div>
+</body>
+</html>

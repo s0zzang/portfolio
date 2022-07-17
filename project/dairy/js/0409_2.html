@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0409_2</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{background:#ffe3ca;}
+		p{margin-left:10px;}
+		a{text-decoration:none; color:#ccc;}
+		a:hover{color:#ffe3ca;}		
+
+	</style>
+</head>
+<body>
+	<h1>method 1 <a href="0412_1.html">method 2 바로가기</a></h1>
+	<div class="div">
+		<h3>size ( )</h3>
+		<p>엘리먼트의 갯수 세기</p>
+		<ul>
+			<li>$ ( '.a' ) . size ( )</li>
+			<li>alert ( a )</li>
+		</ul>
+		<h3>eq ( n )</h3>
+		<p>인덱스로 엘리먼트 선택하기</p>
+		<ul>
+			<li>$ ( '.a' ) . eq ( n ) . css ( 'color','red' )</li>
+			<li>eq method : 낮은 IE 호환 가능</li>
+			<li>eq selector : 낮은 IE 호환 불가능</li>
+		</ul>
+		<h3>first ( )</h3>
+		<p>첫 번째 엘리먼트의 선택하기</p>
+		<ul>
+			<li>var el = $ ( 'ul>li' )</li>
+			<li>var firstEl = el.first ( )</li>
+			<li>firstEl . css ( 'color','red' )</li>
+		</ul>
+		<h3>last ( )</h3>
+		<p>마지막 엘리먼트의 선택하기</p>
+		<ul>
+			<li>var el = $ ( 'ul>li' )</li>
+			<li>var lastEl = el.last ( )</li>
+			<li>lastEl . css ( 'color','red' )</li>
+		</ul>
+		<h3>index ( )</h3>
+		<p>요소의 index 값 확인하기</p>
+		<ul>
+			<li>var el = $ ( 'ul>li' ) . index ( )</li>
+			<li>alert ( el )</li>
+		</ul>
+	</div>
+	<div class="div">
+		<h3>not ( a )</h3>
+		<p>특정 요소가 아닌 값만 선택하기</p>
+		<ul>
+			<li>var el = $ ( 'ul>li' ) . not ( '.el' )</li>
+			<li>el . css ( 'color','red' )</li>
+		</ul>
+		<h3>filter ( a )</h3>
+		<p>특정 요소만 선택하기</p>
+		<ul>
+			<li>var el = $ ( 'ul>li' ) . filter ( '.el' )</li>
+			<li>el . css ( 'color','red' )</li>
+		</ul>
+		<h3>slice ( n1, n2 )</h3>
+		<p>특정 부분만 선택하기 : ( n1 다음부터, n2 까지 ) index 아님 주의</p>
+		<ul>
+			<li>var el = $ ( 'ul>li' ) . slice ( 2,5 )</li>
+			<li>el . css ( 'color','red' )</li>
+			<li>인덱스가 아닌, 보이는 순서대로 3 ~ 5 바뀜</li>
+		</ul>
+		<h3>has ( a )</h3>
+		<p>특정 요소를 가진 요소 선택하기</p>
+		<ul>
+			<li>var el = $ ( 'ul>li' ) . has ( ul )</li>
+			<li>el . css ( 'color','red' )</li>
+			<li>ul을 가진 li ( +자식 ) 의 색상이 변경</li>
+		</ul>
+		<h3>each ( function ( ) { } )</h3>
+		<p>같은 값(클래스, 요소 등)을 가진 요소에 각각 함수를 적용</p>
+		<ul>
+			<li>var el = $ ( 'ul>li' ) . each ( function ( ) { </li>
+			<li>el . css ( 'color','red' )}</li>
+			<li>event 사용 시, 차이점 발생</li>
+		</ul>
+	</div>
+</body>
+</html>

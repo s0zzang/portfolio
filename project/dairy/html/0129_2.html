@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0129_2</title>
+	<link rel="stylesheet" type="text/css" href="font.css">
+</head>
+<body>
+	<h1>새로 추가된 텍스트 관련 요소</h1>
+	<h2>mark</h2>
+	<ul>
+		<li>목적 : 형광펜 효과</li>
+		<li>예시 : <mark>와인</mark>은 누가 뭐래도 달달하고 끝 맛이 깔끔한게 최고다.</li>
+		<li></li>
+	</ul>
+	<h2>meter</h2>
+	<ul>
+		<li>목적 : 퍼센트 시각화</li>
+		<li>사용 : meter value="0.5"</li>
+		<li>예시 : 이소정의 예상 취업율은 <meter value="1" title="100%">99%</meter>이다.</li>
+	</ul>
+	<h2>time</h2>
+	<ul>
+		<li>목적 : 컴퓨터가 이해할 수 있는 형태로 날짜와 시간을 변경해줌 (화면에는 표시되지 않음)</li>
+		<li>사용 : time datetime="1995-11-06" /time </li>
+		<li>예시 : 내 <time datetime="1995-11-06">생일</time>이 다가오면 수능이 얼마 남지 않았어</li>
+	</ul>
+	<h2>ruby / rt</h2>
+	<ul>
+		<li>목적 : 한자로 된 단어의 음 표시</li>
+		<li>사용 : ruby[한자로 된 단어 rt(음)]</li>
+		<li>예시 : <ruby title="ruby">漢子<rt title="rt">한자</rt></ryby></li>
+	</ul>
+	<h2>progress</h2>
+	<ul>
+		<li>목적 : 진행 상황 표시</li>
+		<li>사용 : progress value="(진행정도)" max="(최대치)"</li>
+		<li>예시 : 절반 남음<progress title="50/100"value="50" max="100"></progress></li>
+	</ul>
+	<h2>details, summary</h2>
+	<ul>
+		<li>목적 : 접고 펴는 기능</li>
+		<li>특징 : summary와 ul/ol 함께 사용</li>
+		<li>예시</li>
+	</ul>
+	<details>
+		<summary style="background:skyblue;" title="여기를 눌러보세요">summary 태그로 제목을 쓰지</summary>
+		<ul>
+			<li>이렇게 details 태그와</li>
+			<li>summary, ul, li 태그를 통해</li>
+			<li>내용을 접었다 폈다가 가능하지</li>
+		</ul>
+	</details>
+</body>
+</html>

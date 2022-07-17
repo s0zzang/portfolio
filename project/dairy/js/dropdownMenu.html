@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>dropdown_menu (different height)</title>
+	<style type="text/css">
+		/* default */
+		*{margin:0; padding:0;}
+		h1{color:#fff; margin:50px;}
+		ul{list-style:none;}
+		.cf:after{content:''; display:block; clear:both;}
+		body{background:#9bc386; overflow-y:scroll;}
+		
+		/* css start */
+		header{margin-top:50px; background:#fff; height:50px; overflow:hidden;}
+		nav{width:450px; margin:auto;}
+		nav>ul>li{float:left; line-height:50px; padding-right:40px; position:relative;}
+		nav>ul>li ul{width:100%; position:absolute; opacity:0; transition:opacity 0.1s;}
+		nav>ul>li ul li{white-space:nowrap;}
+		
+		/* class : on */
+		nav>ul>li.on ul{opacity:1;}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<h1>dropdown_menu</h1>
+	<header>
+		<nav>
+			<ul class="cf">
+				<li>menu1
+					<ul>
+						<li>menu1-2</li>
+						<li>menu1-2</li>
+						<li>menu1-2</li>
+						<li>menu1-2</li>
+						<li>menu1-2</li>
+						<li>menu1-2</li>
+						<li>menu1-2</li>
+						<li>menu1-2</li>
+					</ul>
+				</li>
+				<li>menu2
+					<ul>
+						<li>menu2-2</li>
+						<li>menu2-2</li>
+						<li>menu2-2</li>
+						<li>menu2-2</li>
+						<li>menu2-2</li>
+					</ul>
+				</li>
+				<li>menu3
+					<ul>
+						<li>menu3-2</li>
+						<li>menu3-2</li>
+						<li>menu3-2</li>
+						<li>menu3-2</li>
+						<li>menu3-2</li>
+						<li>menu3-2</li>
+						<li>menu3-2</li>
+						<li>menu3-2</li>
+						<li>menu3-2</li>
+						<li>menu3-2</li>
+						<li>menu3-2</li>
+					</ul>
+				</li>
+				<li>menu4
+					<ul>
+						<li>menu4-2</li>
+						<li>menu4-2</li>
+						<li>menu4-2</li>
+						<li>menu4-2</li>
+						<li>menu4-2</li>
+						<li>menu4-2</li>
+						<li>menu4-2</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<script>
+		$(function(){
+			var dep1=$('ul>li'), 
+				header=$('header'), 
+				headerHeight=header.outerHeight();
+				
+			dep1.mouseenter(function(){
+				var tgHeight=$(this).find('ul').height();
+				var tg=$(this);
+				(function(){			
+					dep1.removeClass('on');
+					tg.addClass('on');
+				})();	// 글씨가 빨리 나타나기 위해, 애니메이션보다 먼저 작성하고 혼자 선언, 혼자 실행 ()();
+				header.stop().animate({height:tgHeight+headerHeight+10},300)
+			}).mouseleave(function(){
+				header.stop().animate({height:headerHeight},300)
+			});
+		})
+	</script>
+</body>
+</html>

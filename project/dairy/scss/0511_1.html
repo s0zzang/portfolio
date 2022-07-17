@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>0511_1</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{background:#e6efc2;}
+		p{margin-left:10px;}
+		a{text-decoration:none; color:#ccc;}
+		a:hover{color:#c4e1da;}		
+	</style>
+</head>
+<body>
+	<h1>SCSS 1</h1>
+	<div class="div">
+		<h3>변수 선언 : $ abcd</h3>
+		<p>scss 상단에 변수 선언</p>
+		<ul>
+			<li>선택자 생성과 규칙이 같음</li>
+			<li>영어로만 시작</li>
+			<li>숫자 : 가능</li>
+			<li>특수문자 : _ - $ 가능</li>
+			<li>띄어쓰기 : 불가능</li>
+		</ul>
+		<h3>nesting</h3>
+		<p>- 포함관계를 적용한 작성법 <br>- & : 나 자신/문자열 그 자체</p>
+		<ul>
+			<li>부모 { ~, ~, 자식 { ~, ~ } }</li>
+			<li>부모 { ~, ~ }</li>
+			<li>부모 자식 { ~, ~ } <sub>자손선택자 적용</sub></li>
+			<li>부모 { ~, ~, &>자식 { ~, ~ } }</li>
+			<li>부모 > 자식 { ~, ~ } <sub>자식선택자 적용</sub></li>
+        </ul>
+        <ul>
+			<li>부모 : #box1</li>
+            <li>자식 : #box1-title</li>
+            <li>#box1-title = &-title</li>
+            <li>&, &-title { ~, ~ }</li>
+        </ul>
+		<h3>미디어쿼리</h3>
+		<ul>
+			<li>div { ~, ~, @ media screen (max-width:500px) { ~, ~ } }</li>
+		</ul>
+	</div>
+	<div class="div">
+		<h3>mixin</h3>
+		<p>- 다른 속성을 하나의 코드 블록으로 정의해서 재사용 <br> - @mixin "name" ($인자) {속성}</p>
+		<ul>
+			<li><strong>mixin X</strong></li>
+			<li>box1 { background : red; font-size : 14px; }</li>
+			<li>box2 { background : blue; font-size : 16px; }</li>
+			<li>box3 { background : gray; font-size : 20px; }</li>
+		</ul>
+		<ul>
+			<li><strong>mixin O</strong></li>
+			<li>@mixin fontSizeBgColor( $fontSize, $bgColor ) <br> { font-size : $fontSize; background-color : $bgColor; }</li>
+			<li>box1 { @include fontSizeBgColor ( 14px, red ); }</li>
+			<li>box2 { @include fontSizeBgColor ( 16px, blue ); }</li>
+			<li>box3 { @include fontSizeBgColor ( 20px, gray ); }</li>
+        </ul>
+		<ul>
+			<li><strong>mixin defalut 값 할당</strong></li>
+			<li>@mixin fontSizeBgColor( $fontSize:14px, $bgColor ) <br> { font-size : $fontSize; background-color : $bgColor; }</li>
+			<li>box1 { @include fontSizeBgColor ( red ); }</li>
+			<li>box2 { @include fontSizeBgColor ( 16px, red ); }</li>
+			<li>안쓰면 기본 값 할당</li>
+        </ul>
+		<h3>extend</h3>
+		<p>- 완전히 똑같은 속성 재사용 
+			<br> - %name {속성}</p>
+		<ul>
+			<li><strong>extend</strong></li>
+			<li>box1 { @extend %name }</li>
+		</ul>
+	</div>
+</body>
+</html>

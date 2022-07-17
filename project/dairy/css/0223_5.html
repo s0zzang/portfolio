@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0223_5</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{
+			background:#d7eaca;
+		}
+		p,q{
+			padding-left:20px;
+		}
+		#content:before{
+			content:"짜잔 ! " open-quote;
+			color:#ff9429;
+			font-weight:bold;
+		}
+		#content:after{
+			content:close-quote" 끝 !";
+			color:#ff9429;
+			font-weight:bold;
+		}
+		q{
+			quotes:"▶ "" ™";
+		}
+		.increment, .counter{
+			counter-increment:ex;
+		}
+		.counter:before{
+			content:counter(ex, upper-alpha)
+		}
+		.increment:before{
+			content:counter(ex, upper-roman)
+		}
+	</style>
+</head>
+<body>
+	<h1>content 관련</h1>
+	<div class="div">
+		<div>
+			<h3>quotes</h3>
+			<p>인용부호 설정</p>
+			<ul>
+				<li> "여는부호( ▶ )" "닫는부호( ™ )" </li>
+			</ul>
+			<q>이렇게 씁니다.</q>
+		</div>
+		<div>
+			<h3>content</h3>
+			<p>내용 추가</p>
+			<ul>
+				<li>after, before 가상 선택자와 함께 사용</li>
+				<li>tag : before { content : "짜잔~" } </li>
+				<li>tag : after { content : "끝!" } </li>
+				<li>content : open-quote (") </li>
+			</ul>
+			<p id="content"> 이렇게 씁니다. </p>
+		</div>
+		<div>
+			<h3>transform</h3>
+			<ul>
+				<li>transform : <strong>rotate</strong> : "회전각"deg</li>
+				<li>transform-<strong>origin</strong> : 회전축 / x축, y축</li>
+				<li style="list-style:none; color:#999;">- 0%, 0% : 좌측상단</li>
+				<li style="list-style:none; color:#999;">- 50%, 50% : 중앙</li>
+				<li style="list-style:none; color:#999;">- 100%, 100% : 우측하단</li>
+			</ul>
+		</div>
+	</div>
+	<div class="div">
+		<div>
+			<h3>counter-increment</h3>
+			<p>일반 태그에 일련번호 붙이기</p>
+			<ul>
+				<li>방법 : 1) 일련번호를 붙일 태그에 counter-increment:"name"</li>
+				<li style="list-style-type:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				2) 일련번호를 붙일 위치에 content:counter(name, 속성)</li>
+				<li>붙일 태그 : tag { counter-increment : name } </li>
+				<li>붙일 위치 : tag:before { content-counter : ( name, 속성 <sub>roman, alpha, latin 등</sub> ) } </li>
+				<li>예시</li>
+			</ul>
+			<div class="div">
+				<p class="counter"> 런닝맨 너무 재밌다 </p>
+				<p class="counter"> 유재석 짱 </p>
+			</div>
+			<div class="div">
+				<p class="increment"> 오늘은 화요일</p>
+				<p class="increment"> 내일은 수요일</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

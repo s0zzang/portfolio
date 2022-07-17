@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>0426_2</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{background:#cde9f9;}
+		p{margin-left:10px;}
+        #face{position:absolute; top:0; right:0; bottom:0; left:0; width:250px; margin:auto;}
+		.change1{fill:#3c2717;}
+		.change2{fill:#5f3d2b;}
+		.change3{fill:#483421;}
+		.face_eye{animation:eye-ani 1s infinite alternate;}
+		@keyframes eye-ani{
+			0%{transform:scale(0.9);}
+			100%{transform:scale(1.0);}
+		}
+		.face_eye.left{transform-origin:240px 458.5px;}
+		.face_eye.right{transform-origin:450px 458.5px;}
+	</style>
+</head>
+<body>
+	<h1>svg에 css 적용하기</h1>
+	<svg version="1.1" id="face" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		 viewBox="0 0 768 768" style="enable-background:new 0 0 768 768;" xml:space="preserve">
+	<style type="text/css">
+		.st0{fill:none;stroke:#000000;stroke-width:30;stroke-miterlimit:10;}
+		.st1{fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	</style>
+	<path class="st0" d="M651,458.2c0,149.6-115.5,243.1-258,243.1s-258-93.6-258-243.1s82.2-270.8,258-270.8
+		C577,187.4,651,308.7,651,458.2z"/>
+	<g>
+		<circle class=" left" cx="289.5" cy="458.5" r="30.5"/>
+	</g>
+	<g>
+		<circle class=" right" cx="498.5" cy="458.5" r="30.5"/>
+	</g>
+	<path class="st1" d="M529,549.2c-33.3,37.2-93,53.1-136,52.8c-40-0.2-102.2-15.7-135.5-52.8"/>
+	<ellipse class="change1 face_eye" cx="275.5" cy="274.5" rx="168.5" ry="121.5"/>
+	<ellipse class="change2 face_eye" cx="535.5" cy="262.5" rx="142.5" ry="123.5"/>
+	<ellipse class="change3 face_eye" cx="352.5" cy="167" rx="151.5" ry="103"/>
+	</svg>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0215_2</title>
+	<link rel="stylesheet" type="text/css" href="../html/font.css">
+	<style>
+		table, td, th{
+			border:1px solid #666;
+			border-collapse:collapse;
+			padding:13px;
+			font-size:17px;
+		}
+		th{
+			background:#ddddee;
+			font-size:18px;
+		}
+		.w50{
+			width:50px;
+		}
+		.w250{
+			width:250px;
+		}
+		.w230{
+			width:230px;
+		}
+		h3{
+			padding-left:10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>CSS 적용방법</h1>
+	<table>
+		<tr>
+			<th class="w50">no.</th>
+			<th class="w250">방법</th>
+			<th class="w230">비고</th>
+			<th>우선순위</th>
+		</tr>
+		<tr>
+			<th>1</th>
+			<td>link 태그로 css 문서 연결</td>
+			<td>외부링크방식 (external)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>2</th>
+			<td>head 태그 내 style 태그 입력</td>
+			<td>인베디드방식 (internal)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>3</th>
+			<td>태그 내 style 속성 입력</td>
+			<td>인라인방식</td>
+			<td>1순위</td>
+		</tr>
+	</table>
+	<br/>
+	<h3 style="background:#faedaf; width:700px;">W3C 추천 방법</h3>
+	<p>- 외부 link 방식</p>
+	<ol>
+		<li>디자인과 코딩의 분리</li>
+		<li>유지와 보수</li>
+	</ol>
+	<h3 style="background:#faedaf; width:700px;">@import</h3>
+	<p>- 여러 개의 css 문서를 @import로 한 개의 css 문서에 연결함</p>
+	<ul>
+		<li>head 태그 내 수많은 link/meta 태그로 태그 식별이 어려운 경우 사용</li>
+		<li>예시 : @import url ( "css경로" )</li>
+	</ul>
+</body>
+</html>

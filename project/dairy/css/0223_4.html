@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0223_4</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{
+			background:#e6d7d0;
+			width:600px;
+			padding:1px 7px;
+		}
+		.div{
+			float:left;
+			width:850px;
+		}
+		sub{
+			color:#999999;
+		}
+		#margin p{
+			border:30px solid #ccc;
+			width:50%;
+			margin:25px;
+			padding:30px;
+			text-align:center;
+		}
+		#padding p{
+			border:1px solid #ccc;
+			width:50%;
+			margin:25px;
+			padding:30px;
+			text-align:center;
+			background:#eeeeee;
+		}
+	</style>
+</head>
+<body>
+	<h1>margin, padding</h1>
+	<div class="div">
+		<h3>margin</h3>
+		<p>박스 <strong>밖</strong>의 여백을 조절</p>
+		<ul>
+			<li>margin : 1px <sub>top</sub> 2px <sub>right</sub> 3px <sub>bottom</sub> 4px <sub>left</sub></li>
+			<li>margin : 1px <sub>top</sub> 2px <sub>right, left</sub> 3px <sub>bottom</sub></li>
+			<li>margin : 1px <sub>top, bottom</sub> 2px <sub>right, left</sub></li>
+			<li>margin : auto + width값 지정 <sub>중앙정렬</sub></li>
+		</ul>
+		<div id="margin">
+			<p>margin</p>
+		</div>
+	</div>
+	<div class="div">
+		<h3>padding</h3>
+		<p>박스 <strong>안</strong>의 여백을 조절</p>
+		<ul>
+			<li>padding : 1px <sub>top</sub> 2px <sub>right</sub> 3px <sub>bottom</sub> 4px <sub>left</sub></li>
+			<li>padding : 1px <sub>top</sub> 2px <sub>right, left</sub> 3px <sub>bottom</sub></li>
+			<li>padding : 1px <sub>top, bottom</sub> 2px <sub>right, left</sub></li><br/><br/>
+		</ul>
+		<div id="padding">
+			<p>padding</p>
+		</div>
+
+	</div>
+</body>
+</html>

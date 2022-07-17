@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>0427_1</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{background:#cde9f9;}
+		p{margin-left:10px;}
+        .charts{width:80%; margin:3rem auto; display:flex; justify-content: center;}
+        .charts .chart{margin:0 20px; position:relative;}
+        .charts .chart h2{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); margin:0;}
+        .charts .chart svg{width:220px; height:220px;}
+        circle{fill:#ebebeb; stroke-width:20; stroke-dasharray:630; transform:rotate(-90deg); transform-origin:50% 50%; animation:line 3s forwards; stroke-dashoffset: 628; stroke-linecap: round;}
+        .charts .chart:nth-child(1) circle{stroke:#ffc114;}
+        .charts .chart:nth-child(2) circle{stroke:#6b69e7;}
+        .charts .chart:nth-child(3) circle{stroke:#75d159;}
+        .charts .chart:nth-child(4) circle{stroke:#e95460;}
+        section{height:100vh;}
+	</style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<h1>stroke-dashoffset, stroke-dasharray</h1>
+    <p>stroke-linecap : 선의 끝 모양</p>
+    <p>stroke-linejoin : 코너 모양</p>
+    <p>data (사용자정의속성) : script와 연동할 때, 웹접근성, SEO 위해 사용</p>
+    <section></section>
+    <div class="charts">
+        <div class="chart">
+            <h2 data-num="40">0</h2>
+            <svg><circle cx="110" cy="110" r="100"></circle></svg>
+        </div>
+        <div class="chart">
+            <h2 data-num="70">0</h2>
+            <svg><circle cx="110" cy="110" r="100"></circle></svg>
+        </div>
+        <div class="chart">
+            <h2 data-num="50">0</h2>
+            <svg><circle cx="110" cy="110" r="100"></circle></svg>
+        </div>
+        <div class="chart">
+            <h2 data-num="85">0</h2>
+            <svg><circle cx="110" cy="110" r="100"></circle></svg>
+        </div>
+    </div>
+    <section></section>
+    <script>
+        $(function(){
+            var charts=$('.charts');
+            var chart=$('.chart');
+            var chartOST=chart.offset().top-700;    
+            // 700 : 빠르게 스크롤 되기 위해 임의 숫자 지정
+
+            $(window).scroll(function(){
+                animateChart();
+                var sct=$(this).scrollTop();
+                if(sct >= chartOST){
+                    if(!charts.hasClass('active')){
+                        animateChart();
+                        charts.addClass('active');
+                    }
+                }
+            })
+
+            function animateChart(){
+                chart.each(function(){
+                    var item=$(this);
+                    var title=item.find('h2');
+                    var targetNum=title.attr('data-num');
+                    var circle=item.find('circle');
+                    $({rate:0}).animate({rate:targetNum},{
+                        // rate : 중간 단계를 보여줌
+                        duration:1500,
+                        progress:function(){
+                            // progress : duration이 종료되면 function 실행
+                            var now=this.rate;
+                            var amout=630-(630*now/100);
+                            title.text(Math.floor(now)+'%');
+                            // Math.floor : 소수점 버리기 (그래프바는 자연스럽게하기 위해 소수점 없애지 않음)
+                            circle.css({strokeDashoffset:amout});
+                        }
+                    })
+                })
+            }
+        })    
+    </script>
+</body>
+</html>

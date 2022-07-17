@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0401_1</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{background:#cbe9e6;}
+		p{margin-left:10px;}
+	</style>
+</head>
+<body>
+	<h1>js 불러오기</h1>
+	<div class="div">
+		<h3>외부 자바스크립 불러오기</h3>
+		<p>- 보통 문서의 가장 끝에 script 작성 <br/>
+			&lt; body &gt; <br/>
+				<strong>&nbsp;&nbsp;&nbsp;&lt; script src = "js01.js" &gt;</strong> <br/>
+			&lt; /body &gt; 
+		</p>
+		<h3>내부 자바스크립 작성하기</h3>
+		<p>
+			&lt; body &gt; <br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt; script &gt; <br/>
+				<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.body.innerHTML="&lt; h2 &gt; 짜장 짱 &lt; /h2 &gt;  " <br/></strong>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt; /script &gt; <br/>
+			&lt; /body &gt; 
+		</p>
+		<h3>태그 내부에 자바스크립 작성하기</h3>
+		<p>- " "로 작성된 문장 안에는 '' 사용<br/>
+			&lt; h1 <strong>onclick="alert('클릭했쓰')"</strong> &gt; 
+		</p>
+	</div>
+</body>
+</html>

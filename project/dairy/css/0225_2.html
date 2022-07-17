@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0225_2</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{background:#fbddd7;}
+		strong{color:#15892e;}
+		p{margin-left:20px;}
+		a{text-decoration:none; color:#ccc;}
+		a:hover{color:#fbddd7;}
+	</style>
+</head>
+<body>
+	<h1>position <a href="http://dlth8888.dothome.co.kr/dairy/css/0315_1.html">float 바로가기</a></h1>
+	<div class="div">
+		<div>
+			<h3>position</h3>
+			<p>- 절대 / 상대 위치 설정 <br/>
+			1) position 설정값 설정 <br/>
+			2) 좌표 <sub> top, right, left, bottom </sub> 로 이동하기</p>
+			<ul>
+				<li>position : <strong>absolute</strong>
+					<ul>
+						<li>절대적 위치 설정</li>
+						<li>위치 시작점 : 브라우저 상단 좌측</li>
+						<li>부모 (position:relative) 자식(position:absolute) 경우</li>
+						<li style="list-style:none;"> : 부모 요소 좌측 상단 시작</li>
+					</ul>
+				</li>
+			</ul>
+			<ul>
+				<li>position : <strong>relative</strong>
+					<ul>
+						<li>상대적 위치 설정</li>
+						<li>위치 시작 점 : 나 / 부모 요소의 기본 위치</li>
+					</ul>
+				</li>
+			</ul>
+			<ul>
+				<li>position : <strong>fixed</strong>
+					<ul>
+						<li>고정 위치 설정</li>
+						<li>위치 시작 점 : 브라우저 상단 좌측</li>
+						<li>특징 : 스크를해도 위치가 고정됨</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<h3>z-index</h3>
+			<ul>
+				<li>position 속성 설정 후 원하는 깊이에 위치하기 위해 사용</li>
+				<li>사용하지 않았을 땐 z-index = 1 / +, - 가능</li>
+				<li>z-index : 5 = 지상 5층</li>
+				<li>z-index : -1 = 지하 1층</li>
+				<li>예시 : div1 > div2 <sub>z-index:2</sub> + div3 <sub>z-index:3</sub></li>
+				<li style="list-style:none;">형제인 div2와 div3의 깊이 차이를 주기 위해 사용함 </li>
+			</ul>
+		</div>
+	</div>
+	<div class="div">
+		<div>
+			<h3>부모 position에 따른 absolute 자식 시작점</h3>
+			<ul>
+				<li>absolute <sub>부모</sub> > absolute <sub>자식</sub> : 부모요소 좌측 상단</li>
+				<li>relative <sub>부모</sub> > absolute <sub>자식</sub> : 부모요소 좌측 상단</li>
+				<li>fixed <sub>부모</sub> > absolute <sub>자식</sub> : 부모요소 좌측 상단 <strong>하지만, 부모 다음 요소들이 치고 올라가 보이지 않음 !!</strong></li>
+				<li>X <sub>부모</sub> > absolute <sub>자식</sub> : 브라우저 좌측 상단</li>
+			</ul>
+		</div>
+		<div>
+			<h3>position을 사용한 수평, 수직 중앙정렬</h3>
+			<ul>
+				<li>부모 (300px X 300px), 자식 (100px X 100px)</li>
+				<li style="list-style:none;">1. 너비 지정</li>
+				<li style="list-style:none;">2. 자식 top:50% <sub>수평</sub> left:50% <sub>수직</sub></li>
+				<li style="list-style:none;">3. 자식 margin-top:-50px <sub>수평 : 높이의 50%</sub> margin-left:-50px <sub>수직 : 너비의 50%</sub></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

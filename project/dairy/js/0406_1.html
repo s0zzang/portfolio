@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0406_1</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{background:#fdf3c5;}
+		p{margin-left:10px;}
+		.if li, span{color:#999;}
+	</style>
+</head>
+<body>
+	<h1>조건문</h1>
+	<div class="div if">
+		<h3>if</h3>
+		<p>if (조건문) {실행문}</p>
+		<ul>
+			<li>조건 true : 실행문 실행</li>
+			<li>조건 false : 실행문 무시</li>
+		</ul>
+		<p>if (조건문) {실행문} esle {실행문}</p>
+		<ul>
+			<li>조건 true : 실행문 실행</li>
+			<li>조건 false : esle 실행문 실행</li>
+		</ul>
+		<p>if (조건1) {실행문} <br/>
+		else { if (조건2) {실행문} eles {조건2 거짓인 경우 실행문} } <br/>
+		</p>
+		<ul>
+			<li>조건1 true : 조건 1 실행문 실행</li>
+			<li>조건1 false : else - 조건 2 탐색</li>
+			<li>조건2 true : 조건 2 실행문 실행</li>
+			<li>조건2 false : else - else 실행</li>
+		</ul>
+		<p>if (조건1) {실행문} <br/>
+		else if (조건2) {실행문} <br/>
+		esle {실행문}</p>
+		<ul>
+			<li>조건1 true : 조건1 실행문 실행</li>
+			<li>조건1 false : esle if 조건 탐색</li>
+			<li>조건2 true : 조건2 실행문 실행</li>
+			<li>조건2 false : esle 실행문 실행</li>
+		</ul>
+	</div>
+	<div class="div">
+		<h3>switch</h3>
+		<p>switch (자료) {case 조건: 실행문}</p>
+		<ul>
+			<li>case "a": 실행문1 <br/><span>break;</span></li>
+			<li>case "b": 실행문2 <br/><span>break;</span></li>
+			<li>case "c": 실행문3 <br/><span>break;</span></li>
+			<li>case "d": (실행문4) <span> case "e"와 실행문이 같으므로 실행문 적지 않아도 됨</span></li>
+			<li>case "e": 실행문4 <br/><span>break;</span></li>
+			<li>default : 실행문5 <span> 위의 case에 해당되지 않는 모든 경우에 실행</span></li>
+		</ul>
+		<h3>조건부 연산자</h3>
+		<p>(조건문) ? (참인 경우 실행문) : (거짓인 경우 실행문)</p>
+		<ul>
+			<li>(number >= 0) <sub>조건문</sub> ? '0 이상의 숫자입니다.' <sub>참인 경우</sub> : '0보다 작은 숫자입니다.' <sub>거짓인 경우</sub></li>
+		</ul>
+	</div>
+</body>
+</html>

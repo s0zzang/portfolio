@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>tab</title>
+	<style type="text/css">
+		/* default */
+		*{margin:0; padding:0; list-style:none;}
+		body{padding:1.5em 2em; line-height:1.4; font-family:Arial, snas-serif;}
+
+		/* css start */
+		.all{width:610px;}
+		.tabSet{border:2px solid #666; margin:0 0 20px; padding:3px; border-radius:4px;}
+		ul{overflow:hidden; padding:12px 12px 0; background:#f6c7c7; border-radius:4px;}
+		ul li{float:left; padding:0 4px 0 0;}
+		ul li a{float:left; color:#dd7a7a; background:#fff; padding:.45em 1.25em; border-radius:5px 5px 0 0; font-weight:bold; text-decoration:none; display:none;}
+		ul li a:hover{text-decoration:underline;}
+		.panel{background:#fff; padding:.75em 15px .4em; margin:0 0 .5em; width:570px;}
+		
+		/* class : on */
+		ul li a.on{background:#dd7a7a; color:#fff; cursor:default;}
+		ul li a.on:hover{text-decoration:none;}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	<h1>tab</h1>
+	<div class="all">
+		<div class="tabSet">
+			<ul class="tabs">
+				<!-- a의 href = panel id  -->
+				<li><a href="#panel1-1" class="on">panel1</a></li>
+				<li><a href="#panel1-2">panel2</a></li>
+				<li><a href="#panel1-3">panel3</a></li>
+				<li><a href="#panel1-4">panel4</a></li>
+			</ul>
+			<div class="panels">
+				<div class="panel" id="panel1-1">panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 </div>
+				<div class="panel" id="panel1-2">panel2 panel2 panel2 panel2 panel2 panel2 panel2 panel2 panel2 panel2 panel2 panel2 panel2 panel2 panel2 panel2 </div>
+				<div class="panel" id="panel1-3">panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 </div>
+				<div class="panel" id="panel1-4">panel4 panel4 panel4 panel4 panel4 panel4 panel4 panel4 panel4 panel4 panel4 panel4 panel4 panel4 panel4 panel4 panel4 </div>
+			</div>
+		</div>
+		<div class="tabSet">
+			<ul class="tabs">
+				<li><a href="#panel2-1">panel1</a></li>
+				<li><a href="#panel2-2">panel2</a></li>
+				<li><a href="#panel2-3" class="on">panel3</a></li>
+				<li><a href="#panel2-4">panel4</a></li>
+			</ul>
+			<div class="panels">
+				<div class="panel" id="panel2-1">panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 panel1 </div>
+				<div class="panel" id="panel2-2">panel2 panel2 panel2 panel2 panel2 panel2 panel2 panel2 panel2 panel2 panel2 panel2 panel2 panel2 panel2 panel2 </div>
+				<div class="panel" id="panel2-3">panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 panel3 </div>
+				<div class="panel" id="panel2-4">panel4 panel4 panel4 panel4 panel4 panel4 panel4 panel4 panel4 panel4 panel4 panel4 panel4 panel4 panel4 panel4 panel4 </div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(function(){
+			$('.tabSet').each(function(){
+				var topDiv=$(this);
+				var anchors=topDiv.find('ul.tabs a');
+				var panelDivs=topDiv.find('div.panel');
+				var lastAnchor;
+				var lastPanel;
+				anchors.show();
+				lastAnchor=anchors.filter('.on');					// on class를 제거하기 위해 
+				lastPanel=$(lastAnchor.attr('href'));				// href = #panel11-1
+				panelDivs.hide();
+				lastPanel.show();
+				anchors.click(function(e){
+					e.preventDefault();								// = return false
+					var currentAnchor=$(this);
+					var currentPanel=$(currentAnchor.attr('href'));
+					lastAnchor.removeClass('on');
+					lastPanel.hide();
+					currentAnchor.addClass('on');
+					currentPanel.show();
+					lastAnchor=currentAnchor;
+					lastPanel=currentPanel;
+				})
+			})
+		});
+    </script>
+</body>
+</html>

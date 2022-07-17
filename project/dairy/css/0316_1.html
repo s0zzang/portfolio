@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0316_1</title>
+	<link rel="stylesheet" href="css/0316_1.css"/>
+</head>
+<body>
+	<div id="title">
+		<h1>radio button 활용하기</h1>
+		<label>
+			<input class="checkbox1" type="radio"/> 방법 확인하기
+			<p class="checkbox">
+				1) #board input:checked ~ div.content_wrap{display:block;}<br/>input이 체크된 상태가 되면 형제관계 .content_wrap이 보여라!<br/>
+				2) #board input:checked ~ div.title>label{cursor:default;}
+</p>
+		</label>
+	</div>
+	<div id="wrap">
+		<h1>게시판</h1>
+		<div id="search_wrap" class="cf">
+		<!-- cf : float 해제 5번 방법 사용 위한 클래스 -->
+			<form action="#">
+				<fieldset>
+					<label>검색분류&nbsp;
+						<select name="search">
+							<option value="제목">제목</option>
+							<option value="날짜">날짜</option>
+							<option value="글쓴이">글쓴이</option>
+						</select>
+					</label>
+					<label>검색단어&nbsp;<input type="text" name="text"/></label>
+					<button type="submit">검색</button>
+				</fieldset>
+			</form>
+		</div><!-- //id="search_wrap" -->
+		<div id="board">
+			<div class="cf first">
+				<div><span>번호</span></div>
+				<!-- div : float:left / span : text 디자인 -->
+				<div class="title"><span>제목</span></div>
+				<div><span>글쓴이</span></div>
+				<div><span>등록일</span></div>
+			</div>
+			<div class="cf">
+				<input type="radio" id="click10" name="click"/>
+				<div>10</div>
+				<div class="title left"><label for="click10" class="cf">법관은 탄핵 또는 금고 이상의 형의 선고에 의하지 아니하고는 파면되지 아니한다.</label></div>
+				<!-- 
+				input id = label for 일치시키는 것이 핵심 !! 
+				input과 label이 디자인을 위해 위치가 다르지만, 이름만 같다면 서로 영향을 받음 -->
+				<div>이소정</div>
+				<div>2021-03-16</div>
+				<div class="content_wrap">
+					<div class="subject">교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다. </div>
+					<div class="content">재판의 심리와 판결은 공개한다. 다만, 심리는 국가의 안전보장 또는 안녕질서를 방해하거나 선량한 풍속을 해할 염려가 있을 때에는 법원의 결정으로 공개하지 아니할 수 있다. 이 헌법시행 당시의 법령과 조약은 이 헌법에 위배되지 아니하는 한 그 효력을 지속한다. 행정각부의 장은 국무위원 중에서 국무총리의 제청으로 대통령이 임명한다.</div>
+				</div>
+			</div>
+			<div class="cf">
+				<input type="radio" id="click9" name="click"/>
+				<div>9</div>
+				<div class="title left"><label for="click9" class="cf">법관은 탄핵 또는 금고 이상의 형의 선고에 의하지 아니하고는 파면되지 아니한다.</label></div>
+				<div>이소정</div>
+				<div>2021-03-16</div>
+				<div class="content_wrap">
+					<div class="subject">교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다. </div>
+					<div class="content">재판의 심리와 판결은 공개한다. 다만, 심리는 국가의 안전보장 또는 안녕질서를 방해하거나 선량한 풍속을 해할 염려가 있을 때에는 법원의 결정으로 공개하지 아니할 수 있다. 이 헌법시행 당시의 법령과 조약은 이 헌법에 위배되지 아니하는 한 그 효력을 지속한다. 행정각부의 장은 국무위원 중에서 국무총리의 제청으로 대통령이 임명한다.</div>
+				</div>
+			</div>
+			<div class="cf">
+				<input type="radio" id="click8" name="click"/>
+				<div>8</div>
+				<div class="title left"><label for="click8" class="cf">법관은 탄핵 또는 금고 이상의 형의 선고에 의하지 아니하고는 파면되지 아니한다.</label></div>
+				<div>이소정</div>
+				<div>2021-03-16</div>
+				<div class="content_wrap">
+					<div class="subject">교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다. </div>
+					<div class="content">재판의 심리와 판결은 공개한다. 다만, 심리는 국가의 안전보장 또는 안녕질서를 방해하거나 선량한 풍속을 해할 염려가 있을 때에는 법원의 결정으로 공개하지 아니할 수 있다. 이 헌법시행 당시의 법령과 조약은 이 헌법에 위배되지 아니하는 한 그 효력을 지속한다. 행정각부의 장은 국무위원 중에서 국무총리의 제청으로 대통령이 임명한다.</div>
+				</div>
+			</div>
+		</div> <!-- //id="board" -->
+		<div id="page" class="cf">
+			<div class="prev">이전</div>
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div class="next">다음</div>
+		</div> <!-- //id="page" -->
+	</div>
+</body>
+</html>

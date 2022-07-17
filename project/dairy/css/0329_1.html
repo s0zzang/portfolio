@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0329_1</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{background:#d4d3f2;}
+		strong{color:#0047a0;}
+		p{margin-left:20px;}
+		a{text-decoration:none; color:#ccc;}
+		a:hover{color:#cee1c1;}
+		img{width:149px;}
+	</style>
+</head>
+<body>
+	<h1>flex</h1>
+	<p>
+		- 부모에 display:flex 적용시 자동으로 float:left 처리됨 <br/> - clear 시킬필요 없음, '%' 단위 사용시 반응형 완성!
+	</p>
+	<div class="div">
+		<div>
+			<h3>flex-direction</h3>
+			<p>flex item 배치</p>
+			<ul>
+				<li>flex-direction : <strong>row</strong> 수평 좌측 정렬 <sub>(1-2-3)</sub></li> 
+				<li>flex-direction : <strong>row-reverse</strong> 수평 우측 정렬 <sub>(3-2-1)</sub> </li>
+				<li>flex-direction : <strong>column</strong> 수직 좌측 정렬 <sub>(1-2-3)</sub></li> 
+				<li>flex-direction : <strong>column-reverse</strong> 수직 우측 정렬 <sub>(3-2-1)</sub></li> 
+			</ul>
+		</div>
+		<div>
+			<h3>flex-direction</h3>
+			<p>flex : 자식이 부모보다 커도 얌전히 부모 안에 갇혀있음 (기본값)</p>
+			<ul>
+				<li>flex-wrap : <strong>nowrap</strong>  줄바꿈 X <sub>기본값</sub> </li>
+				<li>flex-wrap : <strong>wrap</strong> 줄바꿈 O <sub>크기가 크다면 자동으로</sub> </li>
+				<li>flex-wrap : <strong>wrap-reverse</strong> 줄바꿈 O - 반대로 <sub>크기가 크다면 자동으로</sub></li>
+			</ul>
+		</div>
+		<div>
+			<h3>flex 축약속성</h3>
+			<p>예시 : flex-flow:row wrap;</p>
+			<ul>
+				<li>flex-flow : <strong>row</strong> <sub>flex-derection</sub> <strong>wrap</strong> <sub>flex-wrap</sub> </li>
+			</ul>
+		</div>
+		<div>
+			<h3>교차축 방향 아이템 개별 배치</h3>
+			<ul>
+				<li>align-self : <strong>flex-start</strong> 교차축 시작점기준 아이템 개별 배치</li>
+				<li>align-self : <strong>flex-end</strong> 교차축 끝점기준 아이템 개별 배치</li>
+				<li>align-self : <strong>center</strong> 교차축 중앙으로 아이템 개별 배치</li>
+				<li>align-self : <strong>auto</strong> flex-container(부모)에 적용된 align-item값 상속</li>
+				<li>align-self : <strong>baseline</strong> 교차측 시작점에서 제일 먼 text 기준 개별 배치</li>
+			</ul>
+		</div>
+		<div>
+			<h3>플렉스 아이템 박스 크기 조절</h3>
+			<p>사용법 : flex:[flex-grow] [flex-shrink] [flex-basis]</p>
+			<ul>
+				<li>flex-grow : 부모보다 작을 때 모자란 곳을 늘리기</li>
+				<li>flex-shrink : 부모보다 클 때 넘치는 곳을 줄이기</li>
+				<li>flex-basis : 앞에 적은 비율대로 할지 말지 선언 <sub>0 : Do | 1 : Don't</sub></li>
+			</ul>
+		</div>
+	</div>
+	<div class="div">
+		<div>
+			<h3>주축 방향 아이템 배치</h3>
+			<ul>
+				<li>justify-content : <strong>flex-start</strong> 기본값</li>
+				<li>justify-content : <strong>flex-end</strong> 주축의 끝점 배치
+					<div><img src="image/justify1.png" alt="flex-end"/></div>
+				</li>
+				<li>justify-content : <strong>center</strong> 주축의 중앙 배치
+					<div><img src="image/justify2.png" alt="center"/></div>
+				</li>
+				<li>justify-content : <strong>space-between</strong> 요소 간 여백 (양끝 배치 + 중앙정렬)
+					<div><img src="image/justify3.png" alt="space-between"/></div>
+				</li>
+				<li>justify-content : <strong>space-around</strong> 박스마다 좌우 동일여백 <sub>10 box1 20(box1의 10 + box2의 10) box2 10</sub>
+					<div><img src="image/justify4.png" alt="space-around"/></div>
+				<li>justify-content : <strong>space-evenly</strong> 모두 동일 여백 <sub>10 box1 10 box2 10</sub>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<h3>교차축 방향 아이템 배치</h3>
+			<ul>
+				<li>align-items : <strong>stretch</strong> 기본값
+					<div><img src="image/align1.png" alt="stretch"/></div>
+				</li>
+				<li>align-items : <strong>flex-start</strong> 교차축의 시작점 배치
+					<div><img src="image/align2.png" alt="flex-start"/></div>
+				</li>
+				<li>align-items : <strong>flex-end</strong> 교차축의 끝점 배치
+					<div><img src="image/align3.png" alt="flex-end"/></div>
+				</li>
+				<li>align-items : <strong>center</strong> 교차축의 중앙 배치
+					<div><img src="image/align4.png" alt="center"/></div>
+				</li>
+				<li>align-items : <strong>baseline</strong> 교차축에서 가장 멀리 떨어진 text 기준 배치
+					<div><img src="image/align5.png" alt="baseline"/></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

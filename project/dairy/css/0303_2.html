@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0303_2</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{
+			background:#abd6f8;
+		}
+		p,q{
+			padding-left:20px;
+		}
+		#ex p{
+			width:500px;
+			height:30px;
+			line-height:2em;
+			background:#ccc;
+			padding:3px 8px;
+			margin:0px 0 20px 40px;
+			background:url(image/color.png);
+		}
+		#box1{
+			overflow:hidden;
+			width:320px;
+		}
+		#box2{
+			overflow:scroll;
+			width:320px;
+		}
+		#box3{
+			overflow:auto;
+			width:320px;
+		}
+		img{
+			background:#ccc url(../../basic/href/photo/young/images/img4.jpg);
+			width:500px;
+			margin-left:42px;
+		/*	position:absolute;
+			clip:rect(100px 0px 0px 1px); */
+		}
+/*		#ex2{
+			position:absolute;
+			clip:rect(100px 0px 0px 1px);
+		} */
+	</style>
+</head>
+<body>
+	<h1>overflow, clip</h1>
+	<div class="div">
+		<div>
+			<h3>overflow</h3>
+			<p>박스와 컨텐츠의 크기와 관계된 스타일</p>
+			<ul>
+				<li><strong>hidden</strong> : 박스에서 넘친 컨텐츠 숨김</li>
+				<li><strong>scroll</strong> : 박스에서 컨텐츠가 넘치든 안넘치든 스크롤바 생성 </li>
+				<li style="list-style:none; color:#999;">- overflow-y:scroll : y축 스크롤 무조건 생성</li>
+				<li><strong>auto</strong> : 박스에서 컨텐츠가 넘치면 스크롤바 O, 안넘치면 X </li>
+				<li><strong>예시</strong></li>
+			</ul>
+			<div id="ex">
+				<div id="box1">
+					<p>hidden 박스보다 컨텐츠가 길어지면 짤리지</p>
+				</div>
+				<div id="box2">
+					<p>scroll 박스보다 크든 작든 스크롤이 생기지</p>
+				</div>
+				<div id="box3">
+					<p>auto 알아서 생기지</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="div">
+		<div>
+			<h3>clip</h3>
+			<p>포토샵 클리핑마스크 처럼 <strong>원하는 부분만 보여지게</strong> 하기</p>
+			<ul>
+				<li>rect ( top, right, botton, left )</li>
+				<li>position : absolute / fixed 일때만 사용 가능</li>
+			</ul>
+			<div id="ex2">
+				<p>짜장이 코만 보이게 하고 싶은데 clip 적용이 안된다</p>
+				<img src="../../basic/href/photo/young/images/img4.jpg" alt="짜장"/>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

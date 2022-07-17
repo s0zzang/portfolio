@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0412_3</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{background:#c4e1da;}
+		p{margin-left:10px;}
+		a{text-decoration:none; color:#ccc;}
+		a:hover{color:#c4e1da;}		
+	</style>
+</head>
+<body>
+	<h1>function 2 <a href="0412_2.html">function 1 바로가기</a></h1>
+	<div class="div">
+		<h3>addClass, removeClass, toggleClass</h3>
+		<p>클래스를 추가, 제거, 토글 형태로 변경하는 함수</p>
+		<ul>
+			<li>인자 : class명 <sub>.찍으면 안됨</sub></li>
+			<li>추가 : $ ( '.a' ) . addClass ( box )</li>
+			<li>삭제 : $ ( '.a' ) . removeClass ( box )</li>
+			<li>토글 : $ ( '.a' ) . toggleClass ( box ) <sub>클래스가 없으면 추가, 있으면 삭제</sub></li>
+		</ul>
+		<h3>append, appendTo</h3>
+		<p>형제 요소를 마지막 자식 요소로 포함시키는 함수 <br/>: 구조가 변경됨</p>
+		<ul>
+			<li>A . append ( B ) : A 사이의 마지막에 B 추가</li>
+			<li>A . appendTo ( B ) : A가 B 사이 마지막에 추가</li>
+			<li>append : $ ( '.basket' ) . append ( '.apple' )</li>
+			<li>appendTo : $ ( '.apple' ) . appendTo ( '.basket' )</li>
+			<li>담긴 순서 : basket - apple - 2 - 3</li>
+		</ul>
+		<h3>prepend, prependTo</h3>
+		<p>형제 요소를 첫 자식 요소로 포함시키는 함수 <br/>: 구조가 변경됨</p>
+		<ul>
+			<li>A . prepend ( B ) : A 사이의 처음에 B 추가</li>
+			<li>A . prependTo ( B ) : A가 B 사이 처음에 추가</li>
+			<li>prepend : $ ( '.basket' ) . append ( '.apple' )</li>
+			<li>prependTo : $ ( '.apple' ) . appendTo ( '.basket' )</li>
+			<li>담긴 순서 : 3 - 2 - apple - basket</li>
+		</ul>
+		<h3>prepend, prependTo</h3>
+		<p>형제 요소를 첫 자식 요소로 포함시키는 함수 <br/>: 구조가 변경됨</p>
+		<ul>
+			<li>A . prepend ( B ) : A 사이의 처음에 B 추가</li>
+			<li>A . prependTo ( B ) : A가 B 사이 처음에 추가</li>
+			<li>prepend : $ ( '.basket' ) . append ( '.apple' )</li>
+			<li>prependTo : $ ( '.apple' ) . appendTo ( '.basket' )</li>
+			<li>담긴 순서 : 3 - 2 - apple - basket</li>
+		</ul>
+	</div>
+	<div class="div">
+		<h3>click ( function ( ){ } )</h3>
+		<p>click event</p>
+		<ul>
+			<li>$ ( '.a' ) . click ( function ( ){ } ) </li>
+		</ul>
+		<h3>mouseenter, mouseleave ( function ( ){ } )</h3>
+		<p>drop down menu : 마우스 진입 후 움직여도 메뉴가 그대로</p>
+		<ul>
+			<li>$ ( '.a' ) . mouseenter ( function ( ){ } ) </li>
+			<li>$ ( '.a' ) . mouseleave ( function ( ){ } ) </li>
+		</ul>
+		<h3>mouseover, mouseout ( function ( ){ } )</h3>
+		<p>drop down menu : 마우스 진입 후 움직일 때마다 메뉴가 움직임</p>
+		<ul>
+			<li>$ ( '.a' ) . mouseover ( function ( ){ } ) </li>
+			<li>$ ( '.a' ) . mouseout ( function ( ){ } ) </li>
+		</ul>
+		<h3>hover ( function ( ){ }, function ( ) { } )</h3>
+		<ul>
+			<li>인자 : ( function 1 <sub>마우스가 올라왔을 때</sub> function 2 <sub>마우스가 내려갈 때</sub> </li>
+			<li>$ ( '.a' ) . hover ( function ( ){ }, function ( ){ } ) </li>
+		</ul>
+		<h3>focus, blur ( function ( ){ } )</h3>
+		<p>input 요소에 사용</p>
+		<ul>
+			<li>$ ( '.a' ) . focus ( function ( ){ } ) </li>
+			<li>$ ( '.a' ) . blur ( function ( ){ } ) </li>
+		</ul>
+		<h3>this ( function ( ){ } )</h3>
+		<p>동일한 클래스, 요소 중 특정한 요소만 함수를 적용하기 위한 함수</p>
+		<ul>
+			<li>$( '.click' ) . click ( function ( ) {</li>
+			<li>$( <strong>this</strong> ). text ( '클릭했당' ) </li>
+		</ul>
+	</div>
+</body>
+</html>

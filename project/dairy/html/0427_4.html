@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>0427_4</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h1{z-index: 1;}
+		p{margin-left:10px;}
+        body{margin:0; padding:0;}
+        svg{position:absolute; left:0; top:0; width:100%; height:100%; background:#ddd; z-index: -1;}
+        .pattern{fill:#db9292;}
+        .bg{fill:url(#pattern);}
+	</style>
+</head>
+<body>
+	<h1>svg pattern</h1>
+	<div class="div">
+        <svg viewBox="0 0 1000 1000">
+            <defs>
+                <pattern id="pattern" x="0" y="0" width=".1" height=".1">
+                    <circle class="pattern" cx="50" cy="50" r="50"></circle>
+                </pattern>
+            </defs>
+            <rect class="bg" x="0" y="0" width="100%" height="100%"></rect>
+        </svg>
+    </div>
+</body>
+</html>

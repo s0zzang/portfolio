@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0224_1</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{
+			background:#b6d1d3;
+		}
+		.div{
+			float:left;
+			width:850px;
+		}
+	</style>
+</head>
+<body>
+	<h1>content 관련</h1>
+	<div class="div">
+		<div>
+			<h3>quotes</h3>
+			<p>인용부호 설정</p>
+			<ul>
+				<li> "여는부호( ▶ )" "닫는부호( ™ )" </li>
+			</ul>
+			<q>이렇게 씁니다.</q>
+		</div>
+		<div>
+			<h3>content</h3>
+			<p>내용 추가</p>
+			<ul>
+				<li>after, before 가상 선택자와 함께 사용</li>
+				<li>tag : before { content : "짜잔~" } </li>
+				<li>tag : after { content : "끝!" } </li>
+				<li>content : open-quote (") </li>
+			</ul>
+			<p id="content"> 이렇게 씁니다. </p>
+		</div>
+		<div>
+			<h3>counter-increment</h3>
+			<p>일반 태그에 일련번호 붙이기</p>
+			<ul>
+				<li>방법 : 1) 일련번호를 붙일 태그에 counter-increment:"name"</li>
+				<li style="list-style-type:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				2) 일련번호를 붙일 곳에 content:counter(name, 속성)</li>
+				<li>tag { counter-increment : name } </li>
+				<li>tag:before { content-counter : ( name, 속성 <sub>roman, alpha, latin 등</sub> ) } </li>
+			</ul>
+			<div class="div">
+				<p class="counter"> 런닝맨 너무 재밌다 </p>
+				<p class="counter"> 유재석 짱 </p>
+			</div>
+			<div class="div">
+				<p class="increment"> 오늘은 화요일</p>
+				<p class="increment"> 내일은 수요일</p>
+			</div>
+		</div>
+</body>
+</html>

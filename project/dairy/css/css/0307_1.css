@@ -1,0 +1,59 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+}
+ul,li{
+	list-style:none;
+}
+h1{
+	width:70%;
+	margin:60px auto;
+	text-align:center;
+	font-style:italic;
+	font-size:40px;
+	color:#fff;
+	text-shadow:0 0 10px #4d3686;
+}
+#albumList{
+	width:620px;
+	height:200px;
+	margin:0 auto;
+	border:5px solid #ccc;
+	border-radius:10px;
+	box-shadow:5px 5px 10px #8e8fb5;
+	padding:20px;
+	position:relative;
+	z-index:1;
+}
+#albumList img{
+	width:200px;
+}
+#albumList li{
+	float:left;
+}
+#albumList img{
+	text-align:center;
+}
+#albumList .frame{
+	margin-right:10px;
+}
+#albumList a,#albumList img{
+	display:block;
+}
+#albumList a:hover img{
+	border:10px solid #f8e298;
+	width:180px;
+	box-shadow:0 0 20px #333333;
+}
+#albumList span{
+	display:block;
+}
+#albumList span.hit{
+	background:url(../image/medal.png) no-repeat top left;
+	width:30px;
+	height:30px;
+	position:relative;
+	top:-210px;
+	left:-10px;
+}

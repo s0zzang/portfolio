@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>FullPage</title>
+	<link rel="stylesheet" href="css/jquery.fullpage.css"/>
+	<style type="text/css">
+		header{position:fixed; left:0; right:0; top:0; background:ragba(0,0,0,.6); z-index:100;}
+		header nav ul{display:flex; justify-content:center;}
+		header nav ul li{margin:0 20px; list-style:none;}
+		header nav ul li.active{background:#fff;}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="js/jquery.fullpage.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				//options
+				menu:'nav',
+				anchors:['section1','section2','section3'],
+				// data-menuachor 값과 일치 시키기
+				autoScrolling:true,
+				scrollHorizontally: true,
+				sectionsColor:['#f187a5','#85b7dc','#93d099'],
+				navigation:true,
+				navigationPosition:'right',
+			});
+		});
+	</script>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li data-menuanchor="section1"><a href="#section1">section1</a></li>
+				<li data-menuanchor="section2"><a href="#section2">section2</a></li>
+				<li data-menuanchor="section3"><a href="#section3">section3</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="fullpage">
+    <div class="section">section1</div>
+    <div class="section">section2
+        <div class="slide">1</div>
+        <div class="slide">2</div>
+        <div class="slide">3</div>
+    </div>
+    <div class="section">section3</div>
+    <div class="section fp-auto-height">section4 footer</div>
+</div>
+</body>
+</html>

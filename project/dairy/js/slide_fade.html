@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>SlideShow</title>
+	<style>
+		/* default */
+		*{margin:0; padding:0;}
+		body{padding:30px;}
+		h1{padding:0 0 20px;}
+
+		/* css start */
+		.slideshow{width:300px; height:300px; margin:0 20px 20px 0; float:left; position:relative;}
+		.slideshow a{position:absolute; top:0; left:0; display:block;}
+		.slideshow img{border:1px solid #000;}
+		.slideshow a.alt{display:none;}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	<h1>slideshow</h1>
+	<div class="slideshow">
+		<a href="#"><img src="images/dinner1.jpg"/></a>
+		<a href="#" class="alt"><img src="images/dinner2.jpg"/></a>
+	</div>
+	<div class="slideshow">
+		<a href="#"><img src="images/illust1.png"/></a>
+		<a href="#" class="alt"><img src="images/illust2.png"/></a>
+		<a href="#" class="alt"><img src="images/illust3.png"/></a>
+	</div>
+	<div class="slideshow">
+		<a href="#"><img src="images/art1.gif"/></a>
+		<a href="#" class="alt"><img src="images/art2.gif"/></a>
+		<a href="#" class="alt"><img src="images/art3.gif"/></a>
+		<a href="#" class="alt"><img src="images/art4.gif"/></a>
+	</div>
+	<script>
+		$(function(){
+			var interval=1000;										// 유지, 보수에 용이
+			$('.slideshow').each(function(){						// 3개의 슬라이드 각각 의미
+				var timer;
+				var container=$(this);			
+				function switchImg(){
+					var imgs=container.find('a');					// a : img의 부모
+					var first=imgs.eq(0);
+					var second=imgs.eq(1);
+					first.fadeOut().appendTo(container);			// first fadeout 후 container의 마지막으로 포함됨 = last
+					second.fadeIn();								// second index = 0
+				}	
+				function startTimer(){
+					timer=setInterval(switchImg, interval);			// timer로 stop 한번에
+				}
+				function stopTimer(){
+					clearInterval(timer);
+				}
+				startTimer();										// 함수 실행 명령 해야만 실행
+				container.find('a').hover(stopTimer,startTimer);	// a를 호버하면 stop, 호버 끝나면 start	
+			})
+		});	
+	</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>table_background image</title>
+	<style type="text/css">
+		*{margin:0;padding:0;}
+		body{font-size:0.9em;}
+		#tableDesign caption{background:url(image/title_bbs.png) no-repeat; height:50px; width:397px; margin:20px 0 10px;}
+		#tableDesign caption span{display:none;}
+		#tableDesign{margin:0 auto; border-collapse:collapse;}
+		#tableDesign th{background:url(image/table_header_bg.png) repeat-x center top; height:34px; font-weight:lighter;}
+		#tableDesign th:first-child{width:50px; background:url(image/table_header_bg.png) no-repeat top left;}
+		#tableDesign th:nth-child(2){width:70px;}
+		#tableDesign th:nth-child(3){width:400px;}
+		#tableDesign th:nth-child(4){width:100px;}
+		#tableDesign th:nth-child(5){width:100px; background:url(image/table_header_bg.png) no-repeat top right;}
+		#tableDesign td{border-bottom:1px solid #999; background:url(image/bar7_1.png) no-repeat bottom right; text-align:center; padding:5px;}
+		#tableDesign .leftStyle{text-align:left;}
+		.btnView {padding:5px 10px; border:2px solid #666666; font-size:0.8em; border-radius:5px; color:#666666; background:#fff;}
+		#tableDesign tr:hover{background:#ffeded;}
+		.btnView:hover{background:#666; color:#fff; cursor:pointer;}
+	</style>
+</head>
+<body>
+    <table id="tableDesign">
+		<caption><span>자료 게시판</span></caption>
+		<tr>
+			<th><span>번호</span></th>
+			<th><span>구분</span></th>
+			<th><span>제목</span></th>
+			<th><span>등록일</span></th>
+			<th>보기</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>행정</td>
+			<td  class="leftStyle">요양급여비용 청구방법 심사청구서·명세서서식 및 작성요령</td>
+			<td>2012/03/15</td>
+			<td class="lastStyle"><input type="button" value="VIEW" class="btnView" /></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>입법 </td>
+			<td class="leftStyle">의료법 시행규칙 일부개정령안 입법예고 </td>
+			<td>2012/03/10</td>
+			<td class="lastStyle"><input type="button" value="VIEW" class="btnView" /></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>입법</td>
+			<td class="leftStyle">장애인복지법 시행령 및 시행규칙 </td>
+			<td>2012/02/26</td>
+			<td class="lastStyle"><input type="button" value="VIEW" class="btnView" /></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>입법</td>
+			<td class="leftStyle">기초노령연금법 일부개정 법률안 </td>
+			<td>2012/01/30</td>
+			<td class="lastStyle"><input type="button" value="VIEW" class="btnView" /></td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td >행정</td>
+			<td class="leftStyle">외래처방에 대한 요양급여비용 가산지급 기준 </td>
+			<td>2012/01/05</td>
+			<td class="lastStyle"><input type="button" value="VIEW" class="btnView" /></td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>행정</td>
+			<td class="leftStyle">건강검진 실시기준 고시 일부 개정안 </td>
+			<td>2011/12/27</td>
+			<td class="lastStyle"><input type="button" value="VIEW" class="btnView" /></td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>행정</td>
+			<td class="leftStyle">헌혈기록카드 고시 일부개정안 행정 </td>
+			<td>2011/12/22</td>
+			<td class="lastStyle"><input type="button" value="VIEW" class="btnView" /></td>
+		</tr>
+   </table>
+</body>
+
+</html>

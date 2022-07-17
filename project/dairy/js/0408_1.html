@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0408_1</title>
+	<link rel="stylesheet" href="../html/font.css"/>
+	<style type="text/css">
+		h3{background:#dad7f2;}
+		p{margin-left:10px;}
+	</style>
+</head>
+<body>
+	<h1>함수</h1>
+	<div class="div">
+		<h3>함수의 선언</h3>
+		<ul>
+			<li>function ( 매개변수1, 매개변수2 ) { 실행문 }</li>
+			<li>ex ( 인자1, 인자2 ) <sub>function만 작성해선, 문서에 실행되지 않음</sub></li>
+		</ul>
+		<h3>익명 함수</h3>
+		<p><strong>변수 식별자 = function ( ) { }</strong></p>
+		<ul>
+			<li>const fn = function ( ) { }</li>
+			<li>fn( ) <sub>함수 2번 부르면 실행문 2번 실행</sub></li>
+			<li>화살표 함수로 연결되어 es6부터 많이 사용함</li>
+		</ul>
+		<h3>선언적 함수</h3>
+		<p><strong>function 함수이름 ( ) { }</strong></p>
+		<ul>
+			<li>function fn ( ) { }</li>
+			<li>fn( ) <sub>위치 상관 없음</sub></li>
+			<li>함수의 호이스팅<sub>선언적 함수를 먼저 읽는 특징</sub>으로 function 위,아래 모두 호출 가능</li>
+		</ul>
+		<h3>return</h3>
+		<p><strong>함수의 최종적인 결과</strong><br/>function ( ) {  ~ <strong>return</strong> } : { } 안의 값을 밖으로 배달하여 적용되게 함 </p>
+		<ul>
+			<li>function f ( x ) { return x * x }</li>
+			<li>const a = f( 3 <sub>인자</sub>) </li>
+			<li>console.log ( a )</li>
+			<li>return 있는 경우 : 9 </li>
+			<li>return 없는 경우 : undefined </li>
+		</ul>
+	</div>
+	<div class="div">
+		<h3>화살표 함수</h3>
+		<p><strong>변수 식별자 = (매개변수) => {실행문}</strong> <br/>익명 함수에서만 사용 가능</p>
+		<p>매개변수가 없는 경우</p>
+		<ul>
+			<li>const hi = ( ) => { return "안녕하세요?" }</li>
+			<li>const hi = ( ) => "안녕하세요?" <sub>return값만 갖는다면 { }, return 생략 가능</sub></li>
+		</ul>
+		<p>매개변수가 1개인 경우</p>
+		<ul>
+			<li>const hi = ( user ) => { document.write ( user + "님, 안녕하세요?" )}</li>
+			<li>const hi =  user  => { document.write ( user + "님, 안녕하세요?" )} <sub>매개 변수 괄호 생략 가능</sub></li>
+			<li>hi ('짜장')</li>
+		</ul>
+		<p>매개변수가 2개 이상인 경우</p>
+		<ul>
+			<li>let sum = ( a,b ) => { return a+b }</li>
+			<li>let sum = ( a,b ) => a+b</li>
+			<li>const hi =  user  => { document.write ( user + "님, 안녕하세요?" )} <sub>return값만 갖는다면 { }, return 생략 가능</sub></li>
+			<li>document.write ('두 수의 합 : '+sum (10,20))</li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>div로 table 만들기</title>
+	<style type="text/css">
+		*{margin:0;padding:0;border:0;}
+		ul,li{list-style:none;text-align:center;}
+		ul{float:left;}
+		#wrap{width:800px;margin:0 auto;font-size:0.9em;}
+		#wrap h1{text-align:center;margin:20px 0;}
+		#table li{font-size:0.8em;border-top:1px solid #666666;padding:13px 0;}
+		#table li:last-child{border-bottom:1px solid #666666;}
+		.btnView{background:#fff;border:1px solid #666666;border-radius:10px;padding:3px 6px;margin:-10px;}
+		#table ul li:nth-child(1){background:#f8f2e9;}
+		#table .th{font-weight:bold;}
+		#table ul:nth-child(1) .th{width:80px;}
+		#table ul:nth-child(2) .th{width:290px;}
+		#table ul:nth-child(3) .th{width:170px;}
+		#table ul:nth-child(4) .th{width:140px;}
+		#table ul:nth-child(5) .th{width:120px;}
+		span{display:block; border-right:1px solid #888;}
+		#table ul:nth-child(2) li{text-align:left;}
+		#table ul:nth-child(2) li:nth-child(1){text-align:center;}
+		.btnView{padding:4px 17px; background:#fff; border-radius:5px; border:1px solid #666; color:#000; cursor:pointer;}
+		.btnView:hover{background:#666; border-radius:5px; border:1px solid #666; color:#fff;}
+		#div{position:absolute; top:20px; right:20px;}
+		#div a{color:#fff; background:#8b9fcf; display:block;text-decoration:none; padding:5px 10px;font-size:1.15em;border:3px solid #8b9fcf;border-radius:10px;font-size:14.95px;}
+		#div a:hover{background:#fff;border:3px solid #8b9fcf;color:#6f7da0;font-weight:bold;}
+		ul li:nth-child(2):hover{background:#ebebeb;}
+		ul li:nth-child(3):hover{background:#ebebeb;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1><img src="image/title_event.png" alt="title"/></h1>
+		<div id="table">
+			<ul>
+				<li class="th"><span>번호</span></li>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+			</ul>
+			<ul>
+				<li class="th"><span>이벤트 명</span></li>
+				<li>소짱홈 그랜드 리뉴얼 오픈 기념 추천 프로모션</li>
+				<li>Whatever you want !</li>
+				<li>인스타그램 팔로워 이벤트 프로모션</li>
+				<li>소짱홈 코딩 서포터즈를 모집합니다.</li>
+				<li>전국이 즐기는 신년 맞이 떡국 이벤트!</li>
+				<li>크리스마스엔 승하와! 이벤트</li>
+				<li>소짱홈 방문하고 기프티콘 주자!</li>
+			</ul>
+			<ul>
+				<li class="th"><span>이벤트 기간</span></li>
+				<li>2021/03/05~2021/03/08</li>
+				<li>2021/02/16~2021/03/05</li>
+				<li>2021/02/10~2021/02/15</li>
+				<li>2021/01/01~2021/01/18</li>
+				<li>2020/12/30~2021/01/02</li>
+				<li>2020/12/23~2020/12/25</li>
+				<li>2020/12/11~2020/12/20</li>
+			</ul>
+			<ul>
+				<li class="th"><span>당첨자 발표일</span></li>
+				<li>2021/03/08</li>
+				<li>2021/03/05</li>
+				<li>2021/02/15</li>
+				<li>2021/01/18</li>
+				<li>2021/01/02</li>
+				<li>2020/12/25</li>
+				<li>2020/12/20</li>
+			</ul>
+			<ul>
+				<li class="th">당첨자 보기</li>
+				<li><input type="button" value="확인" class="btnView"/></li>
+				<li><input type="button" value="확인" class="btnView"/></li>
+				<li><input type="button" value="확인" class="btnView"/></li>
+				<li><input type="button" value="확인" class="btnView"/></li>
+				<li><input type="button" value="확인" class="btnView"/></li>
+				<li><input type="button" value="확인" class="btnView"/></li>
+				<li><input type="button" value="확인" class="btnView"/></li>
+			</ul>
+		</div>
+	</div>
+	<div id="div"><a href="http://dlth8888.dothome.co.kr/dairy/css/0309_1.html">table.ver 바로가기</a></div>
+</body>
+</html>

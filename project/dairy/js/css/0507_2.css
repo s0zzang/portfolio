@@ -1,0 +1,98 @@
+html{overflow-x: hidden;}
+#wrap{position:relative; font-family: 'malgun gothic';}
+.inner{max-width:1100px; height:100vh; margin:auto;}
+.flex_container{width:100%; height:100vh; display:flex; flex-direction:column; justify-content: flex-start;}
+
+/* sec01 */
+.sec01{position:relative; height:100vh; background-color: white;}
+.sec01 .nav{position:relative; z-index:20;}
+.sec01 .nav .list li a{overflow: hidden; position:relative; display: inline-block; font-size: 80px; font-weight: bold; padding:1% 5% 1% 2%; text-decoration: none;}
+.sec01 .nav .list li a .mask{position: absolute; left:0; top:0; z-index: 10; height:100%; background: #333; animation: text_mask 2s 1 cubic-bezier(0.24,0.77,0.32,0.95) both; animation-play-state: paused;}
+.sec01 .nav .list li a .txt{position: relative; z-index: 20; display: block; animation: text_opacity 2s 1 cubic-bezier(0.24,0.77,0.32,0.95) both; animation-play-state: paused;}
+.sec01.on .nav .list li a .txt:after{position: absolute; content: ''; width:100%; height: 2px; background: #233; left:0; bottom:0; z-index: 30; animation: text_opacity 2s 1s 1 cubic-bezier(0.24,0.77,0.32,0.95) both; animation-play-state: running;}
+.sec01.on .nav .list li a .mask{animation-play-state: running;}
+.sec01.on .nav .list li a .txt{animation-play-state: running;}
+.sec01.on .nav .list li a .mask2{position:absolute; left:0; bottom:0; z-index: -1; width:0; height:40%; background: #009fe9; transition: width .5s cubic-bezier(0.24,0.77,0.32,0.95);}
+.sec01.on .nav .list li a:hover .txt:after{width: 0%;}
+.sec01.on .nav .list li a:hover .mask2{width: 100%;}
+
+h2{font-size: 60px; text-align:center; text-transform: uppercase; padding:60px 0;}
+.sec01.on .nav .list li a:hover {text-decoration: none;}
+.sec01.on .nav .list li a:focus {text-decoration: none;}
+
+.sec01 .rotate{position: absolute; left:50%; top:50%; z-index: 10; width: 800px; height:800px; margin-left:100px; margin-top: -300px; background: url(../images/bg_rotate01.png) no-repeat; background-size: contain; opacity: .5; animation: rotate 40s infinite linear; animation-play-state: paused;}
+.sec01.on .rotate{animation-play-state: running;}
+
+@keyframes text_mask {
+    0%{width:0; margin-left: 0;}
+    50%{width:100%; margin-left: 0;}
+    100%{width:100%; margin-left: 101%;}
+    /* margin-left:101% : 오른쪽으로 쭉 빠짐 */
+}
+@keyframes text_opacity {
+    0%{opacity: 0; color:#009fe9; transform: translateX(-50%);}
+    100%{opacity: 1; color:#333; transform: translateX(0%);}
+}
+@keyframes rotate {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+/* sec02 */
+.sec02{overflow: hidden; position: relative; height:100vh; text-align: center; background-color: #dbdbdb;}
+.txt_wrap{font-size:4em; }
+.sec02 .text{color:rosybrown;}
+
+/* sec03 */
+.sec03 .inner_wrap{width:60%; margin:auto;}
+.sec03 .img_list{display:flex; flex-wrap:wrap; justify-content: space-between;}
+.sec03 .img_list li{width:49%;}
+.sec03 article.img .img_list li .img_con{transform:translateX(-101%); transition: transform 1.2s .5s;}
+.sec03 article.img.on .img_list li .img_con{font-size:0; transform:translateX(0%);}
+.sec03 .img_list li{overflow: hidden; position:relative;}
+.sec03 .img_list li:after{content:''; position:absolute; right:0; top:0; width:100%; height:100%; transition:2.5s; background-color: #fff;}
+.sec03 .img.on .img_list li:after{width:0%;}
+.sec03 .img.on .img_list li .img_con img{width:100%; padding-bottom:20px;}
+.sec03 .text .inner_wrap{display: flex; justify-content: center; padding-top:30px;}
+.sec03 .text .text_area{width:40%; padding:0 50px; color:#333; font-size:40px; text-align:right; opacity: 0; transform: translateX(-101px); transition:all .5s 2s;}
+.sec03 .text.on .text_area{opacity:1; transform:translateX(0px);}
+.sec03 .text .img_area{position:relative; width:55%; overflow: hidden; height:890px;}
+.sec03 .text .img_area img{width:100%;}
+.sec03 .text .img_area:after{position:absolute; right:0; bottom:0; content:''; transition:2s 2s cubic-bezier(0.31, 0.85, .31, 1.06); background: #fff; width:100%; height:100%; }
+.sec03 .text.on .img_area:after{height:0;}
+
+/* sec04 */
+.sec04{position:relative; overflow: hidden; padding:150px 0 200px 0;}
+/* 사선 배경 만들기 */  
+.sec04:after{position:absolute; background: #dbdbdb; width:120%; height:100%; content:''; display:block; left:0; z-index: -1; transform:rotate(4deg) translate(0%, 60%); top:-48%;}
+.sec04 .inner_wrap .motion_area{position:relative; margin-top:100px; color:#333; text-align: center;}
+.sec04 .inner_wrap .motion_area .text_box:afer{display: block; content:''; clear:both;}
+.sec04 .txt01{font-size:120px; width:200%; font-weight:bold; }
+.sec04 .inner_wrap .motion_area .text_box .left{overflow: hidden; float:left; width:50%; height:100%;}
+.sec04 .inner_wrap .motion_area .text_box .right{overflow: hidden; float:left; width:50%; height:100%; color:#f37e7e;}
+.sec04 .right .txt01{margin-left:-100%;}
+.sec04 .inner_wrap .motion_area .text_box .left span,.sec04 .inner_wrap .motion_area .text_box .right span{display: inline-block; padding-bottom:5px; white-space: nowrap; animation:move_text 2.2s 1 both ease-in-out; animation-play-state: paused;}
+.sec04.on .inner_wrap .motion_area .text_box .left span,.sec04.on .inner_wrap .motion_area .text_box .right span{animation-play-state: running;}
+.sec04.on .text_box.line02 span{animation-delay: .3s !important;}
+.sec04.on .text_box.line03 span{animation-delay: .6s !important;}
+.sec04.on .text_box.line02 .left span{color:#9776ca;}
+.sec04.on .text_box.line02 .right span{color:#333;}
+
+@keyframes move_text {
+    0%{margin-left:-50%;}
+    50%{margin-left:50%;}
+    100%{margin-left:0%;}
+}
+
+/* sec05 */
+.sec05{overflow:hidden; position:relative; padding-top:100px; padding-bottom:80px; }
+.sec05 h2{position:relative; z-index: 60; padding-bottom:50px; }
+.sec05 .img_device{position:relative; z-index: 50; width:300px; margin:auto;}
+.sec05 .img_device img{width:100%;}
+.sec05 .bg_change{position:absolute; right:0; top:0; z-index:10; width:100%; height:100%;}
+.sec05 .bg_change.color01{z-index: 40; background: #000; transition:width .8s .2s;}
+.sec05 .bg_change.color02{z-index: 30; background: rgb(211,127,127); transition:width .8s .6s;}
+.sec05 .bg_change.color03{z-index: 20; background: rgb(182,211,127); transition:width .8s 1s;}
+.sec05 .bg_change.color04{z-index: 10; background: rgb(127,166,211); transition:width .8s 1.4s;}
+
+.sec05.on .bg_change.color01,.sec05.on .bg_change.color02,.sec05.on .bg_change.color03,.sec05.on .bg_change.color04{width:0;}

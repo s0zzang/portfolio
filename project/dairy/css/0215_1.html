@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>0215_1</title>
+	<link rel="stylesheet" type="text/css" href="../html/font.css">
+	<style type="text/css">
+		table, td, th{
+			border:1px solid #666;
+			border-collapse:collapse;
+			padding:10px;
+			margin:15px;
+			margin-top:30px;
+		}
+		h3{
+			background:#ffebb7;
+		}
+		.w100 {width:100px;}
+		.w450 {width:450px;}
+		.title {background:#f7f3fe;}
+		.block {width:450px;}
+		ul,li {line-height:1.8em;}
+		#cell {display:table; border-spacing:5px;}
+		#cell li{display:table-cell; width:60px; background:#d4d4d4; text-align:center;}
+	</style>
+</head>
+<body>
+	<div class="div">
+		<h3>블록요소와 인라인요소</h3> 
+		<table>
+			<tr>
+				<th class="w100 title">유형</th>
+				<th class="w450 title">특징</th>
+			</tr>
+			<tr>
+				<th class="title" rowspan="5">블록요소</th>
+				<td> 줄바꿈 O</td>
+			</tr>
+			<tr>
+				<td> block > inline : O</td>
+			</tr>
+			<tr>
+				<td> block > block : X <sub>div 제외</sub></td>
+			</tr>
+			<tr>
+				<td> <strong>모든 style 적용 가능</strong> <sub>width, height, margin</sub></td>
+			</tr>
+			<tr>
+				<td>p, <strong style="background:skyblue;">div</strong>, h1~h6, 목록태그, 테이블태그, form</td>
+			</tr>
+			<tr>
+				<th class="title" rowspan="5">인라인요소</th>
+				<td> 줄바꿈 X</td>
+			</tr>
+			<tr>
+				<td> inline > block : X</td>
+			</tr>
+			<tr>
+				<td> inline > inline : O</td>
+			</tr>
+			<tr>
+				<td>  <strong>width, height, margin</strong><sub> (상,하) </sub> <strong>설정 불가</strong></td>
+			</tr>
+			<tr>
+				<td><strong style="background:#ffe599;">span</strong>, a, input, b, i, strong, img <sub>인라인블록</sub></td>
+			</tr>
+		</table>
+	</div>
+	<div class="div">
+		<div>
+			<h3>div, span</h3>
+			<p>영역을 표시하는 태그</p>
+			<div class="block" style="background:skyblue;"><strong>div</strong>는</div>
+			<div class="block" style="background:#70c2e7;">자동 줄바꿈되는</div>
+			<div class="block" style="background:#45b1e0;">블럭요소</div>
+			<span style="background:#ffe599;"><strong>span</strong>은</span>
+			<span style="background:#ffdf80;">줄바꿈 되지않는</span>
+			<span style="background:#ffce3c;">인라인요소</span>
+		</div><br/>
+		<div>
+			<h3>display</h3>
+			<p>블럭 요소와 인라인 요소를 각각의 모습으로 변신시켜주는 요소</p>
+			<ul>
+				<li><strong>inline</strong> : block 요소를 inline 요소로 변환 <sub> 예시 : list 가로 배치</sub></li>
+				<li><strong>block</strong> : inline 요소를 block 요소로 변환 <sub> 예시 : img 1열 배치</sub></li>
+				<li><strong>inline-block</strong> : 겉인속블 <sub> 예시 : 나란히 하되 패딩값 갖고 싶을 때</sub></li>
+				<li><strong>none</strong> : html을 통해 적힌 텍스트를 화면에 보이지 않도록 숨김</li>
+				<li style="list-style:none; color:#666666;">- h1 등 검색을 위해 텍스트를 작성하지만 이미지로 대체할 경우 텍스트 숨김 필요</li>
+				<li style="list-style:none; color:#666666;">- 숨김이 가능한 다른 요소 : 1) visibility : visible, hidden 2) opacity: 1, 0</li>
+				<li><strong>table</strong> : table로 변환</li>
+				<li style="list-style:none; color:#666666;">- 특징 : width 값 없이 중앙정렬 가능</li>
+				<li style="list-style:none; color:#666666;">- table-cell : td가 아닌 요소를 td처럼 변환</li>
+				<li style="list-style:none; color:#666666;">- vertical-align : 수직 중앙정렬 <sub>table에서만 적용</sub></li>
+				<ul id="cell">
+					<li>li를</li>
+					<li>table</li>
+					<li>처럼</li>
+					<li>만들기</li>
+				</ul>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

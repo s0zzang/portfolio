@@ -1,0 +1,205 @@
+main{
+    margin-top:4vh;
+    @include clearfix();
+    #section-about{
+        float:left; 
+        background:url(../images/section_bg.jpg) no-repeat 0 -10px;
+        width:66.6666%;
+        min-height:42rem;
+        padding:7rem 0 6.5rem 6rem;
+        border-radius: 20px 0 0 20px;
+        @include clearfix();
+        @include transition;
+        @include mq('small-screen-1'){
+            width:100%;
+            border-radius:20px 20px 0 0;
+        }
+        @include mq('small-screen-2'){
+            width:100%;
+            height:34rem;
+            padding:7rem 6rem 6.5rem 6rem;
+            border-radius: 20px 20px 0 0;
+        }
+        @include mq('small-screen-3'){
+            width:100%;
+            height:70rem;
+            padding:7rem 6rem 6.5rem 6rem;
+            border-radius: 20px 20px 0 0;
+        }
+        @include mq('small-screen-4'){
+            padding:5rem;
+            background: url(../images/section_bg.jpg) no-repeat -300px -10px;
+        }
+        &-words{
+            width:65%; 
+            padding:0 2rem 0 0;
+            float:left;
+            @include transition;
+            @include mq('small-screen-2'){
+                width:100%;
+            }    
+            @include mq('small-screen-3'){
+                width:100%;
+            }
+            @include mq('small-screen-4'){
+                padding:0;
+            }
+            h3{
+                color:#ddd;
+            }    
+            p{
+                font-size:1.4rem;
+                padding:1.5rem 0;
+                font-size:1.6rem;
+                font-weight:700;
+                text-align: justify;
+                color:#ddd;
+                font-weight:300;
+                @include transition;
+                @include mq('small-screen-2'){
+                    width:60%;
+                }
+            }
+            a:hover{
+                color:$color-secondary;
+                background:transparent;
+            }
+        }
+        &-photo{
+            position:relative;
+            width:50%;
+            float:left;
+            @include transition;
+            @include mq('small-screen-2'){
+                width:100%;
+            }    
+            @include mq('small-screen-3'){
+                width:100%;
+            }    
+            .photo{
+                position:absolute;
+                width:100%;
+                left:90%;
+                top:-35rem;
+                @include transition;
+                @include mq('small-screen-1'){
+                    left:93%;
+                    top:-33rem;    
+                }    
+                @include mq('small-screen-2'){
+                    top:-26rem !important;
+                    left:55% !important;
+                }
+                @include mq('small-screen-3'){
+                    top:-3rem;
+                    left:-5%;
+                }            
+                @include mq('small-screen-4'){
+                    top:-3rem;
+                }            
+                img{
+                    width:100%;
+                    height:100%;
+                    @include transition;
+                    @include mq('small-screen-2'){
+                        width:50%;
+                    }    
+                }
+            }
+        }
+    }
+    #section-etc{
+        float:left; width:33.3334%;
+        @include transition;
+        @include mq('small-screen-1'){
+            width:100%;
+        }
+        @include mq('small-screen-2'){
+            width:100%;
+        }
+        @include mq('small-screen-3'){
+            width:100%;
+        }
+        .etc{
+            @include mq('small-screen-1'){
+                width:33.3333%;
+                height:18rem;
+                float:left;
+            }
+            @include mq('small-screen-2'){
+                width:33.3333%;
+                height:18rem;
+                float:left;
+            }
+            height:14rem;
+            &:nth-child(1){
+                background-color: $color-blue-1;
+                border-radius: 0 20px 0 0;
+                @include transition;
+                @include mq('small-screen-1'){
+                    border-radius:0 0 0 20px;
+                }
+                @include mq('small-screen-2'){
+                    border-radius:0 0 0 20px;
+                }
+                @include mq('small-screen-3'){
+                    border-radius:0;
+                }
+            }
+            &:nth-child(2){
+                background-color: $color-blue-2;
+            }
+            &:nth-child(3){
+                background-color: $color-blue-3;
+                border-radius: 0 0 20px 0;
+                @include transition;
+                @include mq('small-screen-3'){
+                    border-radius:0 0 20px 20px;
+                }
+            }
+            &-icon{
+                padding-top: 3.5rem;
+                width:30%;
+                text-align:center;
+                float:left;
+                i{
+                    font-size:7rem;
+                    color: #444;
+                    @include transition;
+                    @include mq('small-screen-1'){
+                        font-size:6rem;
+                        margin-top:2rem;
+                    }
+                    @include mq('small-screen-2'){
+                        font-size:3rem;
+                        margin-top:-.5rem;
+                    }
+                    @include mq('small-screen-4'){
+                        font-size:6rem;
+                    }
+                }
+            }
+            &-text{
+                padding-top:1rem;
+                width:70%;
+                float:left;
+                @include transition;
+                @include mq('small-screen-1'){
+                    padding-top:2rem;
+                }
+                p{
+                    font-size:1.4rem;
+                    margin:.5rem 0;
+                    padding-right:3.5rem;
+                    text-align: justify;
+                    @include transition;
+                    @include mq('small-screen-2'){
+                        padding-right: 0;
+                        width: 115%;
+                        margin-left: -50px;
+                    }
+                }
+            }
+        }
+    }
+}
